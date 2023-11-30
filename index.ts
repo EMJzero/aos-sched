@@ -7,18 +7,30 @@ import { Schedule, Plan, ScheduleProducer } from "./lib/types";
 
 type Tests = {
   cfs: Plan<any, any>[];
+  fifo: Plan<any, any>[];
+  sjf: Plan<any, any>[];
+  srtf: Plan<any, any>[];
 };
 
 type Simulators = {
   cfs: ScheduleProducer;
+  fifo: ScheduleProducer;
+  sjf: ScheduleProducer;
+  srtf: ScheduleProducer;
 };
 
 let tests: Tests = {
   cfs: require("./lib/cfs/fixtures").plans as Plan<any, any>[],
+  fifo: require("./lib/configurable/fixtures").plansFIFO as Plan<any, any>[],
+  sjf: require("./lib/configurable/fixtures").plansSJF as Plan<any, any>[],
+  srtf: require("./lib/configurable/fixtures").plansSRTF as Plan<any, any>[],
 };
 
 let sims: Simulators = {
   cfs: require("./lib/cfs/lib").produceSchedule as ScheduleProducer,
+  fifo: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
+  sjf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
+  srtf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
 };
 
 let $fs = require("mz/fs");

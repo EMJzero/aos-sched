@@ -111,7 +111,7 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
 
   let taskevents = _.map(sched.plan.tasks, (t) => {
     return [
-      `\\draw [->] (${t.start}, ${t.index} + 0.75) -- (${t.start}, ${t.index});`,
+      `\\draw [->] (${t.arrival}, ${t.index} + 0.75) -- (${t.arrival}, ${t.index});`,
     ];
   });
 
