@@ -1,23 +1,16 @@
 
 # Introduction
 
-This is a small CLI tool written for the Advanced Operating Systems course to create realtime schedule diagrams from schedule plans. It provides several sub-commands that can be chained together to simulate and print task scheduling scenarios. 
-
-
-![](Images/readme%202024-03-31%2011.24.57.excalidraw.png)
-[☆](Images/readme%202024-03-31%2011.24.57.excalidraw.md)
-
-
-At the moment, the following schedulers are implemented:
+This is a small CLI tool written for the Advanced Operating Systems course to create realtime schedule diagrams from schedule plans. It provides several commands to simulate and print scheduling simulations. At the moment, the following schedulers are implemented:
 
 - CFS (Linux CFS)
 
 The available commands are:
 
 
-2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes two arguments: the scheduler to use and the JSON file or stdin containing the schedule data `Plan` (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule (`Schedule`).
+2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes two arguments: the scheduler to use and the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
 
-  ```
+   ```
    bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs
    ```
 
@@ -27,7 +20,7 @@ The available commands are:
    bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched export complete
    ```
 
-1. `dump`: This command is optional and is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
+1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
 
    ```
    bunx aos-sched dump cfs 0 | jq .
@@ -57,19 +50,15 @@ The available commands are:
        ...
    ```
 
-## Example
-This example generates a `Plan` for example n. 0 of the cfs scheduler, produces the corresponding `Schedule` and converts it into a latex file:
+# Example
 
 ```
 bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched export complete
 ```
 
-The resulting latex file is a Tikz picture that when compiled and exported to png will give the following diagram
+will produce a latex file that when compiled and exported to png gives
 
-![](Images/example.png)
+![](./example.png)
 
 
-# Internal data structures
 
-![](Images/readme%202024-03-31%2011.46.50.excalidraw.png)
-[☆](Images/readme%202024-03-31%2011.46.50.excalidraw.md)

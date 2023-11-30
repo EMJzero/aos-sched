@@ -18,9 +18,10 @@
     "eslint": "8.48.0",
     "get-stdin": "5.0.1",
     "jest": "29.6.4",
-    "lodash": "4.17.4",
+    "lodash": "^4.17.21",
     "mz": "2.7.0",
-    "replace-ext": "1.0.0"
+    "replace-ext": "1.0.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.198"
