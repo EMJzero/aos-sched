@@ -171,14 +171,16 @@ let plansFIFO: SimPlan[] = [
   schedule4,
 ];
 
-let plansSJF: SimPlan[] = _.map(plansFIFO, (p) => {
-  p.class = SJFSchedClass;
-  return p;
+const plansSJF: SimPlan[] = _.map(plansFIFO, p => {
+  const copy = _.cloneDeep(p);
+  copy.class = SJFSchedClass;
+  return copy;
 });
 
-let plansSRTF: SimPlan[] = _.map(plansFIFO, (p) => {
-  p.class = SRTFSchedClass;
-  return p;
+const plansSRTF: SimPlan[] = _.map(plansFIFO, p => {
+  const copy = _.cloneDeep(p);
+  copy.class = SRTFSchedClass;
+  return copy;
 });
 
 //module.exports = { plansFIFO, plansSJF, plansSRTF };

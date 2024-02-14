@@ -4,6 +4,7 @@ import { program } from "@caporal/core";
 
 import { exportLatex } from "./lib/artifacts";
 import { Schedule, Plan, ScheduleProducer } from "./lib/types";
+import { FIFOSchedClass, SJFSchedClass, SRTFSchedClass } from "./lib/configurable/lib";
 
 type Tests = {
   cfs: Plan<any, any>[];
@@ -42,7 +43,7 @@ let main = () => {
     .description("Create temporal diagrams of AOS realtime schedulers")
     .command("dump", "Dump out examples")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs, fifo, sjf, srtf"],
+      validator: ["cfs", "fifo", "sjf", "srtf"],
     })
     .argument("<num>", "Example number", {
       validator: program.NUMBER,
@@ -53,7 +54,7 @@ let main = () => {
     })
     .command("simulate", "Simulate provided schedule")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs, fifo, sjf, srtf"],
+      validator: ["cfs", "fifo", "sjf", "srtf"],
     })
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args, options }) => {
@@ -65,12 +66,18 @@ let main = () => {
             sim = sims.cfs(options, sched, logger);
             break;
           case "fifo":
+            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
+            sched.class = FIFOSchedClass;
             sim = sims.fifo(options, sched, logger);
             break;
           case "sjf":
+            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
+            sched.class = SJFSchedClass;
             sim = sims.sjf(options, sched, logger);
             break;
           case "srtf":
+            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
+            sched.class = SRTFSchedClass;
             sim = sims.srtf(options, sched, logger);
             break;
           default:
