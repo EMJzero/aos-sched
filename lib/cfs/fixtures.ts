@@ -203,4 +203,5 @@ let plans: CFSPlan[] = [
   // { ...schedule1, runfor: 40 },
 ];
 
-module.exports = { plans };
+//module.exports = { plans };
+export { plans };

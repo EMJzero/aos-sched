@@ -42,7 +42,7 @@ let main = () => {
     .description("Create temporal diagrams of AOS realtime schedulers")
     .command("dump", "Dump out examples")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs"],
+      validator: ["cfs, fifo, sjf, srtf"],
     })
     .argument("<num>", "Example number", {
       validator: program.NUMBER,
@@ -53,17 +53,31 @@ let main = () => {
     })
     .command("simulate", "Simulate provided schedule")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs"],
+      validator: ["cfs, fifo, sjf, srtf"],
     })
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
       datap.then(JSON.parse).then((sched: Plan<any, any>) => {
         let sim: Schedule;
-        if (args.sched === "cfs") {
-          sim = sims.cfs(options, sched, logger);
-          console.log(JSON.stringify(sim, null, 2));
+        switch (args.sched) {
+          case "cfs":
+            sim = sims.cfs(options, sched, logger);
+            break;
+          case "fifo":
+            sim = sims.fifo(options, sched, logger);
+            break;
+          case "sjf":
+            sim = sims.sjf(options, sched, logger);
+            break;
+          case "srtf":
+            sim = sims.srtf(options, sched, logger);
+            break;
+          default:
+            console.log("ERROR: invalid <sched> argument passed the validator check!");
+            return;
         }
+        console.log(JSON.stringify(sim, null, 2));
       });
     })
     .command("export", "Export simulation data to available formats")

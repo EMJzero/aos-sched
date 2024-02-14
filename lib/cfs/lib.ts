@@ -264,14 +264,9 @@ let eventLoop = (
       tw.vrtlwk = { message: `${v} < ${schedstate.curr.vrt}`, color: "black" };
     }
 
-    /*
-    DANGER!!!!
-    The text in vrtlwk here is backward, the OK text must be swapped with the X text!!
-    If you have a lower next virtual runtime, there is the preemption!
-
-    Note: the picture on github does NOT respect the logic programmed
-          here, and it is wrong, as it preempted on v > curr.vrt!!
-    */
+    // Note: a preemption will happen iif the next virtual runtime of the woken up
+    // task is lower than the vrt of the currently running task or if there is no
+    // currently running task
 
     // Check for preemption (invoke resched if it occurs)
     if (schedstate.curr !== undefined && v < schedstate.curr.vrt) {
@@ -332,6 +327,8 @@ let eventLoop = (
           how much time passes before the next event occurs, starting AFTER the previous event.
           Ex: [2, 1] indicates that the first event occurs 2 units from now, and
           1 unit after such event another event follows!
+          Another way to read it is:
+          "Run for 2, sleep for 1, run for ..., sleep for ..., ..."
         
           To change such behavior, change the following line to decrement by "delta"
           every element of the array! Consequently events will refer to absolute time.

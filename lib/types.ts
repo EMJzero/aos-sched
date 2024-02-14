@@ -35,6 +35,8 @@ type Task = {
     how much time passes before the next event occurs, starting AFTER the previous event.
     Ex: [2, 1] indicates that the first event occurs 2 units from now, and
     1 unit after such event another event follows!
+    Another way to read it is:
+    "Run for 2, sleep for 1, run for ..., sleep for ..., ..."
 
     Also, note that for a runnable task time passes, only while it is running, while
     for a sleeping task, time always passes. Thus only the currenlty running task

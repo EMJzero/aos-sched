@@ -181,4 +181,5 @@ let plansSRTF: SimPlan[] = _.map(plansFIFO, (p) => {
   return p;
 });
 
-module.exports = { plansFIFO, plansSJF, plansSRTF };
+//module.exports = { plansFIFO, plansSJF, plansSRTF };
+export { plansFIFO, plansSJF, plansSRTF };

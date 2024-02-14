@@ -73,10 +73,10 @@ const FIFOSchedClass : SchedClass = {
 
 const SJFSchedClass : SchedClass = {
   type: "SJF",
-  metric: "remaining computation time",
+  metric: "required computation time",
   // No preemption
   preempt: (t: TaskState, s: State) => false,
-  // Computes the remaining computation time for a task
+  // Computes the required computation time for a task
   schedmetric: (t?: TaskState) => t ? t.computation - t.sum : +Infinity,
   order: (t1?: TaskState, t2?: TaskState) => SJFSchedClass.schedmetric(t1) < SJFSchedClass.schedmetric(t2)
 };
