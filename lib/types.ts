@@ -22,6 +22,8 @@ type Plan<T, C> = {
   graphics: any;
   tasks: T[];
   class: C;
+  // A generic dictionary encoding additional scheduling attributes
+  attributes: {};
 };
 
 type Task = {

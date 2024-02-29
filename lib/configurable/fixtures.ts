@@ -1,4 +1,4 @@
-import { SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass } from "./lib";
+import { SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass } from "./lib";
 
 import _ from "lodash";
 
@@ -15,6 +15,7 @@ let schedule1: SimPlan = {
   timer: 0.5,
   runfor: 8,
   class: FIFOSchedClass,
+  attributes: {},
 
   tasks: [
     {
@@ -50,6 +51,7 @@ let schedule0: SimPlan = {
   timer: 0.5,
   runfor: 8,
   class: FIFOSchedClass,
+  attributes: {},
 
   tasks: [
     {
@@ -85,6 +87,7 @@ let schedule2: SimPlan = {
   timer: 0.5,
   runfor: 12,
   class: FIFOSchedClass,
+  attributes: {},
 
   tasks: [
     {
@@ -120,6 +123,7 @@ let schedule3: SimPlan = {
   timer: 0.5,
   runfor: 24,
   class: FIFOSchedClass,
+  attributes: {},
 
   tasks: [
     {
@@ -155,6 +159,7 @@ let schedule4: SimPlan = {
   timer: 0.5,
   runfor: 16,
   class: FIFOSchedClass,
+  attributes: {},
   tasks: [
     { index: 0, name: "R", computation: 8, arrival: 0, events: [8] },
     { index: 1, name: "S", computation: 8, arrival: 0, events: [8] },
@@ -183,5 +188,14 @@ const plansSRTF: SimPlan[] = _.map(plansFIFO, p => {
   return copy;
 });
 
+const plansRR: SimPlan[] = _.map(plansFIFO, p => {
+  const copy = _.cloneDeep(p);
+  copy.class = RRSchedClass;
+  copy.attributes = {
+    "quantum": 1.5
+  }
+  return copy;
+});
+
 //module.exports = { plansFIFO, plansSJF, plansSRTF };
-export { plansFIFO, plansSJF, plansSRTF };
+export { plansFIFO, plansSJF, plansSRTF, plansRR };
