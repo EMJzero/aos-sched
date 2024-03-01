@@ -104,7 +104,7 @@ const RRSchedClass : SchedClass = {
   preempt_tick: (t: TaskState, s: State) => (t.sum - t.prev) >= s.origplan.attributes["quantum"],
   // Computes the remaining computation time for a task
   schedmetric: (t?: TaskState) => t ? t.enqueue : +Infinity,
-  order: (t1?: TaskState, t2?: TaskState) => SRTFSchedClass.schedmetric(t1) < SRTFSchedClass.schedmetric(t2)
+  order: (t1?: TaskState, t2?: TaskState) => RRSchedClass.schedmetric(t1) < RRSchedClass.schedmetric(t2)
 };
 
 type SimPlan = Plan<PlannedTask, SchedClass>;
@@ -268,13 +268,10 @@ let eventLoop = (
   // Add task to the runqueue (respecting the queue's order),
   // uses the scheduler's predicate to infer the order relation
   let addToRunqueue = (task: TaskState) => {
-    schedstate.runqueue.splice(
-      schedstate.runqueue.findIndex((t) => taskstates.class.order(task, t)),
-      0,
-      task
-    );
     task.enqueue = timer.walltime;
     task.wait = 0;
+    schedstate.runqueue.push(task);
+    schedstate.runqueue.sort((a, b) => (taskstates.class.order(a, b) ? -1 : 1))
   };
 
   // Wakeup task, moving it from the blocked list to the runqueue,
@@ -350,17 +347,11 @@ let eventLoop = (
 
       // No events occur on the currently running task
       // CHANGED FROM: >= delta
-      console.log(schedstate)
-      console.log(schedstate.curr)
-      console.log(schedstate.curr.events)
-      console.log(schedstate.curr.events[0])
       if (schedstate.curr.events[0] > 0) {
         schedstate.curr.sum = r2(schedstate.curr.sum + delta);
 
         // See types.ts -> Task -> events for a detailed explanation of this behaviour
-        console.log("Before: " + schedstate.curr.events[0])
         schedstate.curr.events[0] = r2(schedstate.curr.events[0] - delta);
-        console.log("After: " + schedstate.curr.events[0])
 
         // If the current task's computation time has been satisfied, exit it
         if (schedstate.curr.computation - schedstate.curr.sum <= 0) {
@@ -373,16 +364,12 @@ let eventLoop = (
           // The current task goes to sleep
           let ts = schedstate.curr;
           removeFromRunqueue(schedstate.curr);
-          addBlocked(schedstate.curr);
+          addToRunqueue(schedstate.curr);
           // Run the next task
           resched(`task ${schedstate.curr.name} finished quantum @${timer.walltime}`);
         }
-      }
-
-      // Event triggered on the currently running task
-      // CHANGED FROM: === 0
-      // NOTE: yeah, this could be an "else" XD
-      if (schedstate.curr.events[0] <= 0) {
+      } else {
+        // Event triggered on the currently running task
         // The current task goes to sleep
         let ts = schedstate.curr;
         removeFromRunqueue(schedstate.curr);
@@ -406,20 +393,24 @@ let eventLoop = (
   };
 
   let exitCurrentTask = () => {
-    let v = _.find(
-      taskstates.tasks,
-      (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
-    );
-    if (v) {
-      v.exited = timer.walltime;
-    }
+    if (schedstate.curr !== undefined) {
+      let v = _.find(
+        taskstates.tasks,
+        (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
+      );
+      if (v) {
+        v.exited = timer.walltime;
+      }
+  
+      let vp = _.find(
+        schedstate.origplan.tasks,
+        (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
+      );
+      if (vp) {
+        vp.exited = timer.walltime;
+      }
 
-    let vp = _.find(
-      schedstate.origplan.tasks,
-      (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
-    );
-    if (vp) {
-      vp.exited = timer.walltime;
+      removeFromRunqueue(schedstate.curr);
     }
   };
 

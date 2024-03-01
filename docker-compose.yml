@@ -6,7 +6,7 @@ services:
     ports:
       - "10022:22"
     volumes:
-      - "./:/home/ubuntu/sheduler"
+      - "./:/home/ubuntu/sheduler:rw"
     ulimits:
       memlock:
         soft: -1
