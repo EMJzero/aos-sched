@@ -603,6 +603,7 @@ let serialiseSim = (
     graphics: simPlan.graphics,
     tasks: [],
     class: {},
+    attributes: {}
   };
 
   plan.tasks = _.map(simPlan.tasks, (t) => {
