@@ -585,7 +585,7 @@ let serialiseSim = (
               if (nextState) {
                 // Write at time "time" the text decorating the task 
                 tslot.belowSlot = nextState.schedmetric + "";
-                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${nextState.sum - t.p}/${r2(t.q)}` : `${nextState.sum - t.p}}`) : "";
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${nextState.sum - t.p}/${r2(simPlan.attributes["quantum"])}` : `${nextState.sum - t.p}}`) : "";
               }
               return tslot;
             }
