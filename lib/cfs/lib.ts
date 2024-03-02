@@ -581,6 +581,7 @@ let serialiseSim = (
     graphics: cfsPlan.graphics,
     tasks: [],
     class: {},
+    attributes: {}
   };
 
   plan.tasks = _.map(cfsPlan.tasks, (t) => {

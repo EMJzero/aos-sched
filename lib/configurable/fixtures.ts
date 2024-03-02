@@ -1,4 +1,4 @@
-import { SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass } from "./lib";
+import { SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass } from "./lib";
 
 import _ from "lodash";
 
@@ -11,7 +11,7 @@ There are two ways a task can end:
 Events alternate, the first is a sleep, then a wakeup, then sleep, ...
 */
 
-let schedule1: SimPlan = {
+let schedule0: SimPlan = {
   timer: 0.5,
   runfor: 8,
   class: FIFOSchedClass,
@@ -47,7 +47,7 @@ let schedule1: SimPlan = {
   },
 };
 
-let schedule0: SimPlan = {
+let schedule1: SimPlan = {
   timer: 0.5,
   runfor: 8,
   class: FIFOSchedClass,
@@ -59,21 +59,21 @@ let schedule0: SimPlan = {
       name: "$t_1$",
       computation: 8,
       arrival: 0,
-      events: [8],
+      events: [1],
     },
     {
       index: 1,
       name: "$t_2$",
       computation: 8,
       arrival: 0,
-      events: [8],
+      events: [2],
     },
     {
       index: 2,
       name: "$t_3$",
       computation: 8,
       arrival: 0,
-      events: [8],
+      events: [3],
     },
   ],
   graphics: {
@@ -188,6 +188,12 @@ const plansSRTF: SimPlan[] = _.map(plansFIFO, p => {
   return copy;
 });
 
+const plansHRRN: SimPlan[] = _.map(plansFIFO, p => {
+  const copy = _.cloneDeep(p);
+  copy.class = HRRNSchedClass;
+  return copy;
+});
+
 const plansRR: SimPlan[] = _.map(plansFIFO, p => {
   const copy = _.cloneDeep(p);
   copy.class = RRSchedClass;
@@ -197,5 +203,4 @@ const plansRR: SimPlan[] = _.map(plansFIFO, p => {
   return copy;
 });
 
-//module.exports = { plansFIFO, plansSJF, plansSRTF };
-export { plansFIFO, plansSJF, plansSRTF, plansRR };
+export { plansFIFO, plansSJF, plansSRTF, plansHRRN, plansRR };

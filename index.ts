@@ -4,13 +4,14 @@ import { program } from "@caporal/core";
 
 import { exportLatex } from "./lib/artifacts";
 import { Schedule, Plan, ScheduleProducer } from "./lib/types";
-import { FIFOSchedClass, RRSchedClass, SJFSchedClass, SRTFSchedClass } from "./lib/configurable/lib";
+import { FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass } from "./lib/configurable/lib";
 
 type Tests = {
   cfs: Plan<any, any>[];
   fifo: Plan<any, any>[];
   sjf: Plan<any, any>[];
   srtf: Plan<any, any>[];
+  hrrn: Plan<any, any>[];
   rr: Plan<any, any>[];
 };
 
@@ -19,6 +20,7 @@ type Simulators = {
   fifo: ScheduleProducer;
   sjf: ScheduleProducer;
   srtf: ScheduleProducer;
+  hrrn: ScheduleProducer;
   rr: ScheduleProducer;
 };
 
@@ -27,6 +29,7 @@ let tests: Tests = {
   fifo: require("./lib/configurable/fixtures").plansFIFO as Plan<any, any>[],
   sjf: require("./lib/configurable/fixtures").plansSJF as Plan<any, any>[],
   srtf: require("./lib/configurable/fixtures").plansSRTF as Plan<any, any>[],
+  hrrn: require("./lib/configurable/fixtures").plansHRRN as Plan<any, any>[],
   rr: require("./lib/configurable/fixtures").plansRR as Plan<any, any>[],
 };
 
@@ -35,6 +38,7 @@ let sims: Simulators = {
   fifo: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
   sjf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
   srtf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
+  hrrn: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
   rr: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
 };
 
@@ -47,7 +51,7 @@ let main = () => {
     .description("Create temporal diagrams of AOS realtime schedulers")
     .command("dump", "Dump out examples")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs", "fifo", "sjf", "srtf", "rr"],
+      validator: ["cfs", "fifo", "sjf", "srtf", "hrrn", "rr"],
     })
     .argument("<num>", "Example number", {
       validator: program.NUMBER,
@@ -58,7 +62,7 @@ let main = () => {
     })
     .command("simulate", "Simulate provided schedule")
     .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs", "fifo", "sjf", "srtf", "rr"],
+      validator: ["cfs", "fifo", "sjf", "srtf", "hrrn", "rr"],
     })
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args, options }) => {
@@ -83,6 +87,11 @@ let main = () => {
             // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
             sched.class = SRTFSchedClass;
             sim = sims.srtf(options, sched, logger);
+            break;
+          case "hrrn":
+            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
+            sched.class = HRRNSchedClass;
+            sim = sims.hrrn(options, sched, logger);
             break;
           case "rr":
             // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
