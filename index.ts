@@ -2,7 +2,7 @@
 
 import { program } from "@caporal/core";
 
-import { exportLatex } from "./lib/artifacts";
+import { exportLatex, exportLatexSummary } from "./lib/artifacts";
 import { Schedule, Plan, ScheduleProducer } from "./lib/types";
 import { FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass } from "./lib/configurable/lib";
 
@@ -113,7 +113,17 @@ let main = () => {
       datap.then(JSON.parse).then((sim: Schedule) => {
         console.log(exportLatex(sim, logger)[args.artifact + ""].code);
       });
+    })
+    .command("table", "Export a LaTeX table with the summary of tasks")
+    .argument("<artifact>", "Artfiact name")
+    .argument("[JSON]", "JSON file or stdin")
+    .action(({ logger, args }) => {
+      let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
+      datap.then(JSON.parse).then((sim: Schedule) => {
+        console.log(exportLatexSummary(sim, logger)[args.artifact + ""].code);
+      });
     });
+    
   program.run();
 };
 
