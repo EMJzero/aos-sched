@@ -14,16 +14,19 @@ type TaskSlot = {
   };
 };
 
-type Plan<T, C> = {
+type GenericPlan<T> = {
   // Timestep-size for the simulation
   timer: number;
   // Total time span of the simulation
   runfor: number;
   graphics: any;
   tasks: T[];
-  class: C;
   // A generic dictionary encoding additional scheduling attributes
   attributes: {};
+};
+
+type Plan<T, C> = GenericPlan<T> & {
+  class: C;
 };
 
 type Task = {
@@ -84,4 +87,5 @@ export {
   ScheduledTask,
   NoClass,
   Maybe,
+  GenericPlan
 };

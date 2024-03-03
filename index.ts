@@ -3,43 +3,28 @@
 import { program } from "@caporal/core";
 
 import { exportLatex, exportLatexSummary } from "./lib/artifacts";
-import { Schedule, Plan, ScheduleProducer } from "./lib/types";
-import { FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass } from "./lib/configurable/lib";
+import { Schedule, Plan, GenericPlan, ScheduleProducer } from "./lib/types";
+import { FIFOSchedClass, RRSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, schedClassFromString } from "./lib/configurable/lib";
+import { string } from "easy-table";
 
 type Tests = {
   cfs: Plan<any, any>[];
-  fifo: Plan<any, any>[];
-  sjf: Plan<any, any>[];
-  srtf: Plan<any, any>[];
-  hrrn: Plan<any, any>[];
-  rr: Plan<any, any>[];
+  configurable: GenericPlan<any>[];
 };
 
 type Simulators = {
   cfs: ScheduleProducer;
-  fifo: ScheduleProducer;
-  sjf: ScheduleProducer;
-  srtf: ScheduleProducer;
-  hrrn: ScheduleProducer;
-  rr: ScheduleProducer;
+  configurable: ScheduleProducer;
 };
 
 let tests: Tests = {
   cfs: require("./lib/cfs/fixtures").plans as Plan<any, any>[],
-  fifo: require("./lib/configurable/fixtures").plansFIFO as Plan<any, any>[],
-  sjf: require("./lib/configurable/fixtures").plansSJF as Plan<any, any>[],
-  srtf: require("./lib/configurable/fixtures").plansSRTF as Plan<any, any>[],
-  hrrn: require("./lib/configurable/fixtures").plansHRRN as Plan<any, any>[],
-  rr: require("./lib/configurable/fixtures").plansRR as Plan<any, any>[],
+  configurable: require("./lib/configurable/fixtures").allPlans as GenericPlan<any>[],
 };
 
 let sims: Simulators = {
   cfs: require("./lib/cfs/lib").produceSchedule as ScheduleProducer,
-  fifo: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
-  sjf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
-  srtf: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
-  hrrn: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
-  rr: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
+  configurable: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
 };
 
 let $fs = require("mz/fs");
@@ -58,49 +43,38 @@ let main = () => {
     })
     .action(({ args }) => {
       let n: number = parseInt(args.num + "");
-      console.log(JSON.stringify(tests[args.sched + ""][n]));
+      if (args.sched === "cfs") {
+        console.log(JSON.stringify(tests.cfs[n]));
+      } else {
+        //Inject the scheduler string, then return the JSON
+        let plan = tests.configurable[n];
+        plan["class"] = args.sched;
+        console.log(JSON.stringify(plan));
+      }
     })
     .command("simulate", "Simulate provided schedule")
-    .argument("<sched>", "Scheduler to use", {
-      validator: ["cfs", "fifo", "sjf", "srtf", "hrrn", "rr"],
-    })
+    /*.argument("<sched>", "Scheduler to use", {
+      validator: ["cfs", "fifo", "sjf", "srtf", "rr"],
+    })*/
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
-      datap.then(JSON.parse).then((sched: Plan<any, any>) => {
+      datap.then(JSON.parse).then((presched: any) => {
+        //Inject the class into the object
+        let class_customizable = presched["class"];
+        if (class_customizable !== "cfs") {
+          presched["class"] = schedClassFromString(presched["class"])
+        }
+        return presched as Plan<any, any>;
+      }).then((sched: Plan<any, any>) => {
         let sim: Schedule;
         switch (args.sched) {
           case "cfs":
             sim = sims.cfs(options, sched, logger);
             break;
-          case "fifo":
-            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
-            sched.class = FIFOSchedClass;
-            sim = sims.fifo(options, sched, logger);
-            break;
-          case "sjf":
-            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
-            sched.class = SJFSchedClass;
-            sim = sims.sjf(options, sched, logger);
-            break;
-          case "srtf":
-            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
-            sched.class = SRTFSchedClass;
-            sim = sims.srtf(options, sched, logger);
-            break;
-          case "hrrn":
-            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
-            sched.class = HRRNSchedClass;
-            sim = sims.hrrn(options, sched, logger);
-            break;
-          case "rr":
-            // WARNING: this is a workaround since you cannot dump the whole SchedClass with lambdas...
-            sched.class = RRSchedClass;
-            sim = sims.rr(options, sched, logger);
-            break;
           default:
-            console.log("ERROR: invalid <sched> argument passed the validator check!");
-            return;
+            sim = sims.configurable(options, sched, logger);
+            break;
         }
         console.log(JSON.stringify(sim, null, 2));
       });

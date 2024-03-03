@@ -42,27 +42,27 @@ The available commands are:
        ...
    ```
 
-2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes two arguments: the scheduler to use and the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
+2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes a single argument: the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). The scheduler to be used will be inferred from the data and format of the JSON schedule being passed as input to the command. It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
 
    ```sh
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs
+   bunx aos-sched dump cfs 0 | bunx aos-sched simulate
    ```
 
 3. `export`: This command is used to export simulation data to available formats. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data. It exports the simulation data in the specified artifact format. At the moment there are three artifacts (`blank`, `complete`, `data`) that output latex source code.
 
    ```
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched export complete
+   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
    ```
 
 4. `table`: This command is used to export a LaTeX table summarizing the schedule plan data. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data, or alternatively the raw schedule plan. At the moment there are two artifacts (`blank`, `complete`) that output LaTeX source code, which are observed ONLY if the command is fed with full simulation data (otherwise, `blank` is generated regardless of this option). `blank` creates the table filled with arrival and computation times, while `complete` also adds start, completion, waiting times and turnaround (if the simulation did not run for enough time to let a task exit, it will not have a completion time hence no turnaround can be determined as well, and therefore these fields will remain blank).
 
    ```sh
    # To extract a full, filled-out table
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched table complete
+   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table complete
    ```
    ```sh
    # To extract a blank table
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched table blank
+   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table blank
    # Or alternatively
    bunx aos-sched dump cfs 0 | bunx aos-sched table blank
    ```
@@ -70,7 +70,7 @@ The available commands are:
 # Example
 
 ```
-bunx aos-sched dump cfs 0 | bunx aos-sched simulate cfs | bunx aos-sched export complete
+bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
 ```
 
 will produce a latex file that when compiled and exported to png gives

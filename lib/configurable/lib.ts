@@ -11,6 +11,7 @@ import {
   ScheduledTask,
   NoClass,
   Maybe,
+  GenericPlan
 } from "../types";
 
 type PlannedTask = Task & {
@@ -62,6 +63,21 @@ type SchedClass = {
   // return true if t1 < t2
   order: (t1?: TaskState, t2?: TaskState) => boolean
 };
+
+function schedClassFromString(schedclass: string) {
+  switch (schedclass) {
+    case "fifo":
+      return FIFOSchedClass;
+    case "sjf":
+      return SJFSchedClass;
+    case "srtf":
+      return SRTFSchedClass;
+    case "rr":
+      return RRSchedClass;
+    case "hrrn":
+      return FIFOSchedClass;
+  }
+}
 
 const FIFOSchedClass : SchedClass = {
   type: "FIFO",
@@ -119,6 +135,7 @@ const RRSchedClass : SchedClass = {
   order: (t1?: TaskState, t2?: TaskState) => RRSchedClass.schedmetric(t1) < RRSchedClass.schedmetric(t2)
 };
 
+type GenericSimPlan = GenericPlan<PlannedTask>;
 type SimPlan = Plan<PlannedTask, SchedClass>;
 type TasksState = Plan<TaskState, SchedClass>;
 
@@ -689,4 +706,4 @@ produceSchedule = function (
   return eventLoop(options, plan as SimPlan, logger).simData;
 };
 
-export { eventLoop, produceSchedule, SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass };
+export { eventLoop, produceSchedule, SimPlan, GenericSimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass, HRRNSchedClass, schedClassFromString };
