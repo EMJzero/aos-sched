@@ -216,6 +216,12 @@ let eventLoop = (
       t.vrt + taskstates.class.wgup * (t.lambda / sumlambda()) <
         schedstate.curr.vrt
     ) {
+      if(!_.isUndefined(schedstate.curr)) {
+        t.vrtlwk = {
+          message: `(${t.vrt} < ${schedstate.curr.vrt}) X`,
+          color: "red",
+        };
+      }
       resched(`starting task ${t.name} @${timer.walltime}`);
     }
   };

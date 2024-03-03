@@ -11,6 +11,7 @@ let schedule1: CFSPlan = {
     mingran: 0.75,
     wgup: 1,
   },
+  attributes: {},
 
   tasks: [
     {
@@ -55,6 +56,7 @@ let schedule0: CFSPlan = {
     mingran: 0.75,
     wgup: 1,
   },
+  attributes: {},
 
   tasks: [
     {
@@ -99,6 +101,7 @@ let schedule2: CFSPlan = {
     mingran: 0.75,
     wgup: 1,
   },
+  attributes: {},
 
   tasks: [
     {
@@ -143,6 +146,7 @@ let schedule3: CFSPlan = {
     mingran: 0.75,
     wgup: 1,
   },
+  attributes: {},
 
   tasks: [
     {
@@ -182,6 +186,7 @@ let schedule4: CFSPlan = {
   timer: 0.5,
   runfor: 16,
   class: { type: "CFS", latency: 6.0, mingran: 0.75, wgup: 1 },
+  attributes: {},
   tasks: [
     { index: 0, name: "R", lambda: 4, arrival: 0, events: [8], vrt: 0.0 },
     { index: 1, name: "S", lambda: 1, arrival: 0, events: [8], vrt: 0.0 },
