@@ -96,6 +96,18 @@ const SRTFSchedClass : SchedClass = {
   order: (t1?: TaskState, t2?: TaskState) => SRTFSchedClass.schedmetric(t1) < SRTFSchedClass.schedmetric(t2)
 };
 
+const HRRNSchedClass : SchedClass = {
+  type: "HRRN",
+  metric: "response ratio",
+  // No preemption
+  preempt_wakeup: (t: TaskState, s: State) => false,
+  preempt_tick: (t: TaskState, s: State) => false,
+  // Computes the response ratio for a task
+  schedmetric: (t?: TaskState) => t ? (t.wait == 0 ? 0 : (t.wait + t.computation) / t.wait) : -1,
+  // Highest first
+  order: (t1?: TaskState, t2?: TaskState) => HRRNSchedClass.schedmetric(t1) > HRRNSchedClass.schedmetric(t2)
+};
+
 const RRSchedClass : SchedClass = {
   type: "RR",
   metric: "time quantum",
@@ -122,7 +134,7 @@ type State = {
 };
 
 type TaskStateSnapshot = {
-  rbt: TaskState[];
+  rqueue: TaskState[];
   blocked: TaskState[];
   time: number;
 };
@@ -190,8 +202,11 @@ let eventLoop = (
       e.func(e.arg);
     });
 
-    // Update available time slices of the tasks, if no task is currently running,
-    // run the first task in the runqueue (mark it with "X")
+    // If no task is currently running, run the first task in the runqueue
+    if(_.isUndefined(schedstate.curr))
+      resched(`no task running @${timer.walltime}`);
+
+    // Mark the currently running task (for the diagram)
     schedstate.runqueue = _.map(schedstate.runqueue, (t) => {
       if (!_.isUndefined(schedstate.curr) && schedstate.curr.index == t.index) {
         t.R = "X";
@@ -207,7 +222,7 @@ let eventLoop = (
 
     // Create a snapshot of the current state
     let res: TaskStateSnapshot = {
-      rbt: _.cloneDeep(schedstate.runqueue),
+      rqueue: _.cloneDeep(schedstate.runqueue),
       blocked: _.cloneDeep(schedstate.blocked),
       time: timer.walltime,
     };
@@ -240,9 +255,14 @@ let eventLoop = (
   let _start_task = (t: TaskState) => {
     t.sum = 0;
     t.prev = 0;
-    // DOUBLE CHECK THIS!! Maybe use schedstate.runqueue.push(t)?
     addToRunqueue(t);
-    if (schedstate.curr === undefined || taskstates.class.preempt_wakeup(t, schedstate)) {
+    // If there is some task running, check for preemption, if no task
+    // is running, the next one is scheduled in _task_tick
+    if (schedstate.curr !== undefined && taskstates.class.preempt_wakeup(t, schedstate)) {
+      t.text = {
+        message: `(arr: ${taskstates.class.schedmetric(t)}, cur: ${taskstates.class.schedmetric(schedstate.curr)}) preempt`,
+        color: "red"
+      };
       resched(`starting task ${t.name} @${timer.walltime}`);
     }
   };
@@ -282,11 +302,11 @@ let eventLoop = (
     addToRunqueue(tw);
 
     tw.text = {
-      message: `(woken up: ${taskstates.class.schedmetric(tw)})`,
+      message: `(wu: ${taskstates.class.schedmetric(tw)}`,
       color: "black"
     };
     if (!_.isUndefined(schedstate.curr)) {
-      tw.text.message += `, curr: ${taskstates.class.schedmetric(schedstate.curr)}`;
+      tw.text.message += `, cur: ${taskstates.class.schedmetric(schedstate.curr)}`;
     }
     tw.text.message += ")";
 
@@ -307,7 +327,7 @@ let eventLoop = (
         resched(`Waking up task ${tw.name} @${timer.walltime}`);
       else {
         // No preemption
-        tw.text.message += " continue",
+        tw.text.message += " cont",
         tw.text.color = "blue";
       }
     }
@@ -357,6 +377,7 @@ let eventLoop = (
         if (schedstate.curr.computation - schedstate.curr.sum <= 0) {
           exitCurrentTask();
           resched(`exiting task ${schedstate.curr.name} @${timer.walltime}`);
+          return;
         }
 
         // If the current time slice has expired, update the runqueue and schedule the next task
@@ -368,7 +389,9 @@ let eventLoop = (
           // Run the next task
           resched(`task ${schedstate.curr.name} finished quantum @${timer.walltime}`);
         }
-      } else {
+      }
+      
+      if(schedstate.curr.events[0] <= 0) {
         // Event triggered on the currently running task
         // The current task goes to sleep
         let ts = schedstate.curr;
@@ -381,13 +404,15 @@ let eventLoop = (
           _setTimeout(_wakeup, blocktime, ts, "_wakeup");
           // Remove the two used events (sleep and wakeup)
           ts.events = _.tail(_.tail(ts.events));
+          // Run the next task
+          resched(`putting task to sleep ${ts.name} @${timer.walltime}`);
         } else {
           // If no subsequent wakeup event is present in the plan, the sleep is treated as an exit,
           // and the current task's "exited" field is written
           exitCurrentTask();
+          // Run the next task
+          resched(`exiting task ${ts.name} @${timer.walltime}`);
         }
-        // Run the next task
-        resched(`putting task to sleep ${ts.name} @${timer.walltime}`);
       }
     }
   };
@@ -414,9 +439,10 @@ let eventLoop = (
     }
   };
 
-  // For every task, schedule its start event at the start of the simulation
+  // For every task, schedule its start event at the start of the simulation.
+  // The inline-if is to compensate the initial offset of the timer...
   _.map(taskstates.tasks, (t) => {
-    _setTimeout(_start_task, t.arrival, t, "_start_task");
+    _setTimeout(_start_task, t.arrival === 0 ? t.arrival : t.arrival + taskstates.timer, t, "_start_task");
   });
 
   // Schedule the first occurrence of the tick event (afterwwards it automatically re-schedules itself)
@@ -474,21 +500,21 @@ let serialiseSim = (
     curtime: number
   ): Maybe<SimTaskSlot> => {
     // Get runqueue and blocked list state at time "curtime" from the snapshots
-    let { rbt, blocked } = _.defaultTo(
+    let { rqueue, blocked } = _.defaultTo(
       _.find(stateSnapshots, ({ time }) => {
         return time === curtime;
       }),
-      { rbt: [], blocked: [] }
+      { rqueue: [], blocked: [] }
     );
 
     // Get the running task from the curtime's runqueue
-    let findRunning = () => _.find(rbt, (t) => t.R === "X");
+    let findRunning = () => _.find(rqueue, (t) => t.R === "X");
     let tr = findRunning();
 
     // If a running task exists...
     if (tr) {
       // If the requested task was the running one...
-      if (rbt.length > 0 && tr.index === tindex) {
+      if (rqueue.length > 0 && tr.index === tindex) {
         return {
           event: "RAN",
           tstart: curtime,
@@ -496,7 +522,6 @@ let serialiseSim = (
           index: tr.index,
           sum: tr.sum,
           wait: 0,
-          //q: tr.q,
           p: tr.prev,
           aboveSlot: tr.text,
           belowSlot: "",
@@ -506,7 +531,7 @@ let serialiseSim = (
       } else {
         let tt: TaskState | undefined;
         // If the requested task is in the runqueue...
-        if (!_.isUndefined((tt = _.find(rbt, (t) => t.index === tindex)))) {
+        if (!_.isUndefined((tt = _.find(rqueue, (t) => t.index === tindex)))) {
           return {
             event: "RUNNABLE",
             tstart: curtime,
@@ -517,7 +542,6 @@ let serialiseSim = (
             aboveSlot: tt.text,
             belowSlot: "",
             inSlot: "",
-            //q: 0,
             p: 0,
             schedmetric: simPlan.class.schedmetric(tt)
           };
@@ -536,7 +560,6 @@ let serialiseSim = (
                 aboveSlot: tt.text,
                 belowSlot: "",
                 inSlot: "",
-                //q: 0,
                 p: 0,
                 schedmetric: simPlan.class.schedmetric(tt)
               };
@@ -551,12 +574,46 @@ let serialiseSim = (
                 aboveSlot: tt.text,
                 belowSlot: "",
                 inSlot: "",
-                //q: 0,
                 p: 0,
                 schedmetric: simPlan.class.schedmetric(tt)
               };
             }
           }
+        }
+      }
+    } else {
+      // Case of not currently running task...
+      let tt: TaskState | undefined;
+      if (!_.isUndefined((tt = _.find(blocked, (t) => t.index === tindex)))) {
+        // If the requested task has NOT yet exited...
+        if (_.isUndefined(tt.exited) || curtime < tt.exited) {
+          return {
+            event: "BLOCKED",
+            tstart: curtime,
+            tend: curtime + simPlan.timer,
+            index: tt.index,
+            sum: tt.sum,
+            wait: 0,
+            aboveSlot: tt.text,
+            belowSlot: "",
+            inSlot: "",
+            p: 0,
+            schedmetric: simPlan.class.schedmetric(tt)
+          };
+        } else {
+          return {
+            event: "EXITED",
+            tstart: curtime,
+            tend: curtime + simPlan.timer,
+            index: tt.index,
+            sum: tt.sum,
+            wait: 0,
+            aboveSlot: tt.text,
+            belowSlot: "",
+            inSlot: "",
+            p: 0,
+            schedmetric: simPlan.class.schedmetric(tt)
+          };
         }
       }
     }
@@ -582,10 +639,13 @@ let serialiseSim = (
             if (t) {
               nextState = getTaskSlot(t.index, r2(time + simPlan.timer));
               let tslot: TaskSlot = t as TaskSlot;
+              // Task normally running
               if (nextState) {
                 // Write at time "time" the text decorating the task 
                 tslot.belowSlot = nextState.schedmetric + "";
-                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${nextState.sum - t.p}/${r2(simPlan.attributes["quantum"])}` : `${nextState.sum - t.p}}`) : "";
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${nextState.sum - t.p}/${r2(simPlan.attributes["quantum"])}` : `${nextState.sum - t.p}`) : "";
+              } else { // Last tick for the task, no nextState, it ends!
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${t.sum + simPlan.timer - t.p}/${r2(simPlan.attributes["quantum"])}` : `${t.sum + simPlan.timer - t.p}`) : "";
               }
               return tslot;
             }
@@ -609,7 +669,7 @@ let serialiseSim = (
   plan.tasks = _.map(simPlan.tasks, (t) => {
     return {
       ...t,
-      description: [`length = ${t.computation}`],
+      description: [`$cmp=$${t.computation}`, ''],
     };
   });
 
@@ -629,4 +689,4 @@ produceSchedule = function (
   return eventLoop(options, plan as SimPlan, logger).simData;
 };
 
-export { eventLoop, produceSchedule, SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass };
+export { eventLoop, produceSchedule, SimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, RRSchedClass };
