@@ -10,6 +10,16 @@ This is a small CLI tool written for the Advanced Operating Systems course to cr
 - RR (Round-Robin)
 - HRRN (Highest Response Ratio Next)
 
+# Installation
+To install the package and use it properly, you need to link it as a Bun package, so that Bun knows where the package is and of its existence.
+
+To install, run the following:
+```
+cd <path-to-repo>
+bun link && bun link aos-sched
+```
+
+# Usage
 The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.

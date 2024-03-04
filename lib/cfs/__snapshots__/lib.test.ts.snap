@@ -7,6 +7,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -16,12 +17,12 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -30,12 +31,12 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -44,7 +45,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
       },
@@ -56,6 +56,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -65,7 +66,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 100.5,
         "vrtlwk": {
@@ -75,6 +75,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -83,7 +84,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -93,6 +93,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -101,7 +102,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -117,6 +117,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -126,7 +127,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -136,6 +136,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -144,7 +145,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -154,6 +154,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -162,7 +163,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -178,6 +178,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -187,7 +188,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -197,6 +197,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -205,7 +206,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -215,6 +215,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -223,7 +224,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -239,6 +239,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -248,7 +249,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -258,6 +258,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -266,7 +267,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -276,6 +276,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -285,7 +286,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -301,6 +301,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -310,7 +311,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101,
         "vrtlwk": {
@@ -320,6 +320,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -328,7 +329,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -338,6 +338,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -347,7 +348,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -363,6 +363,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -372,7 +373,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101.5,
         "vrtlwk": {
@@ -382,6 +382,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -390,7 +391,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -400,6 +400,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -409,7 +410,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -425,6 +425,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -434,7 +435,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102,
         "vrtlwk": {
@@ -444,6 +444,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -452,7 +453,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -462,6 +462,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -471,7 +472,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -487,6 +487,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -496,7 +497,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -506,6 +506,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -515,7 +516,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -525,6 +525,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -534,7 +535,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -550,6 +550,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -559,7 +560,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -569,6 +569,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -578,7 +579,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -588,6 +588,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -597,7 +598,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -613,6 +613,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -622,7 +623,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 102,
         "vrtlwk": {
@@ -632,6 +632,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -641,7 +642,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -651,6 +651,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -660,7 +661,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -676,6 +676,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -685,7 +686,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -695,6 +695,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -704,7 +705,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -714,6 +714,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -723,7 +724,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -739,6 +739,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -748,7 +749,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -758,6 +758,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -767,7 +768,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -777,6 +777,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -786,7 +787,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -802,6 +802,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -811,7 +812,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -821,6 +821,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -830,7 +831,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -840,6 +840,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -849,7 +850,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -865,6 +865,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -874,7 +875,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -884,6 +884,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -893,7 +894,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -903,6 +903,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -912,7 +913,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -928,6 +928,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -937,7 +938,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -947,6 +947,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -956,7 +957,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -966,6 +966,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -975,7 +976,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -991,6 +991,7 @@ exports[`Schedule 0 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1000,7 +1001,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -1010,6 +1010,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1019,7 +1020,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -1029,6 +1029,7 @@ exports[`Schedule 0 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -1038,7 +1039,6 @@ exports[`Schedule 0 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -1059,6 +1059,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1068,12 +1069,12 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1082,12 +1083,12 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1096,7 +1097,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
       },
@@ -1108,6 +1108,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -1117,7 +1118,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 100.5,
         "vrtlwk": {
@@ -1127,6 +1127,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1135,7 +1136,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -1145,6 +1145,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1153,7 +1154,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1169,6 +1169,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -1178,7 +1179,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -1188,6 +1188,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1196,7 +1197,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -1206,6 +1206,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1214,7 +1215,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1230,6 +1230,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -1239,7 +1240,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -1249,6 +1249,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1257,7 +1258,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -1267,6 +1267,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1275,7 +1276,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1291,6 +1291,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1300,7 +1301,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -1310,6 +1310,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1318,7 +1319,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1328,6 +1328,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1337,7 +1338,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1353,6 +1353,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -1362,7 +1363,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0.5,
         "vrt": 100.833,
         "vrtlwk": {
@@ -1372,6 +1372,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1380,7 +1381,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1390,6 +1390,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1399,7 +1400,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1415,6 +1415,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -1424,7 +1425,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101.166,
         "vrtlwk": {
@@ -1434,6 +1434,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1442,7 +1443,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1452,6 +1452,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1461,7 +1462,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1477,6 +1477,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -1486,7 +1487,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 101.499,
         "vrtlwk": {
@@ -1496,6 +1496,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1504,7 +1505,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1514,6 +1514,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1523,7 +1524,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1539,6 +1539,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1548,7 +1549,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 101.832,
         "vrtlwk": {
@@ -1558,6 +1558,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1566,7 +1567,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1576,6 +1576,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1585,7 +1586,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1601,6 +1601,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -1610,7 +1611,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2.5,
         "vrt": 102.165,
         "vrtlwk": {
@@ -1620,6 +1620,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1628,7 +1629,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1638,6 +1638,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1647,7 +1648,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1663,6 +1663,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -1672,7 +1673,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -1682,6 +1682,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1691,7 +1692,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1701,6 +1701,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1710,7 +1711,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -1726,6 +1726,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -1735,7 +1736,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0.5,
         "vrt": 102,
         "vrtlwk": {
@@ -1745,6 +1745,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1754,7 +1755,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1764,6 +1764,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1773,7 +1774,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -1789,6 +1789,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -1798,7 +1799,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -1808,6 +1808,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1817,7 +1818,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -1827,6 +1827,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -1836,7 +1837,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 103,
         "vrtlwk": {
@@ -1852,6 +1852,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -1861,7 +1862,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -1871,6 +1871,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1880,7 +1881,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -1890,6 +1890,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -1899,7 +1900,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 103,
         "vrtlwk": {
@@ -1915,6 +1915,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1924,7 +1925,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -1934,6 +1934,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -1943,7 +1944,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -1953,6 +1953,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -1962,7 +1963,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 103,
         "vrtlwk": {
@@ -1978,6 +1978,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -1987,7 +1988,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -1997,6 +1997,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -2006,7 +2007,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -2016,6 +2016,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -2025,7 +2026,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 103,
         "vrtlwk": {
@@ -2041,6 +2041,7 @@ exports[`Schedule 1 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -2050,7 +2051,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 102.498,
         "vrtlwk": {
@@ -2060,6 +2060,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -2069,7 +2070,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 103,
         "vrtlwk": {
@@ -2079,6 +2079,7 @@ exports[`Schedule 1 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -2088,7 +2089,6 @@ exports[`Schedule 1 works as expected 1`] = `
         "origvrt": 100,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -2109,6 +2109,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           5,
@@ -2120,12 +2121,12 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           14,
         ],
@@ -2134,12 +2135,12 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2150,7 +2151,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
       },
@@ -2162,6 +2162,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           5,
@@ -2173,7 +2174,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 100.5,
         "vrtlwk": {
@@ -2183,6 +2183,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           14,
         ],
@@ -2191,7 +2192,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -2201,6 +2201,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2211,7 +2212,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2226,6 +2226,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2235,7 +2236,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2247,6 +2247,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           14,
         ],
@@ -2256,7 +2257,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -2266,6 +2266,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2276,7 +2277,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2291,6 +2291,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2300,7 +2301,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2312,6 +2312,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           13.5,
         ],
@@ -2321,7 +2322,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101,
         "vrtlwk": {
@@ -2331,6 +2331,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2341,7 +2342,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2356,6 +2356,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2365,7 +2366,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2377,6 +2377,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           13,
         ],
@@ -2386,7 +2387,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101.5,
         "vrtlwk": {
@@ -2396,6 +2396,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2406,7 +2407,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2421,6 +2421,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2430,7 +2431,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2442,6 +2442,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           12.5,
         ],
@@ -2451,7 +2452,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102,
         "vrtlwk": {
@@ -2461,6 +2461,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2471,7 +2472,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2486,6 +2486,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2495,7 +2496,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2507,6 +2507,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           12,
         ],
@@ -2516,7 +2517,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -2526,6 +2526,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2536,7 +2537,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2551,6 +2551,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2560,7 +2561,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2572,6 +2572,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           11.5,
         ],
@@ -2581,7 +2582,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2.5,
         "vrt": 103,
         "vrtlwk": {
@@ -2591,6 +2591,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2601,7 +2602,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2616,6 +2616,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2625,7 +2626,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2637,6 +2637,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -2648,7 +2649,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -2658,6 +2658,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2667,7 +2668,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -2682,6 +2682,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2691,7 +2692,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2703,6 +2703,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2.5,
           1,
@@ -2714,7 +2715,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -2724,6 +2724,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2733,7 +2734,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -2748,6 +2748,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2757,7 +2758,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2769,6 +2769,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           1,
@@ -2780,7 +2781,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 102,
         "vrtlwk": {
@@ -2790,6 +2790,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2799,7 +2800,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -2814,6 +2814,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2823,7 +2824,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2835,6 +2835,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           1,
@@ -2846,7 +2847,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -2856,6 +2856,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2865,7 +2866,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -2881,6 +2881,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -2890,7 +2891,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -2900,6 +2900,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -2911,7 +2912,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -2921,6 +2921,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2930,7 +2931,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -2946,6 +2946,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -2955,7 +2956,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -2965,6 +2965,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -2976,7 +2977,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -2986,6 +2986,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -2995,7 +2996,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3011,6 +3011,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -3020,7 +3021,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -3030,6 +3030,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -3041,7 +3042,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -3051,6 +3051,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3060,7 +3061,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3076,6 +3076,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -3085,7 +3086,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -3095,6 +3095,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -3106,7 +3107,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -3116,6 +3116,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3125,7 +3126,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3141,6 +3141,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -3152,7 +3153,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -3162,6 +3162,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -3171,7 +3172,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -3181,6 +3181,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3190,7 +3191,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3206,6 +3206,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           1,
@@ -3217,7 +3218,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3227,6 +3227,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -3236,7 +3237,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -3246,6 +3246,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3255,7 +3256,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3270,6 +3270,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3279,7 +3280,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3291,6 +3291,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -3300,7 +3301,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -3310,6 +3310,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3319,7 +3320,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3334,6 +3334,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3343,7 +3344,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3355,6 +3355,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -3364,7 +3365,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 3.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3374,6 +3374,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3383,7 +3384,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3399,6 +3399,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -3408,7 +3409,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -3418,6 +3418,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3427,7 +3428,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3437,6 +3437,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3446,7 +3447,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3462,6 +3462,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -3471,7 +3472,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 4.5,
         "vrt": 104.5,
         "vrtlwk": {
@@ -3481,6 +3481,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3490,7 +3491,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3500,6 +3500,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3509,7 +3510,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3525,6 +3525,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           11,
         ],
@@ -3534,7 +3535,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -3544,6 +3544,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3553,7 +3554,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3563,6 +3563,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -3572,7 +3573,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 5,
         "vrt": 105,
         "vrtlwk": {
@@ -3588,6 +3588,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           10.5,
         ],
@@ -3597,7 +3598,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 3.5,
         "vrt": 104,
         "vrtlwk": {
@@ -3607,6 +3607,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3616,7 +3617,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3626,6 +3626,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -3635,7 +3636,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 5,
         "vrt": 105,
         "vrtlwk": {
@@ -3651,6 +3651,7 @@ exports[`Schedule 2 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3660,7 +3661,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -3670,6 +3670,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           10,
         ],
@@ -3679,7 +3680,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -3689,6 +3689,7 @@ exports[`Schedule 2 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -3698,7 +3699,6 @@ exports[`Schedule 2 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 2,
-        "start": 0,
         "sum": 5,
         "vrt": 105,
         "vrtlwk": {
@@ -3719,6 +3719,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           2,
@@ -3732,12 +3733,12 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           2,
@@ -3750,12 +3751,12 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -3768,7 +3769,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
       },
@@ -3780,6 +3780,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           2,
@@ -3793,7 +3794,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 0.5,
         "vrt": 100.5,
         "vrtlwk": {
@@ -3803,6 +3803,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           2,
@@ -3815,7 +3816,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_2$",
         "origvrt": 100.5,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -3825,6 +3825,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -3837,7 +3838,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 2,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -3852,6 +3852,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -3863,7 +3864,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -3875,6 +3875,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           2,
@@ -3888,7 +3889,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 100.5,
         "vrtlwk": {
@@ -3898,6 +3898,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -3910,7 +3911,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -3925,6 +3925,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -3936,7 +3937,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -3948,6 +3948,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           2,
@@ -3961,7 +3962,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101,
         "vrtlwk": {
@@ -3971,6 +3971,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -3983,7 +3984,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -3998,6 +3998,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4009,7 +4010,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4021,6 +4021,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           2,
@@ -4034,7 +4035,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101.5,
         "vrtlwk": {
@@ -4044,6 +4044,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -4056,7 +4057,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -4071,6 +4071,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4082,7 +4083,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4094,6 +4094,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           2,
@@ -4107,7 +4108,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102,
         "vrtlwk": {
@@ -4117,6 +4117,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -4129,7 +4130,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "name": "$t_3$",
         "origvrt": 101,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -4144,6 +4144,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4155,7 +4156,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4167,6 +4167,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           1,
@@ -4180,7 +4181,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0,
         "vrt": 101,
         "vrtlwk": {
@@ -4190,6 +4190,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4201,7 +4202,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4216,6 +4216,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4227,7 +4228,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4239,6 +4239,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2.5,
           1,
@@ -4252,7 +4253,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 0.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -4262,6 +4262,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4273,7 +4274,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4288,6 +4288,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4299,7 +4300,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4311,6 +4311,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           1,
@@ -4324,7 +4325,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 102,
         "vrtlwk": {
@@ -4334,6 +4334,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4345,7 +4346,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4360,6 +4360,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4371,7 +4372,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4383,6 +4383,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           1,
@@ -4396,7 +4397,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4406,6 +4406,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4417,7 +4418,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4433,6 +4433,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
           4,
@@ -4444,7 +4445,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 1,
         "vrt": 101,
         "vrtlwk": {
@@ -4454,6 +4454,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4465,7 +4466,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4475,6 +4475,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4488,7 +4489,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4504,6 +4504,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2.5,
           4,
@@ -4515,7 +4516,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 1.5,
         "vrt": 101.5,
         "vrtlwk": {
@@ -4525,6 +4525,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4536,7 +4537,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4546,6 +4546,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4559,7 +4560,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4575,6 +4575,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           4,
@@ -4586,7 +4587,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102,
         "vrtlwk": {
@@ -4596,6 +4596,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4607,7 +4608,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4617,6 +4617,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4630,7 +4631,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4646,6 +4646,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           4,
@@ -4657,7 +4658,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4667,6 +4667,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4678,7 +4679,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4688,6 +4688,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4701,7 +4702,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4717,6 +4717,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -4728,7 +4729,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 102.5,
         "vrtlwk": {
@@ -4738,6 +4738,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4751,7 +4752,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4761,6 +4761,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -4772,7 +4773,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -4788,6 +4788,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           3,
@@ -4799,7 +4800,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 2.5,
         "vrt": 103,
         "vrtlwk": {
@@ -4809,6 +4809,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4822,7 +4823,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4832,6 +4832,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -4843,7 +4844,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -4859,6 +4859,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           3,
@@ -4870,7 +4871,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103.5,
         "vrtlwk": {
@@ -4880,6 +4880,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4893,7 +4894,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4903,6 +4903,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -4914,7 +4915,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -4930,6 +4930,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           3,
@@ -4941,7 +4942,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 3.5,
         "vrt": 104,
         "vrtlwk": {
@@ -4951,6 +4951,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -4964,7 +4965,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 0,
         "q": 2,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -4974,6 +4974,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -4985,7 +4986,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 2,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -5000,6 +5000,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5009,7 +5010,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5021,6 +5021,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           1,
@@ -5034,7 +5035,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 103,
         "vrtlwk": {
@@ -5044,6 +5044,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -5055,7 +5056,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -5070,6 +5070,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5079,7 +5080,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5091,6 +5091,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           1,
@@ -5104,7 +5105,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 2.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -5114,6 +5114,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -5125,7 +5126,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -5140,6 +5140,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -5151,7 +5152,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -5161,6 +5161,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5170,7 +5171,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5182,6 +5182,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           4,
@@ -5193,7 +5194,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 3,
         "vrt": 103,
         "vrtlwk": {
@@ -5208,6 +5208,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -5219,7 +5220,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -5229,6 +5229,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5238,7 +5239,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5250,6 +5250,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           4,
@@ -5261,7 +5262,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 3.5,
         "vrt": 103.5,
         "vrtlwk": {
@@ -5276,6 +5276,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5285,7 +5286,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5295,6 +5295,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5304,7 +5305,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5316,6 +5316,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
           3,
@@ -5327,7 +5328,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 3,
         "vrt": 104,
         "vrtlwk": {
@@ -5342,6 +5342,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5351,7 +5352,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5361,6 +5361,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5370,7 +5371,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 2,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5382,6 +5382,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
           3,
@@ -5393,7 +5394,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 3.5,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5408,6 +5408,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5417,7 +5418,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5429,6 +5429,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5438,7 +5439,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5448,6 +5448,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
           3,
@@ -5459,7 +5460,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 105,
         "vrtlwk": {
@@ -5474,6 +5474,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5483,7 +5484,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5495,6 +5495,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5504,7 +5505,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 2,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5514,6 +5514,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
           3,
@@ -5525,7 +5526,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 4.5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5540,6 +5540,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5549,7 +5550,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5559,6 +5559,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5568,7 +5569,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5580,6 +5580,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5589,7 +5590,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5604,6 +5604,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5613,7 +5614,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5623,6 +5623,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5632,7 +5633,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5644,6 +5644,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
         ],
@@ -5653,7 +5654,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 4.5,
         "vrt": 105,
         "vrtlwk": {
@@ -5668,6 +5668,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -5678,7 +5679,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5688,6 +5688,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5697,7 +5698,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5707,6 +5707,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5716,7 +5717,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5732,6 +5732,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -5742,7 +5743,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5752,6 +5752,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5761,7 +5762,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5771,6 +5771,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5780,7 +5781,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 3,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5796,6 +5796,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -5806,7 +5807,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5816,6 +5816,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5825,7 +5826,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5837,6 +5837,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -5846,7 +5847,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 4,
         "vrt": 104,
         "vrtlwk": {
@@ -5861,6 +5861,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -5871,7 +5872,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5881,6 +5881,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5890,7 +5891,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5902,6 +5902,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -5911,7 +5912,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 4.5,
         "vrt": 104.5,
         "vrtlwk": {
@@ -5926,6 +5926,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -5936,7 +5937,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -5948,6 +5948,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -5957,7 +5958,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 105,
         "vrtlwk": {
@@ -5967,6 +5967,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -5976,7 +5977,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -5991,6 +5991,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6001,7 +6002,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6013,6 +6013,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -6022,7 +6023,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 5.5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6032,6 +6032,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -6041,7 +6042,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -6056,6 +6056,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6066,7 +6067,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6078,6 +6078,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -6087,7 +6088,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 106,
         "vrtlwk": {
@@ -6097,6 +6097,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -6106,7 +6107,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -6121,6 +6121,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6131,7 +6132,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6143,6 +6143,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -6152,7 +6153,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 6.5,
         "vrt": 106.5,
         "vrtlwk": {
@@ -6162,6 +6162,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -6171,7 +6172,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 3,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -6186,6 +6186,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6196,7 +6197,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6208,6 +6208,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -6217,7 +6218,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 5,
         "vrt": 106,
         "vrtlwk": {
@@ -6227,6 +6227,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -6236,7 +6237,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 7,
         "vrt": 107,
         "vrtlwk": {
@@ -6251,6 +6251,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6261,7 +6262,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6273,6 +6273,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
         ],
@@ -6282,7 +6283,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 5.5,
         "vrt": 106.5,
         "vrtlwk": {
@@ -6292,6 +6292,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -6301,7 +6302,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 7,
         "vrt": 107,
         "vrtlwk": {
@@ -6316,6 +6316,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6326,7 +6327,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6336,6 +6336,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6346,7 +6347,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6358,6 +6358,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -6367,7 +6368,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 7,
         "vrt": 107,
         "vrtlwk": {
@@ -6382,6 +6382,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6392,7 +6393,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6402,6 +6402,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6412,7 +6413,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6424,6 +6424,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -6433,7 +6434,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 7.5,
         "vrt": 107.5,
         "vrtlwk": {
@@ -6448,6 +6448,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6458,7 +6459,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6468,6 +6468,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6478,7 +6479,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6490,6 +6490,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -6499,7 +6500,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 8,
         "vrt": 108,
         "vrtlwk": {
@@ -6514,6 +6514,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6524,7 +6525,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6534,6 +6534,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6544,7 +6545,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6556,6 +6556,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3.5,
         ],
@@ -6565,7 +6566,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 8.5,
         "vrt": 108.5,
         "vrtlwk": {
@@ -6580,6 +6580,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6590,7 +6591,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6600,6 +6600,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6610,7 +6611,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6622,6 +6622,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
         ],
@@ -6631,7 +6632,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 9,
         "vrt": 109,
         "vrtlwk": {
@@ -6646,6 +6646,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6656,7 +6657,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6666,6 +6666,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6676,7 +6677,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6688,6 +6688,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2.5,
         ],
@@ -6697,7 +6698,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 9.5,
         "vrt": 109.5,
         "vrtlwk": {
@@ -6712,6 +6712,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6722,7 +6723,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6732,6 +6732,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6742,7 +6743,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6754,6 +6754,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
         ],
@@ -6763,7 +6764,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 10,
         "vrt": 110,
         "vrtlwk": {
@@ -6778,6 +6778,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6788,7 +6789,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6798,6 +6798,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6808,7 +6809,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6820,6 +6820,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
         ],
@@ -6829,7 +6830,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 10.5,
         "vrt": 110.5,
         "vrtlwk": {
@@ -6844,6 +6844,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6854,7 +6855,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6864,6 +6864,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6874,7 +6875,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6886,6 +6886,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -6895,7 +6896,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 11,
         "vrt": 111,
         "vrtlwk": {
@@ -6910,6 +6910,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6920,7 +6921,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -6930,6 +6930,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6940,7 +6941,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -6952,6 +6952,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
         ],
@@ -6961,7 +6962,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 11.5,
         "vrt": 111.5,
         "vrtlwk": {
@@ -6976,6 +6976,7 @@ exports[`Schedule 3 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -6986,7 +6987,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100,
         "prev": 7,
         "q": 6,
-        "start": 0,
         "sum": 12,
         "vrt": 112,
         "vrtlwk": {
@@ -6996,6 +6996,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -7006,7 +7007,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 101,
         "prev": 5,
         "q": 3,
-        "start": 0,
         "sum": 6,
         "vrt": 107,
         "vrtlwk": {
@@ -7016,6 +7016,7 @@ exports[`Schedule 3 works as expected 1`] = `
       },
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -7026,7 +7027,6 @@ exports[`Schedule 3 works as expected 1`] = `
         "origvrt": 100.5,
         "prev": 4,
         "q": 6,
-        "start": 0,
         "sum": 5,
         "vrt": 105.5,
         "vrtlwk": {
@@ -7048,6 +7048,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7057,12 +7058,12 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7071,12 +7072,12 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7085,7 +7086,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
       },
@@ -7097,6 +7097,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -7106,7 +7107,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 0.5,
         "vrt": 0.125,
         "vrtlwk": {
@@ -7116,6 +7116,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7124,7 +7125,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7134,6 +7134,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7142,7 +7143,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7158,6 +7158,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7167,7 +7168,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 1,
         "vrt": 0.25,
         "vrtlwk": {
@@ -7177,6 +7177,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7185,7 +7186,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7195,6 +7195,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7203,7 +7204,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7219,6 +7219,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -7228,7 +7229,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 1.5,
         "vrt": 0.375,
         "vrtlwk": {
@@ -7238,6 +7238,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7246,7 +7247,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7256,6 +7256,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7264,7 +7265,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7280,6 +7280,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -7289,7 +7290,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 2,
         "vrt": 0.5,
         "vrtlwk": {
@@ -7299,6 +7299,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7307,7 +7308,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7317,6 +7317,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7325,7 +7326,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7341,6 +7341,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -7350,7 +7351,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 2.5,
         "vrt": 0.625,
         "vrtlwk": {
@@ -7360,6 +7360,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7368,7 +7369,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7378,6 +7378,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7386,7 +7387,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7402,6 +7402,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -7411,7 +7412,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 3,
         "vrt": 0.75,
         "vrtlwk": {
@@ -7421,6 +7421,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7429,7 +7430,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7439,6 +7439,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7447,7 +7448,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7463,6 +7463,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -7472,7 +7473,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 3.5,
         "vrt": 0.875,
         "vrtlwk": {
@@ -7482,6 +7482,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7490,7 +7491,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "S",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7500,6 +7500,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7508,7 +7509,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7524,6 +7524,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7533,7 +7534,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7543,6 +7543,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7551,7 +7552,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7561,6 +7561,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -7570,7 +7571,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 4,
         "vrt": 1,
         "vrtlwk": {
@@ -7586,6 +7586,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -7595,7 +7596,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0.5,
         "vrt": 0.5,
         "vrtlwk": {
@@ -7605,6 +7605,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7613,7 +7614,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "name": "T",
         "origvrt": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7623,6 +7623,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -7632,7 +7633,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 4,
         "vrt": 1,
         "vrtlwk": {
@@ -7648,6 +7648,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           8,
         ],
@@ -7657,7 +7658,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0,
         "vrt": 0,
         "vrtlwk": {
@@ -7667,6 +7667,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -7676,7 +7677,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 4,
         "vrt": 1,
         "vrtlwk": {
@@ -7686,6 +7686,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7695,7 +7696,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7711,6 +7711,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7.5,
         ],
@@ -7720,7 +7721,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 0.5,
         "vrt": 0.5,
         "vrtlwk": {
@@ -7730,6 +7730,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -7739,7 +7740,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 4,
-        "start": 0,
         "sum": 4,
         "vrt": 1,
         "vrtlwk": {
@@ -7749,6 +7749,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7758,7 +7759,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7774,6 +7774,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -7783,7 +7784,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 4,
         "vrt": 1,
         "vrtlwk": {
@@ -7793,6 +7793,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7802,7 +7803,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7812,6 +7812,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7821,7 +7822,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7837,6 +7837,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3.5,
         ],
@@ -7846,7 +7847,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 4.5,
         "vrt": 1.125,
         "vrtlwk": {
@@ -7856,6 +7856,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7865,7 +7866,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7875,6 +7875,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7884,7 +7885,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7900,6 +7900,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           3,
         ],
@@ -7909,7 +7910,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 5,
         "vrt": 1.25,
         "vrtlwk": {
@@ -7919,6 +7919,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7928,7 +7929,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7938,6 +7938,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7947,7 +7948,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -7963,6 +7963,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2.5,
         ],
@@ -7972,7 +7973,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 5.5,
         "vrt": 1.375,
         "vrtlwk": {
@@ -7982,6 +7982,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -7991,7 +7992,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8001,6 +8001,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8010,7 +8011,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8026,6 +8026,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           2,
         ],
@@ -8035,7 +8036,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 6,
         "vrt": 1.5,
         "vrtlwk": {
@@ -8045,6 +8045,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8054,7 +8055,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8064,6 +8064,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8073,7 +8074,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8089,6 +8089,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1.5,
         ],
@@ -8098,7 +8099,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 6.5,
         "vrt": 1.625,
         "vrtlwk": {
@@ -8108,6 +8108,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8117,7 +8118,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8127,6 +8127,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8136,7 +8137,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8152,6 +8152,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           1,
         ],
@@ -8161,7 +8162,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 7,
         "vrt": 1.75,
         "vrtlwk": {
@@ -8171,6 +8171,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8180,7 +8181,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8190,6 +8190,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8199,7 +8200,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8215,6 +8215,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0.5,
         ],
@@ -8224,7 +8225,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 7.5,
         "vrt": 1.875,
         "vrtlwk": {
@@ -8234,6 +8234,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8243,7 +8244,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8253,6 +8253,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8262,7 +8263,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 1,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8277,6 +8277,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8287,7 +8288,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8299,6 +8299,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8308,7 +8309,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8318,6 +8318,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8327,7 +8328,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8342,6 +8342,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8352,7 +8353,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8364,6 +8364,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -8373,7 +8374,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 1.5,
         "vrtlwk": {
@@ -8383,6 +8383,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8392,7 +8393,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8407,6 +8407,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8417,7 +8418,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8429,6 +8429,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -8438,7 +8439,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 2,
         "vrtlwk": {
@@ -8448,6 +8448,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8457,7 +8458,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8472,6 +8472,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8482,7 +8483,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8494,6 +8494,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -8503,7 +8504,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 2.5,
         "vrt": 2.5,
         "vrtlwk": {
@@ -8513,6 +8513,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8522,7 +8523,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8537,6 +8537,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8547,7 +8548,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8559,6 +8559,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -8568,7 +8569,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 3,
         "vrtlwk": {
@@ -8578,6 +8578,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8587,7 +8588,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8602,6 +8602,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8612,7 +8613,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8624,6 +8624,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -8633,7 +8634,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3.5,
         "vrt": 3.5,
         "vrtlwk": {
@@ -8643,6 +8643,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8652,7 +8653,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 0,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8667,6 +8667,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8677,7 +8678,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8689,6 +8689,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           7,
         ],
@@ -8698,7 +8699,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 1,
         "vrt": 1,
         "vrtlwk": {
@@ -8708,6 +8708,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -8717,7 +8718,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -8732,6 +8732,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8742,7 +8743,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8754,6 +8754,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6.5,
         ],
@@ -8763,7 +8764,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 1.5,
         "vrt": 1.5,
         "vrtlwk": {
@@ -8773,6 +8773,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -8782,7 +8783,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -8797,6 +8797,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8807,7 +8808,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8819,6 +8819,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           6,
         ],
@@ -8828,7 +8829,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 2,
         "vrt": 2,
         "vrtlwk": {
@@ -8838,6 +8838,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -8847,7 +8848,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -8862,6 +8862,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8872,7 +8873,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8884,6 +8884,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5.5,
         ],
@@ -8893,7 +8894,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 2.5,
         "vrt": 2.5,
         "vrtlwk": {
@@ -8903,6 +8903,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -8912,7 +8913,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -8927,6 +8927,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -8937,7 +8938,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -8949,6 +8949,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           5,
         ],
@@ -8958,7 +8959,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3,
         "vrt": 3,
         "vrtlwk": {
@@ -8968,6 +8968,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -8977,7 +8978,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -8992,6 +8992,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -9002,7 +9003,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -9014,6 +9014,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4.5,
         ],
@@ -9023,7 +9024,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 3.5,
         "vrt": 3.5,
         "vrtlwk": {
@@ -9033,6 +9033,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -9042,7 +9043,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -9057,6 +9057,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "blocked": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           0,
         ],
@@ -9067,7 +9068,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 4,
-        "start": 0,
         "sum": 8,
         "vrt": 2,
         "vrtlwk": {
@@ -9079,6 +9079,7 @@ exports[`Schedule 4 works as expected 1`] = `
     "rbt": [
       {
         "R": "X",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -9088,7 +9089,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 4,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
@@ -9098,6 +9098,7 @@ exports[`Schedule 4 works as expected 1`] = `
       },
       {
         "R": "",
+        "arrival": 0,
         "events": [
           4,
         ],
@@ -9107,7 +9108,6 @@ exports[`Schedule 4 works as expected 1`] = `
         "origvrt": 0,
         "prev": 1,
         "q": 3,
-        "start": 0,
         "sum": 4,
         "vrt": 4,
         "vrtlwk": {
