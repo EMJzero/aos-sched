@@ -68,13 +68,11 @@ let main = () => {
         return presched as Plan<any, any>;
       }).then((sched: Plan<any, any>) => {
         let sim: Schedule;
-        switch (args.sched) {
-          case "cfs":
-            sim = sims.cfs(options, sched, logger);
-            break;
-          default:
-            sim = sims.configurable(options, sched, logger);
-            break;
+        let is_configurable = sched.class instanceof string;
+        if (is_configurable) {
+          sim = sims.configurable(options, sched, logger);
+        } else {
+          sim = sims.cfs(options, sched, logger);
         }
         console.log(JSON.stringify(sim, null, 2));
       });
