@@ -207,7 +207,9 @@ let eventLoop = (
     // WARNING: this should be done with "addToRbt" after the next "if" that sets the vrt,
     // otherwise an eventual "resched" with more than 1 task in the rbtree places in execution
     // the wrong task due to the push that simply appends!
-    schedstate.rbt.push(t);
+    //schedstate.rbt.push(t);
+    // This should fix it!
+    addToRbt(t);
     if (_.isUndefined(t.vrt)) {
       t.vrt = _.defaultTo(schedstate.vmin, 0) + schedslice(t) / t.lambda;
     }
@@ -403,7 +405,7 @@ let eventLoop = (
 
   // For every task, schedule its start event at the start of the simulation
   _.map(taskstates.tasks, (t) => {
-    _setTimeout(_start_task, t.arrival, t, "_start_task");
+    _setTimeout(_start_task, t.arrival === 0 ? t.arrival : t.arrival + taskstates.timer, t, "_start_task");
   });
 
   // Schedule the first occurrence of the tick event (afterwwards it automatically re-schedules itself)

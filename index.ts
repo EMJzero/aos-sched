@@ -48,7 +48,7 @@ let main = () => {
       } else {
         //Inject the scheduler string, then return the JSON
         let plan = tests.configurable[n];
-        plan["class"] = args.sched;
+        plan.class["type"] = args.sched;
         console.log(JSON.stringify(plan));
       }
     })
@@ -61,15 +61,14 @@ let main = () => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
       datap.then(JSON.parse).then((presched: any) => {
         //Inject the class into the object
-        let class_customizable = presched["class"];
+        let class_customizable = presched.class["type"];
         if (class_customizable !== "cfs") {
-          presched["class"] = schedClassFromString(presched["class"])
+          presched.class = schedClassFromString(presched.class["type"])
         }
         return presched as Plan<any, any>;
       }).then((sched: Plan<any, any>) => {
         let sim: Schedule;
-        let is_configurable = sched.class instanceof string;
-        if (is_configurable) {
+        if (sched.class.type !== "cfs") {
           sim = sims.configurable(options, sched, logger);
         } else {
           sim = sims.cfs(options, sched, logger);

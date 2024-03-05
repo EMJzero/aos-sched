@@ -80,7 +80,7 @@ function schedClassFromString(schedclass: string) {
 }
 
 const FIFOSchedClass : SchedClass = {
-  type: "FIFO",
+  type: "fifo",
   metric: "enqueue time",
   // No preemption
   preempt_wakeup: (t: TaskState, s: State) => false,
@@ -91,7 +91,7 @@ const FIFOSchedClass : SchedClass = {
 };
 
 const SJFSchedClass : SchedClass = {
-  type: "SJF",
+  type: "sjf",
   metric: "required computation time",
   // No preemption
   preempt_wakeup: (t: TaskState, s: State) => false,
@@ -102,7 +102,7 @@ const SJFSchedClass : SchedClass = {
 };
 
 const SRTFSchedClass : SchedClass = {
-  type: "SRTF",
+  type: "srtf",
   metric: "remaining computation time",
   // Preempt if the new task has lower remaining computation time
   preempt_wakeup: (t: TaskState, s: State) => SRTFSchedClass.order(t, s.curr),
@@ -113,7 +113,7 @@ const SRTFSchedClass : SchedClass = {
 };
 
 const HRRNSchedClass : SchedClass = {
-  type: "HRRN",
+  type: "hrrn",
   metric: "response ratio",
   // No preemption
   preempt_wakeup: (t: TaskState, s: State) => false,
@@ -125,7 +125,7 @@ const HRRNSchedClass : SchedClass = {
 };
 
 const RRSchedClass : SchedClass = {
-  type: "RR",
+  type: "rr",
   metric: "time quantum",
   // Preempt if the current task has finished its time quantum
   preempt_wakeup: (t: TaskState, s: State) => false,
@@ -706,4 +706,4 @@ produceSchedule = function (
   return eventLoop(options, plan as SimPlan, logger).simData;
 };
 
-export { eventLoop, produceSchedule, SimPlan, GenericSimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass, HRRNSchedClass, schedClassFromString };
+export { eventLoop, produceSchedule, SimPlan, GenericSimPlan, PlannedTask, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass, HRRNSchedClass, schedClassFromString };

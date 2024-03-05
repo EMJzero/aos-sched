@@ -2,11 +2,56 @@ import { CFSPlan } from "./lib";
 
 import _ from "lodash";
 
+let schedule0: CFSPlan = {
+  timer: 0.5,
+  runfor: 8,
+  class: {
+    type: "cfs",
+    latency: 6.0,
+    mingran: 0.75,
+    wgup: 1,
+  },
+  attributes: {},
+
+  tasks: [
+    {
+      index: 0,
+      name: "$t_1$",
+      lambda: 1,
+      arrival: 1,
+      events: [8],
+      // override vrt
+      vrt: 100.0,
+    },
+    {
+      index: 1,
+      name: "$t_2$",
+      lambda: 1,
+      arrival: 2,
+      events: [8],
+      vrt: 100.5,
+    },
+    {
+      index: 2,
+      name: "$t_3$",
+      lambda: 1,
+      arrival: 0,
+      events: [8],
+      vrt: 101.0,
+    },
+  ],
+  graphics: {
+    vspace: 1,
+    hspace: 1,
+    barheight: 0.5,
+  },
+};
+
 let schedule1: CFSPlan = {
   timer: 0.5,
   runfor: 8,
   class: {
-    type: "CFS",
+    type: "cfs",
     latency: 6.0,
     mingran: 0.75,
     wgup: 1,
@@ -47,56 +92,11 @@ let schedule1: CFSPlan = {
   },
 };
 
-let schedule0: CFSPlan = {
-  timer: 0.5,
-  runfor: 8,
-  class: {
-    type: "CFS",
-    latency: 6.0,
-    mingran: 0.75,
-    wgup: 1,
-  },
-  attributes: {},
-
-  tasks: [
-    {
-      index: 0,
-      name: "$t_1$",
-      lambda: 1,
-      arrival: 0,
-      events: [8],
-      // override vrt
-      vrt: 100.0,
-    },
-    {
-      index: 1,
-      name: "$t_2$",
-      lambda: 1,
-      arrival: 0,
-      events: [8],
-      vrt: 100.5,
-    },
-    {
-      index: 2,
-      name: "$t_3$",
-      lambda: 1,
-      arrival: 0,
-      events: [8],
-      vrt: 101.0,
-    },
-  ],
-  graphics: {
-    vspace: 1,
-    hspace: 1,
-    barheight: 0.5,
-  },
-};
-
 let schedule2: CFSPlan = {
   timer: 0.5,
   runfor: 12,
   class: {
-    type: "CFS",
+    type: "cfs",
     latency: 6.0,
     mingran: 0.75,
     wgup: 1,
@@ -141,7 +141,7 @@ let schedule3: CFSPlan = {
   timer: 0.5,
   runfor: 24,
   class: {
-    type: "CFS",
+    type: "cfs",
     latency: 6.0,
     mingran: 0.75,
     wgup: 1,
@@ -185,7 +185,7 @@ let schedule3: CFSPlan = {
 let schedule4: CFSPlan = {
   timer: 0.5,
   runfor: 16,
-  class: { type: "CFS", latency: 6.0, mingran: 0.75, wgup: 1 },
+  class: { type: "cfs", latency: 6.0, mingran: 0.75, wgup: 1 },
   attributes: {},
   tasks: [
     { index: 0, name: "R", lambda: 4, arrival: 0, events: [8], vrt: 0.0 },

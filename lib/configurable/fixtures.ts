@@ -1,6 +1,6 @@
-import { SimPlan, GenericSimPlan, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass, HRRNSchedClass } from "./lib";
+import { SimPlan, GenericSimPlan, PlannedTask, FIFOSchedClass, SJFSchedClass, SRTFSchedClass, RRSchedClass, HRRNSchedClass } from "./lib";
 
-import _ from "lodash";
+import _, { max } from "lodash";
 
 /*
 IMPORTANT:
@@ -14,8 +14,9 @@ Events alternate, the first is a sleep, then a wakeup, then sleep, ...
 let schedule1: GenericSimPlan = {
   timer: 0.5,
   runfor: 8,
+  class : {},
   attributes: {
-    "quantum": 1.5
+    quantum: 1.5
   },
 
   tasks: [
@@ -51,8 +52,9 @@ let schedule1: GenericSimPlan = {
 let schedule0: GenericSimPlan = {
   timer: 0.5,
   runfor: 8,
+  class : {},
   attributes: {
-    "quantum": 1.5
+    quantum: 1.5
   },
 
   tasks: [
@@ -88,8 +90,9 @@ let schedule0: GenericSimPlan = {
 let schedule2: GenericSimPlan = {
   timer: 0.5,
   runfor: 12,
+  class : {},
   attributes: {
-    "quantum": 1.5
+    quantum: 1.5
   },
 
   tasks: [
@@ -125,8 +128,9 @@ let schedule2: GenericSimPlan = {
 let schedule3: GenericSimPlan = {
   timer: 0.5,
   runfor: 24,
+  class : {},
   attributes: {
-    "quantum": 1.5
+    quantum: 1.5
   },
 
   tasks: [
@@ -162,7 +166,10 @@ let schedule3: GenericSimPlan = {
 let schedule4: GenericSimPlan = {
   timer: 0.5,
   runfor: 12,
-  attributes: {},
+  class : {},
+  attributes: {
+    quantum: 1.5
+  },
 
   tasks: [
     {
@@ -197,8 +204,9 @@ let schedule4: GenericSimPlan = {
 let schedule5: GenericSimPlan = {
   timer: 0.5,
   runfor: 16,
+  class : {},
   attributes: {
-    "quantum": 1.5
+    quantum: 1.5
   },
   tasks: [
     { index: 0, name: "R", computation: 8, arrival: 0, events: [8] },
@@ -217,5 +225,83 @@ let allPlans: GenericSimPlan[] = [
   schedule5,
 ];
 
-//module.exports = { plansFIFO, plansSJF, plansSRTF };
+let generator = (
+  type: string,
+  tasksCount: number,
+  timer?: number,
+  runfor?: number,
+  quantum?: number,
+  maxSleeps?: number,
+  maxSleepDuration? : number
+): GenericSimPlan => {
+  timer = (!_.isUndefined(timer) ? max([0.1, timer]) : 0.5) as number;
+  runfor = (!_.isUndefined(runfor) ? max([0.1, runfor]) : 12) as number;
+  if ((runfor*10)%(timer*10) !== 0)
+    throw Error("The value of \"runfor\" must be a multiple of \"timer\", also, limit their precision to one decimal points!");
+  maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
+  maxSleepDuration = (!_.isUndefined(maxSleepDuration) ? max([0.5, maxSleepDuration]) : 4) as number;
+  let event_values = _.range(1, maxSleepDuration+1);
+  let event_probs = _.range(0, maxSleepDuration).map(i => 1 / Math.pow(2, i+1));
+  event_probs.push(1 / Math.pow(2, maxSleepDuration));
+
+  let simPlan: GenericSimPlan = {
+    timer: timer,
+    runfor: runfor,
+    class : {
+      type: type
+    },
+    attributes: {},
+
+    tasks: [],
+    graphics: {
+      vspace: 1,
+      hspace: 1,
+      barheight: 0.5,
+    }
+  };
+  
+  if(type === "rr")
+    simPlan.attributes["quantum"] = !_.isUndefined(quantum) ? quantum : 1.5;
+
+  for(let i = 0; i < tasksCount; i++) {
+    let task: PlannedTask = {
+      index: i,
+      name: `$t_${i+1}$`,
+      // The events will determine the length of the task
+      computation: runfor,
+      // TODO: decouple it from the sleep related values...
+      arrival: sample<number>(event_values, event_probs),
+      events: []
+    };
+
+    let eventsCount = _.random(0, maxSleeps)*2 + 1;
+    for(let j = 0; j < eventsCount; j++)
+      task.events.push(sample<number>(event_values, event_probs));
+    
+    simPlan.tasks.push(task);
+  }
+
+  return simPlan;
+}
+
+function sample<T>(list: T[], probs: number[]): T {
+  if (list.length !== probs.length) throw new Error('The list and probabilities array must have the same length.');
+
+  let sum = probs.reduce((a, b) => a + b, 0);
+  if (sum !== 1) throw new Error('The probabilities must sum to 1.');
+
+  let rand = Math.random();
+  let cumulative = 0.0;
+
+  for (let i = 0; i < list.length; i++) {
+      cumulative += probs[i];
+      if (rand < cumulative) {
+          return list[i];
+      }
+  }
+
+  // This should never happen, but TypeScript doesn't know that.
+  throw new Error('Failed to sample from the list.');
+}
+
 export { allPlans };
