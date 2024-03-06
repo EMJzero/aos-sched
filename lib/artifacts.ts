@@ -6,18 +6,22 @@ import { SimPlan } from "./configurable/lib";
 class TaskSummaryData {
   arrival: number;
   computation: number;
+  wakeups: number[];
+  sleeps: number[];
   start: number | undefined;
   completion: number | undefined;
   waiting: number | undefined;
   turnaround: number | undefined;
 
-  constructor(arrival: number, computation: number, waiting: number | undefined, completion: number | undefined, start: number | undefined, turnaround: number | undefined) {
+  constructor(arrival: number, computation: number, wakeups: number[], sleeps: number[], waiting: number | undefined, completion: number | undefined, start: number | undefined, turnaround: number | undefined) {
     this.arrival = arrival;
     this.computation = computation;
     this.waiting = waiting;
     this.completion = completion;
     this.start = start;
     this.turnaround = turnaround;
+    this.wakeups = wakeups;
+    this.sleeps = sleeps;
   }
 }
 
@@ -183,7 +187,21 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
     let plan = ((sched as unknown) as SimPlan)
     for (let index = 0; index < plan.tasks.length; index++) {
       const task = plan.tasks[index];
-      taskData.push(new TaskSummaryData(task.arrival, task.events[task.events.length - 1], undefined, undefined, undefined, undefined))
+      let sleeps: number[] = [];
+      let wakeups: number[] = [];
+      let cumulator = 0;
+      for (let i = 0; i < task.events.length; i++) {
+        const event = task.events[i];
+        if (i % 2 == 0) {
+          sleeps.push(event + cumulator);
+        } else {
+          wakeups.push(event);
+        }
+        if (i == 0) {
+          cumulator += event;
+        }
+      }
+      taskData.push(new TaskSummaryData(task.arrival, task.events[task.events.length - 1], sleeps, wakeups, undefined, undefined, undefined, undefined))
     }
   } else {
     // We are extracting a table AFTER a simulation has completed, so we can have both a blank and filled-out (as best as the simulation allows) table
@@ -204,7 +222,21 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
         waiting = undefined;
         turnaround = undefined;
       }
-      taskData.push(new TaskSummaryData(task.arrival, task["computation"], waiting, end, start, turnaround))
+      let sleeps: number[] = [];
+      let wakeups: number[] = [];
+      let cumulator = 0;
+      for (let i = 0; i < task.events.length; i++) {
+        const event = task.events[i];
+        if (i % 2 == 0) {
+          sleeps.push(event + cumulator);
+        } else {
+          wakeups.push(event);
+        }
+        if (i == 0) {
+          cumulator += event;
+        }
+      }
+      taskData.push(new TaskSummaryData(task.arrival, task["computation"], sleeps, wakeups, waiting, end, start, turnaround))
     }
   }
 
@@ -212,8 +244,8 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   \\centering
   \\caption{Summary of Tasks}
   \\vspace{10pt}
-  \\begin{tabular}{c|c|c|c|c|c|c}
-  Task & Arrival & Computation & Start & Finish & Waiting (W) & Turnaround (Z) \\\\
+  \\begin{tabular}{c|c|c|c|c|c|c|c}
+  Task & Arrival & Computation & Wakeup & Sleep & Start & Finish & Waiting (W) & Turnaround (Z) \\\\
   \\hline`
   for (let index = 0; index < taskData.length; index++) {
     const task = taskData[index];
@@ -221,7 +253,8 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   }
   begin += `\n\\end{tabular}
   \\label{tab:my_label}
-\\end{table}`;
+\\end{table}
+\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate the running times at which each individual task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
   return begin;
 };
 

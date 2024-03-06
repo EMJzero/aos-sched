@@ -81,7 +81,7 @@ let main = () => {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--qt <quantum>", "Meaningfull only if <sched> = \"rr\", time quantum for round robin", {
+    .option("--qt <quantum>", "Meaningful only if <sched> = \"rr\", time quantum for round robin", {
       validator: program.NUMBER,
       default: undefined
     })
