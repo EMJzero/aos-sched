@@ -73,6 +73,11 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
         )
       : "";
 
+  let pVertMarker = (r: TaskSlot) =>
+    !_.isUndefined(r.aboveSlot) && r.aboveSlot.message !== ""
+      ? `\\draw[draw=${r.aboveSlot.color}] [|>-] (${r.tstart * hs}, ${r.index} + 0.55) -- (${r.tstart * hs}, ${r.index});`
+      : "";
+
   let drawRan = (r: TaskSlot) => {
     return [
       `\\draw[draw=black] (${r.tstart * hs}, ${r.index * vs}) rectangle ++(${
@@ -81,6 +86,7 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
       printAt(r.tend, r.index - 0.4, r.belowSlot),
       printAt(r.tend - 0.25, r.index, `${r.inSlot}`),
       pAboveSlot(r),
+      pVertMarker(r)
     ];
   };
   let drawBlocked = (r: TaskSlot) => {
@@ -91,10 +97,14 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
         (r.tend - r.tstart) * hs
       },${hh}) node[pos=.5, text=white] {};`,
       pAboveSlot(r),
+      pVertMarker(r)
     ];
   };
   let drawRunnable = (r: TaskSlot) => {
-    return [pAboveSlot(r)];
+    return [
+      pAboveSlot(r),
+      pVertMarker(r)
+    ];
   };
   let diag = _.map(sched.timeline, (x) => {
     if (x.tstart < sched.plan.runfor) {

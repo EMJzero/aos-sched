@@ -1,6 +1,6 @@
-import { CFSPlan } from "./lib";
+import { CFSPlan, CFSPlannedTask } from "./lib";
 
-import _ from "lodash";
+import _, {max, min} from "lodash";
 
 let schedule0: CFSPlan = {
   timer: 0.5,
@@ -201,12 +201,70 @@ let plans: CFSPlan[] = [
   schedule2,
   schedule3,
   schedule4,
-  // { ...schedule2, timer: 0.25 },
-  // { ...schedule0, runfor: 30 },
-  // { ...schedule2, runfor: 40 },
-  // { ...schedule2, timer: 0.25, runfor: 40 },
-  // { ...schedule1, runfor: 40 },
 ];
 
-//module.exports = { plans };
-export { plans };
+let cfsGenerator = (
+  tasksCount: number,
+  timer?: number,
+  runfor?: number,
+  latency?: number,
+  mingran?: number,
+  wgup?: number,
+  maxSleeps?: number,
+  maxEventInterval? : number,
+  maxArrivalTime? : number,
+): CFSPlan => {
+  timer = (!_.isUndefined(timer) ? max([0.1, timer]) : 0.5) as number;
+  runfor = (!_.isUndefined(runfor) ? max([0.1, runfor]) : 12) as number;
+  if ((runfor*10)%(timer*10) !== 0)
+    throw Error("The value of \"runfor\" must be a multiple of \"timer\", also, limit their precision to one decimal points!");
+  latency = (!_.isUndefined(latency) ? max([0.1, latency]) : 6.0) as number;
+  mingran = (!_.isUndefined(mingran) ? max([0, mingran]) : 0.75) as number;
+  wgup = (!_.isUndefined(wgup) ? max([0.1, wgup]) : 1) as number;
+  maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
+  maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
+  maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
+
+  let simPlan: CFSPlan = {
+    timer: timer,
+    runfor: runfor,
+    class : {
+      type: "cfs",
+      latency: latency,
+      mingran: mingran,
+      wgup: wgup
+    },
+    attributes: {},
+
+    tasks: [],
+    graphics: {
+      vspace: 1,
+      hspace: 1,
+      barheight: 0.5,
+    }
+  };
+  
+  for(let i = 0; i < tasksCount; i++) {
+    let task: CFSPlannedTask = {
+      index: i,
+      name: `$t_${i+1}$`,
+      //TODO: make it customizable
+      lambda: 1,
+      // The events will determine the length of the task
+      arrival: _.random(0, maxArrivalTime),
+      events: [],
+      //TODO: make it customizable
+      vrt: 100.0
+    };
+
+    let eventsCount = _.random(0, maxSleeps)*2 + 1;
+    for(let j = 0; j < eventsCount; j++)
+      task.events.push(_.random(1, maxEventInterval));
+    
+    simPlan.tasks.push(task);
+  }
+
+  return simPlan;
+}
+
+export { plans, cfsGenerator };

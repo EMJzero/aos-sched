@@ -225,24 +225,24 @@ let allPlans: GenericSimPlan[] = [
   schedule5,
 ];
 
-let generator = (
+let configurableGenerator = (
   type: string,
   tasksCount: number,
   timer?: number,
   runfor?: number,
-  quantum?: number,
   maxSleeps?: number,
-  maxSleepDuration? : number
+  maxEventInterval? : number,
+  maxArrivalTime? : number,
+  quantum?: number
 ): GenericSimPlan => {
   timer = (!_.isUndefined(timer) ? max([0.1, timer]) : 0.5) as number;
   runfor = (!_.isUndefined(runfor) ? max([0.1, runfor]) : 12) as number;
   if ((runfor*10)%(timer*10) !== 0)
     throw Error("The value of \"runfor\" must be a multiple of \"timer\", also, limit their precision to one decimal points!");
   maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
-  maxSleepDuration = (!_.isUndefined(maxSleepDuration) ? max([0.5, maxSleepDuration]) : 4) as number;
-  let event_values = _.range(1, maxSleepDuration+1);
-  let event_probs = _.range(0, maxSleepDuration).map(i => 1 / Math.pow(2, i+1));
-  event_probs.push(1 / Math.pow(2, maxSleepDuration));
+  maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
+  maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
+
 
   let simPlan: GenericSimPlan = {
     timer: timer,
@@ -269,14 +269,13 @@ let generator = (
       name: `$t_${i+1}$`,
       // The events will determine the length of the task
       computation: runfor,
-      // TODO: decouple it from the sleep related values...
-      arrival: sample<number>(event_values, event_probs),
+      arrival: _.random(0, maxArrivalTime),
       events: []
     };
 
     let eventsCount = _.random(0, maxSleeps)*2 + 1;
     for(let j = 0; j < eventsCount; j++)
-      task.events.push(sample<number>(event_values, event_probs));
+      task.events.push(_.random(1, maxEventInterval));
     
     simPlan.tasks.push(task);
   }
@@ -284,24 +283,4 @@ let generator = (
   return simPlan;
 }
 
-function sample<T>(list: T[], probs: number[]): T {
-  if (list.length !== probs.length) throw new Error('The list and probabilities array must have the same length.');
-
-  let sum = probs.reduce((a, b) => a + b, 0);
-  if (sum !== 1) throw new Error('The probabilities must sum to 1.');
-
-  let rand = Math.random();
-  let cumulative = 0.0;
-
-  for (let i = 0; i < list.length; i++) {
-      cumulative += probs[i];
-      if (rand < cumulative) {
-          return list[i];
-      }
-  }
-
-  // This should never happen, but TypeScript doesn't know that.
-  throw new Error('Failed to sample from the list.');
-}
-
-export { allPlans };
+export { allPlans, configurableGenerator };

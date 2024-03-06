@@ -20,6 +20,7 @@ bun link && bun link aos-sched
 ```
 
 # Usage
+Only usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
 The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
@@ -52,6 +53,12 @@ The available commands are:
        ...
    ```
 
+2. `gen`: This command is used to randomly generate a new schedule plan. Reasonable default values for the generator are present, but can be chosen via the command's options. As the `dump` command, it returns the JSON representation of the specified schedule.
+
+  ```sh
+  bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mei 4 --mat 6 --qt 2
+  ```
+
 2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes a single argument: the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). The scheduler to be used will be inferred from the data and format of the JSON schedule being passed as input to the command. It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
 
    ```sh
@@ -77,15 +84,21 @@ The available commands are:
    bunx aos-sched dump cfs 0 | bunx aos-sched table blank
    ```
 
-# Example
+# Examples
 
-```
+```sh
 bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
 ```
 
-will produce a latex file that when compiled and exported to png gives
+will produce a latex file that when compiled and exported to png gives:
 
 ![](./example.png)
 
+```sh
+bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 > tmp.json
+cat tmp.json | bunx aos-sched simulate | bunx aos-sched export complete
+cat tmp.json | bunx aos-sched table blank
+cat tmp.json | bunx aos-sched simulate | bunx aos-sched table complete
+```
 
-
+will instead yield a randomly generated schedule and its tables, both empty and complete.

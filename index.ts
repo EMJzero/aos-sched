@@ -22,6 +22,8 @@ let tests: Tests = {
   configurable: require("./lib/configurable/fixtures").allPlans as GenericPlan<any>[],
 };
 
+let configurableGenerator = require("./lib/configurable/fixtures").configurableGenerator;
+
 let sims: Simulators = {
   cfs: require("./lib/cfs/lib").produceSchedule as ScheduleProducer,
   configurable: require("./lib/configurable/lib").produceSchedule as ScheduleProducer,
@@ -46,16 +48,63 @@ let main = () => {
       if (args.sched === "cfs") {
         console.log(JSON.stringify(tests.cfs[n]));
       } else {
-        //Inject the scheduler string, then return the JSON
+        // Inject the scheduler string, then return the JSON
         let plan = tests.configurable[n];
         plan.class["type"] = args.sched;
         console.log(JSON.stringify(plan));
       }
     })
+    .command("gen", "Generate random plan")
+    .argument("<sched>", "Scheduler to use", {
+      validator: ["cfs", "fifo", "sjf", "srtf", "hrrn", "rr"],
+    })
+    .argument("<tasks_count>", "Number of tasks to generate", {
+      validator: program.NUMBER,
+    })
+    .option("--tm <timer>", "Time step for the simulation", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--rf <runfor>", "Duration of the simulation", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--ms <max_sleeps>", "Maximum number of time a task can go to sleep", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--mei <max_event_interval>", "Maximum time between a sleep and a wakeup or viceversa", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--mat <max_arrival_time>", "Maximum time at which tasks can arrive", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--qt <quantum>", "Meaningfull only if <sched> = \"rr\", time quantum for round robin", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .action(({ args, options }) => {
+      if (args.sched === "cfs") {
+        //console.log(JSON.stringify(tests.cfs[n]));
+        throw Error("Feature not yet supported, sorry >.< !");
+      } else {
+        // Invoke the generator
+        let plan = configurableGenerator(
+          args.sched,
+          args.tasksCount,
+          options.tm,
+          options.rf,
+          options.ms,
+          options.mei,
+          options.mat,
+          options.qt
+        );
+        console.log(JSON.stringify(plan));
+      }
+    })
     .command("simulate", "Simulate provided schedule")
-    /*.argument("<sched>", "Scheduler to use", {
-      validator: ["cfs", "fifo", "sjf", "srtf", "rr"],
-    })*/
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();

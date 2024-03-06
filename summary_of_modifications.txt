@@ -1,0 +1,14 @@
+What we did:
+- fully customizable scheduler
+- all the schedulers:
+ - fifo
+ - ...
+- random schedplan generator
+- fixes per cfs:
+ - correct handling of non-zero arrival time
+ - added preemption check in case of non-zero arrival time
+ - implemented functionality for minimum granularity
+- latex:
+ - added tables
+ - fixed missing text inside boxes
+ - added marker for preemption checks

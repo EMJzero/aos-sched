@@ -615,4 +615,4 @@ produceSchedule = function (
   return eventLoop(options, plan as CFSPlan, logger).simData;
 };
 
-export { eventLoop, produceSchedule, CFSPlan };
+export { eventLoop, produceSchedule, CFSPlan, CFSPlannedTask };
