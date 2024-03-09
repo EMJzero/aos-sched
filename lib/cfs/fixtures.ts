@@ -183,7 +183,7 @@ let schedule3: CFSPlan = {
   },
 };
 
-// Test for mingran
+// Test for mingran 1
 let schedule4: CFSPlan = {
   timer: 0.5,
   runfor: 12,
@@ -202,7 +202,6 @@ let schedule4: CFSPlan = {
       lambda: 1,
       arrival: 0,
       events: [1, 5, 8],
-      // override vrt
       vrt: 100.0,
     },
     {
@@ -229,7 +228,52 @@ let schedule4: CFSPlan = {
   },
 };
 
+// Test for mingran 2
 let schedule5: CFSPlan = {
+  timer: 0.5,
+  runfor: 16,
+  class: {
+    type: "cfs",
+    latency: 6.0,
+    mingran: 1.5,
+    wgup: 1,
+  },
+  attributes: {},
+
+  tasks: [
+    {
+      index: 0,
+      name: "$t_1$",
+      lambda: 1,
+      arrival: 0,
+      events: [14],
+      vrt: 100.0,
+    },
+    {
+      index: 1,
+      name: "$t_2$",
+      lambda: 1,
+      arrival: 0,
+      events: [14],
+      vrt: 100.0,
+    },
+    {
+      index: 2,
+      name: "$t_3$",
+      lambda: 1,
+      arrival: 0,
+      events: [1, 1, 1, 1, 2, 2, 2, 2],
+      vrt: 100.0,
+    },
+  ],
+  graphics: {
+    vspace: 1,
+    hspace: 1,
+    barheight: 0.5,
+  },
+};
+
+let schedule6: CFSPlan = {
   timer: 0.5,
   runfor: 16,
   class: { type: "cfs", latency: 6.0, mingran: 0.75, wgup: 1 },
@@ -249,6 +293,7 @@ let plans: CFSPlan[] = [
   schedule3,
   schedule4,
   schedule5,
+  schedule6,
 ];
 
 let cfsGenerator = (
