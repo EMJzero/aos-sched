@@ -39,17 +39,23 @@ type CFSTaskState = CFSPlannedTask & {
 };
 
 type CFSTaskSlot = TaskSlot & {
+  // Virtual runtime
   vrt: number;
+  // Same as "sum" in CFSTaskState
   sum: number;
+  // Same as "prev" in CFSTaskState
   p: number;
+  // Available time quantum/slice
   q: number;
 };
 
 type CFSClass = {
+  // Name of the scheduling class
   type: string;
   // Wake up granularity
   wgup: number;
   latency: number;
+  // Minimum granularity
   mingran: number;
 };
 
@@ -143,10 +149,32 @@ let eventLoop = (
       e.func(e.arg);
     });
 
-    // Update available time slices of the tasks, if no task is currently running,
-    // run the left-most task in the rbtree (mark it with "X")
+    // Update available time slices of the tasks
     schedstate.rbt = _.map(schedstate.rbt, (t) => {
       t.q = schedslice(t);
+      return t;
+    });
+    
+    // If no task is currently running, run the first task in the runqueue
+    // If the current time slice has expired, update the rbtree and schedule the next task
+    // Note: this is required because the above ^ _map might update time slices after a
+    // wakeup, and this handles the case of such update causing a time slice to end
+    if (!_.isUndefined(schedstate.curr)) {
+      if (schedstate.curr.sum - schedstate.curr.prev >= schedslice(schedstate.curr)) {
+        schedstate.curr.vrtlwk = {
+          message: `(new t.s. = ${schedstate.curr.q}) t.s. ended`,
+          color: "black",
+        };
+        removeFromRbt(schedstate.curr);
+        addToRbt(schedstate.curr);
+        resched(`task ${schedstate.curr.name} finished quantum @${timer.walltime}`);
+      }
+    } else {
+      resched(`no task running @${timer.walltime}`);
+    }
+    
+    // Mark the currently running task (for the diagram)
+    schedstate.rbt = _.map(schedstate.rbt, (t) => {
       if (!_.isUndefined(schedstate.curr) && schedstate.curr.index == t.index) {
         t.R = "X";
       } else {
@@ -218,13 +246,46 @@ let eventLoop = (
       t.vrt + taskstates.class.wgup * (t.lambda / sumlambda()) <
         schedstate.curr.vrt
     ) {
-      if(!_.isUndefined(schedstate.curr)) {
+      // If the task has yet to run for at least mingran
+      // postpone the preemption with an event
+      if (!_.isUndefined(schedstate.curr) && schedstate.curr.sum - schedstate.curr.prev < taskstates.class.mingran) {
         t.vrtlwk = {
-          message: `(${t.vrt} < ${schedstate.curr.vrt}) X`,
-          color: "red",
+          message: `(${t.vrt} < ${schedstate.curr.vrt}) mingran`,
+          color: "magenta",
         };
+        _setTimeout(
+          (args) => {
+            let t = args[0];
+            let old_curr_idx = args[1];
+            let old_curr_prev = args[2];
+            let m = args[3];
+            // The running task changed, abort the old preemption
+            // (Identify the task via its index, identify its unique
+            // "running window" via "prev")
+            if(
+              !_.isUndefined(schedstate.curr) &&
+              schedstate.curr.index === old_curr_idx &&
+              schedstate.curr.prev === old_curr_prev) {
+              t.vrtlwk = {
+                message: `(${t.vrt} < ${schedstate.curr.vrt}) preempt`,
+                color: "red",
+              };
+              resched(m);
+            }
+          },
+          taskstates.class.mingran - (schedstate.curr.sum - schedstate.curr.prev),
+          [t, schedstate.curr.index, schedstate.curr.prev, `Waking up task ${t.name} @${timer.walltime} (preemption delayed by mingran)`],
+          "_mingran_preempt");
+      } else {
+        // Mingran already expired, preempt now
+        if(!_.isUndefined(schedstate.curr)) {
+          t.vrtlwk = {
+            message: `(${t.vrt} < ${schedstate.curr.vrt}) preempt`,
+            color: "red",
+          };
+        }
+        resched(`Waking up task ${t.name} @${timer.walltime}`);
       }
-      resched(`starting task ${t.name} @${timer.walltime}`);
     }
   };
 
@@ -268,9 +329,9 @@ let eventLoop = (
     // Next virtual runtime for the woken up task
     let v = r2(tw.vrt + taskstates.class.wgup * (tw.lambda / sumlambda()));
     // WARNING: useless to set this here...
-    if (!_.isUndefined(schedstate.curr)) {
-      tw.vrtlwk = { message: `${v} < ${schedstate.curr.vrt}`, color: "black" };
-    }
+    //if (!_.isUndefined(schedstate.curr)) {
+    //  tw.vrtlwk = { message: `${v} < ${schedstate.curr.vrt}`, color: "black" };
+    //}
 
     // Note: a preemption will happen iif the next virtual runtime of the woken up
     // task is lower than the vrt of the currently running task or if there is no
@@ -279,16 +340,50 @@ let eventLoop = (
     // Check for preemption (invoke resched if it occurs)
     if (schedstate.curr !== undefined && v < schedstate.curr.vrt) {
       // Preemption due to lower next virtual runtime
-      tw.vrtlwk = {
-        message: `(${v} < ${schedstate.curr.vrt}) OK`,
-        color: "blue",
-      };
       logger.debug(`HEII ${v} ---- ${schedstate.curr.vrt}`);
       // Rebuild the runqueue's order
       // WARNING: not necessary to do this remove+add?
       removeFromRbt(schedstate.curr);
       addToRbt(schedstate.curr);
-      resched(`Waking up task ${tw.name} @${timer.walltime}`);
+      // If the task has yet to run for at least mingran
+      // postpone the preemption with an event
+      if (schedstate.curr.sum - schedstate.curr.prev < taskstates.class.mingran) {
+        tw.vrtlwk = {
+          message: `(${tw.vrt} < ${schedstate.curr.vrt}) mingran`,
+          color: "magenta",
+        };
+        // Schedule an event to handle the future (possible) preemption
+        _setTimeout(
+          (args) => {
+            let t = args[0];
+            let old_curr_idx = args[1];
+            let old_curr_prev = args[2];
+            let m = args[3];
+            // The running task changed, abort the old preemption
+            // (Identify the task via its index, identify its unique
+            // "running window" via "prev")
+            if(
+              !_.isUndefined(schedstate.curr) &&
+              schedstate.curr.index === old_curr_idx &&
+              schedstate.curr.prev === old_curr_prev) {
+              t.vrtlwk = {
+                message: `(${t.vrt} < ${schedstate.curr.vrt}) preempt`,
+                color: "red",
+              };
+              resched(m);
+            }
+          },
+          taskstates.class.mingran - (schedstate.curr.sum - schedstate.curr.prev),
+          [tw, schedstate.curr.index, schedstate.curr.prev, `Waking up task ${tw.name} @${timer.walltime} (preemption delayed by mingran)`],
+          "_mingran_preempt");
+      } else {
+        // Mingran already expired, preempt now
+        tw.vrtlwk = {
+          message: `(${v} < ${schedstate.curr.vrt}) preempt`,
+          color: "red",
+        };
+        resched(`Waking up task ${tw.name} @${timer.walltime}`);
+      }
     } else {
       // Preemption because no currently running task
       if (schedstate.curr === undefined)
@@ -296,8 +391,8 @@ let eventLoop = (
       else {
         // No preemption
         tw.vrtlwk = {
-          message: `(${v} < ${schedstate.curr.vrt}) X`,
-          color: "red",
+          message: `(${v} < ${schedstate.curr.vrt}) cont`,
+          color: "blue",
         };
       }
     }
@@ -354,7 +449,8 @@ let eventLoop = (
         // If the current time slice has expired, update the rbtree and schedule the next task
         if (
           // WARNING: wouldn't >= 0 be safer ?
-          schedstate.curr.sum - schedstate.curr.prev == schedslice(schedstate.curr) &&
+          // Indeed, otherwise supporting mingran breaks this!
+          schedstate.curr.sum - schedstate.curr.prev >= schedslice(schedstate.curr) &&
           // WARNING: isn't this one obvious due to the outer if?
           schedstate.curr.events[0] > 0
         ) {
