@@ -8,6 +8,7 @@ What we did:
  - correct handling of non-zero arrival time
  - added preemption check in case of non-zero arrival time
  - implemented functionality for minimum granularity
+  - this required a multitude of fixes (search for "WARNING")
 - latex:
  - added tables
  - fixed missing text inside boxes

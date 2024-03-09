@@ -39,10 +39,13 @@ type TaskState = PlannedTask & {
 };
 
 type SimTaskSlot = TaskSlot & {
+  // Same as "sum" in TaskState
   sum: number;
+  // Same as "wait" in TaskState
   wait: number;
   // Metric depending on SchedClass
   schedmetric: number;
+  // Same as "prev" in TaskState
   p: number;
 };
 

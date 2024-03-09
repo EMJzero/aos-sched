@@ -61,27 +61,27 @@ let main = () => {
     .argument("<tasks_count>", "Number of tasks to generate", {
       validator: program.NUMBER,
     })
-    .option("--tm <timer>", "Time step for the simulation", {
+    .option("--tm <timer>", "Time step for the simulation (default: 0.5)", {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--rf <runfor>", "Duration of the simulation", {
+    .option("--rf <runfor>", "Duration of the simulation (default: 12)", {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--ms <max_sleeps>", "Maximum number of time a task can go to sleep", {
+    .option("--ms <max_sleeps>", "Maximum number of time a task can go to sleep (default: 2)", {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--mei <max_event_interval>", "Maximum time between a sleep and a wakeup or viceversa", {
+    .option("--mei <max_event_interval>", "Maximum time between a sleep and a wakeup or viceversa (default: 4)", {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--mat <max_arrival_time>", "Maximum time at which tasks can arrive", {
+    .option("--mat <max_arrival_time>", "Maximum time at which tasks can arrive (default: 6)", {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--qt <quantum>", "Meaningful only if <sched> = \"rr\", time quantum for round robin", {
+    .option("--qt <quantum>", "Meaningful only if <sched> = \"rr\", time quantum for round robin (default: 1.5)", {
       validator: program.NUMBER,
       default: undefined
     })

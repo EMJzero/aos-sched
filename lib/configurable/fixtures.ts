@@ -242,7 +242,7 @@ let configurableGenerator = (
   maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
   maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
   maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
-
+  quantum = (!_.isUndefined(quantum) ? quantum : 1.5) as number;
 
   let simPlan: GenericSimPlan = {
     timer: timer,
@@ -261,7 +261,7 @@ let configurableGenerator = (
   };
   
   if(type === "rr")
-    simPlan.attributes["quantum"] = !_.isUndefined(quantum) ? quantum : 1.5;
+    simPlan.attributes["quantum"] = quantum;
 
   for(let i = 0; i < tasksCount; i++) {
     let task: PlannedTask = {

@@ -254,7 +254,7 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   begin += `\n\\end{tabular}
   \\label{tab:my_label}
 \\end{table}
-\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate the running times at which each individual task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
+\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate each running time at which the associated task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
   return begin;
 };
 
