@@ -224,7 +224,7 @@ let eventLoop = (
 
   // Computes the time slice for a given task according to the tasks currently in the rbtree
   let schedslice = (t: CFSTaskState) =>
-    taskstates.class.latency * (t.lambda / sumlambda());
+    Math.max(taskstates.class.latency * (t.lambda / sumlambda()), taskstates.class.mingran);
 
   // Moves a task among the scheduled ones, in the rbtree.
   // Call reschedule if the added task qualifies for immediate execution
