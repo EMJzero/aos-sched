@@ -25,87 +25,87 @@ The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
 
-   ```sh
-   bunx aos-sched dump cfs 0 | jq .
-   ```
+    ```sh
+    bunx aos-sched dump cfs 0 | jq .
+    ```
 
-Example output:
+    Example output:
 
-   ```json
-   {
-     "timer": 0.5,
-     "runfor": 8,
-     "class": {
-       "type": "CFS",
-       "latency": 6,
-       "mingran": 0.75,
-       "wgup": 1
-     },
-     "tasks": [
-       {
-         "index": 0,
-         "name": "$t_1$",
-         "lambda": 1,
-         "start": 0,
-         "events": [
-           8
-         ],
-         "vrt": 100
-       },
-       ...
-   ```
+    ```json
+    {
+      "timer": 0.5,
+      "runfor": 8,
+      "class": {
+        "type": "CFS",
+        "latency": 6,
+        "mingran": 0.75,
+        "wgup": 1
+      },
+      "tasks": [
+        {
+          "index": 0,
+          "name": "$t_1$",
+          "lambda": 1,
+          "start": 0,
+          "events": [
+            8
+          ],
+          "vrt": 100
+        },
+        ...
+    ```
 
 2. `gen`: This command is used to randomly generate a new schedule plan. Reasonable default values for the generator are present, but can be chosen via the command's options. As the `dump` command, it returns the JSON representation of the specified schedule.
 
-  ```sh
-  bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mei 4 --mat 6 --qt 2
-  ```
+    ```sh
+    bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mei 4 --mat 6 --qt 2
+    ```
 
 2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes a single argument: the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). The scheduler to be used will be inferred from the data and format of the JSON schedule being passed as input to the command. It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
 
-   ```sh
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate
-   ```
+    ```sh
+    bunx aos-sched dump cfs 0 | bunx aos-sched simulate
+    ```
 
 3. `export`: This command is used to export simulation data to available formats. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data. It exports the simulation data in the specified artifact format. At the moment there are three artifacts (`blank`, `complete`, `data`) that output latex source code.
 
-  - `blank`: returns an empty table, with arrival times and schedule class attributes.
-  - `complete`: returns a filled table with the simulation results.
-  - `data`: returns a LaTeX itemize with the data required to manually simulate the schedule.
+    - `blank`: returns an empty table, with arrival times and schedule class attributes.
+    - `complete`: returns a filled table with the simulation results.
+    - `data`: returns a LaTeX itemize with the data required to manually simulate the schedule.
 
-   ```sh
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
-   ```
-   ```sh
-   bunx aos-sched dump rr 2 | bunx aos-sched simulate | bunx aos-sched export data
-   ```
+    ```sh
+    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
+    ```
+    ```sh
+    bunx aos-sched dump rr 2 | bunx aos-sched simulate | bunx aos-sched export data
+    ```
 
-Example output (`data`):
+    Example output (`data`):
 
-  ```tex
-  \begin{itemize}
-    \item Schedule data: type = rr, metric = time quantum, quantum = 1.5
-    \item task $t_1$ (\length = 9) arrives at 0, runs for 1, waits for 5, runs for 8
-    \item task $t_2$ (\length = 20) arrives at 0, runs for 14
-    \item task $t_3$ (\length = 8) arrives at 0, runs for 3, waits for 2, runs for 10
-  \end{itemize}
-  ```
+    ```tex
+    \begin{itemize}
+      \item Schedule data: type = rr, metric = time quantum, quantum = 1.5
+      \item task $t_1$ (\length = 9) arrives at 0, runs for 1, waits for 5, runs for 8
+      \item task $t_2$ (\length = 20) arrives at 0, runs for 14
+      \item task $t_3$ (\length = 8) arrives at 0, runs for 3, waits for 2, runs for 10
+    \end{itemize}
+    ```
 
 4. `table`: This command is used to export a LaTeX table summarizing the schedule plan data. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data, or alternatively the raw schedule plan. At the moment there are two artifacts (`blank`, `complete`) that output LaTeX source code, which are observed ONLY if the command is fed with full simulation data (otherwise, `blank` is generated regardless of this option). `blank` creates the table filled with arrival and computation times, while `complete` also adds start, completion, waiting times and turnaround (if the simulation did not run for enough time to let a task exit, it will not have a completion time hence no turnaround can be determined as well, and therefore these fields will remain blank).
 
-  - `blank`: returns a table with only the initial data of the simulation.
-  - `complete`: returns a table containing the solution to the simulation.
+    - `blank`: returns a table with only the initial data of the simulation.
+    - `complete`: returns a table containing the solution to the simulation.
 
-   ```sh
-   # To extract a full, filled-out table
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table complete
-   ```
-   ```sh
-   # To extract a blank table
-   bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table blank
-   # Or alternatively
-   bunx aos-sched dump cfs 0 | bunx aos-sched table blank
-   ```
+    ```sh
+    # To extract a full, filled-out table
+    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table complete
+    ```
+    ```sh
+    # To extract a blank table
+    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table blank
+    # Or alternatively
+    bunx aos-sched dump cfs 0 | bunx aos-sched table blank
+    ```
 
 # Examples
 

@@ -666,7 +666,7 @@ let serialiseSim = (
                 tslot.belowSlot = nextState.schedmetric + "";
                 tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${nextState.sum - t.p}}{${r2(simPlan.attributes["quantum"])}}\$` : `\$${nextState.sum - t.p}\$`) : "";
               } else { // Last tick for the task, no nextState, it ends!
-                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${t.sum + simPlan.timer - t.p}}{${r2(simPlan.attributes["quantum"])}}` : `\$${t.sum + simPlan.timer - t.p}\$`) : "";
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${t.sum + simPlan.timer - t.p}}{${r2(simPlan.attributes["quantum"])}}\$` : `\$${t.sum + simPlan.timer - t.p}\$`) : "";
               }
               return tslot;
             }

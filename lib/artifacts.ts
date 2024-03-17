@@ -57,6 +57,8 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
   let vs = sched.plan.graphics.vspace;
   let hh = sched.plan.graphics.barheight;
 
+  let text: Array<{ text: String, color: String }> = [];
+
   let printAt = (time: number, index: number, m: string) => {
     return `\\node at(${hs * time}, ${index * hs + 0.5 * hh}) {\\tiny ${m}};`;
   };
@@ -67,15 +69,27 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
     }) {\\tiny ${m}};`;
   };
 
-  let pAboveSlot = (r: TaskSlot) =>
-    !_.isUndefined(r.aboveSlot) && r.aboveSlot.message !== ""
-      ? printAtConf(
+  let pAboveSlot = (r: TaskSlot) => {
+    if (!_.isUndefined(r.aboveSlot) && r.aboveSlot.message !== "") {
+      if (options.inline) {
+        return printAtConf(
           r.tend,
           r.index + 0.4,
           `${r.aboveSlot.message}`,
           `anchor=east, text=${r.aboveSlot.color}`
-        )
-      : "";
+        );
+      } else {
+        text.push({
+          text: `${r.aboveSlot.message}`,
+          color: `${r.aboveSlot.color}`
+        });
+        return `\\node [shape=circle,draw, inner sep=1pt, ${r.aboveSlot.color}]
+          at(${hs * r.tend - 0.3}, ${(r.index + 0.4) * hs + 0.5 * hh}) {\\tiny ${text.length}};`
+      }
+    } else {
+      return "";
+    }
+  }
 
   let pVertMarker = (r: TaskSlot) =>
     !_.isUndefined(r.aboveSlot) && r.aboveSlot.message !== ""
@@ -164,10 +178,21 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
       "anchor=west"
     ),
   ];
+
+  let aftertext = _.map(text, (t, i) => 
+    `\\node [shape=circle, draw, inner sep=1pt, ${t.color}] (legendNode${i}) at(-1, ${-1.2 - 0.25*i}) {\\tiny ${i + 1}};
+    \\node [right, text=${t.color}] at(legendNode${i}.east) {\\tiny ${t.text}};`
+  );
+  if (text.length > 0) {
+    aftertext.push(
+      `\\node [below] at(0, -0.75) {\\tiny Legend:};`
+    );
+  }
+
   if (_.isUndefined(options.blank) || !options.blank) {
     return wrapper(
       _.join(
-        _.flattenDeep([grid, tnames, diag, taskevents, taskexits, data]),
+        _.flattenDeep([grid, tnames, diag, taskevents, taskexits, data, aftertext]),
         "\n"
       )
     );
@@ -258,17 +283,17 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   return begin;
 };
 
-let exportLatex = (sim: Schedule, logger: Logger) => {
+let exportLatex = (sim: Schedule, inline: Boolean, logger: Logger) => {
   return {
     complete: latexArtifact(
-      schedToLatex(sim, { blank: false }, logger),
+      schedToLatex(sim, { blank: false, inline: inline }, logger),
       "rt diagram",
       "standalone",
       "pdflatex",
       "-r varwidth"
     ),
     blank: latexArtifact(
-      schedToLatex(sim, { blank: true }, logger),
+      schedToLatex(sim, { blank: true, inline: inline }, logger),
       "rt diagram blank",
       "standalone",
       "pdflatex",
@@ -287,14 +312,14 @@ let exportLatex = (sim: Schedule, logger: Logger) => {
 let exportLatexSummary = (sim: Schedule, logger: Logger) => {
   return {
     complete: latexArtifact(
-      schedToLatexSummary(sim, { blank: false }, logger),
+      schedToLatexSummary(sim, { blank: false, inline: false }, logger),
       "rt diagram",
       "standalone",
       "pdflatex",
       "-r varwidth"
     ),
     blank: latexArtifact(
-      schedToLatexSummary(sim, { blank: true }, logger),
+      schedToLatexSummary(sim, { blank: true, inline: false }, logger),
       "rt diagram blank",
       "standalone",
       "pdflatex",

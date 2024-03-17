@@ -132,10 +132,11 @@ let main = () => {
     .command("export", "Export simulation data to available formats")
     .argument("<artifact>", "Artifact name (one of: blank, complete, data)")
     .argument("[json]", "JSON file or stdin")
-    .action(({ logger, args }) => {
+    .option("-i, --inline", "Inserts preemption and event strings inline in the exported LaTeX.")
+    .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
       datap.then(JSON.parse).then((sim: Schedule) => {
-        console.log(exportLatex(sim, logger)[args.artifact + ""].code);
+        console.log(exportLatex(sim, options.inline as Boolean, logger)[args.artifact + ""].code);
       });
     })
     .command("table", "Export a LaTeX table with the summary of tasks")
