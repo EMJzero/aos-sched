@@ -29,6 +29,8 @@ The available commands are:
    bunx aos-sched dump cfs 0 | jq .
    ```
 
+Example output:
+
    ```json
    {
      "timer": 0.5,
@@ -67,11 +69,32 @@ The available commands are:
 
 3. `export`: This command is used to export simulation data to available formats. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data. It exports the simulation data in the specified artifact format. At the moment there are three artifacts (`blank`, `complete`, `data`) that output latex source code.
 
-   ```
+  - `blank`: returns an empty table, with arrival times and schedule class attributes.
+  - `complete`: returns a filled table with the simulation results.
+  - `data`: returns a LaTeX itemize with the data required to manually simulate the schedule.
+
+   ```sh
    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
    ```
+   ```sh
+   bunx aos-sched dump rr 2 | bunx aos-sched simulate | bunx aos-sched export data
+   ```
+
+Example output (`data`):
+
+  ```tex
+  \begin{itemize}
+    \item Schedule data: type = rr, metric = time quantum, quantum = 1.5
+    \item task $t_1$ (\length = 9) arrives at 0, runs for 1, waits for 5, runs for 8
+    \item task $t_2$ (\length = 20) arrives at 0, runs for 14
+    \item task $t_3$ (\length = 8) arrives at 0, runs for 3, waits for 2, runs for 10
+  \end{itemize}
+  ```
 
 4. `table`: This command is used to export a LaTeX table summarizing the schedule plan data. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data, or alternatively the raw schedule plan. At the moment there are two artifacts (`blank`, `complete`) that output LaTeX source code, which are observed ONLY if the command is fed with full simulation data (otherwise, `blank` is generated regardless of this option). `blank` creates the table filled with arrival and computation times, while `complete` also adds start, completion, waiting times and turnaround (if the simulation did not run for enough time to let a task exit, it will not have a completion time hence no turnaround can be determined as well, and therefore these fields will remain blank).
+
+  - `blank`: returns a table with only the initial data of the simulation.
+  - `complete`: returns a table containing the solution to the simulation.
 
    ```sh
    # To extract a full, filled-out table
@@ -96,9 +119,9 @@ will produce a latex file that when compiled and exported to png gives:
 
 ```sh
 bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 > tmp.json
-cat tmp.json | bunx aos-sched simulate | bunx aos-sched export complete
-cat tmp.json | bunx aos-sched table blank
-cat tmp.json | bunx aos-sched simulate | bunx aos-sched table complete
+bunx aos-sched simulate < tmp.json | bunx aos-sched export complete
+bunx aos-sched table blank < tmp.json
+bunx aos-sched simulate < tmp.json | bunx aos-sched table complete
 ```
 
 will instead yield a randomly generated schedule and its tables, both empty and complete.

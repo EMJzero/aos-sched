@@ -477,7 +477,8 @@ let eventLoop = (
 
   return {
     rawSimData: rawSchedule, // <- this is the one being tested by jest
-    simData: serialiseSim(rawSchedule, taskstates), // this is the serialised format
+    // WARNING: changed from taskstates -> origplan, it should be fine, but double check it...
+    simData: serialiseSim(rawSchedule, origplan as TasksState), // this is the serialised format
   };
 };
 
@@ -488,7 +489,7 @@ let printData = (plan: SimPlan) => {
       return [
         `\\item task ${t.name} (\\length = ${t.computation}) arrives at ${t.arrival}, ` +
           _.join(
-            _.map(t.events, (e, i) =>
+            _.map(t.events, (e, i) => 
               i % 2 === 0 ? `runs for ${e}` : `waits for ${e}`
             ),
             ", "
@@ -499,11 +500,11 @@ let printData = (plan: SimPlan) => {
   );
   let s = `
   \\begin{itemize}
-  \\item Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}
+  \\item Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}, ${_.map(plan.attributes, (value, key) => `${key} = ${value}`).join(', ')}
   ${taskevents}
   \\end{itemize}`;
 
-  let legendAbove = `Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}`;
+  let legendAbove = `Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}, ${_.map(plan.attributes, (value, key) => `${key} = ${value}`).join(', ')}`;
 
   return { blankData: s, legendAbove };
 };
@@ -663,9 +664,9 @@ let serialiseSim = (
               if (nextState) {
                 // Write at time "time" the text decorating the task 
                 tslot.belowSlot = nextState.schedmetric + "";
-                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${nextState.sum - t.p}/${r2(simPlan.attributes["quantum"])}` : `${nextState.sum - t.p}`) : "";
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${nextState.sum - t.p}}{${r2(simPlan.attributes["quantum"])}}\$` : `\$${nextState.sum - t.p}\$`) : "";
               } else { // Last tick for the task, no nextState, it ends!
-                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `${t.sum + simPlan.timer - t.p}/${r2(simPlan.attributes["quantum"])}` : `${t.sum + simPlan.timer - t.p}`) : "";
+                tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${t.sum + simPlan.timer - t.p}}{${r2(simPlan.attributes["quantum"])}}` : `\$${t.sum + simPlan.timer - t.p}\$`) : "";
               }
               return tslot;
             }

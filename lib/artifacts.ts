@@ -179,7 +179,7 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
 };
 
 let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) => {
-  //Get the data for each task
+  // Get the data for each task
   let taskData: TaskSummaryData[] = [];
   if (sched.plan === undefined) {
     // We are extracting a table WITHOUT running a simulation, so we can only have a blank table
@@ -189,16 +189,16 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
       const task = plan.tasks[index];
       let sleeps: number[] = [];
       let wakeups: number[] = [];
-      let cumulator = 0;
+      let accumulator = 0;
       for (let i = 0; i < task.events.length; i++) {
         const event = task.events[i];
         if (i % 2 == 0) {
-          sleeps.push(event + cumulator);
+          sleeps.push(event + accumulator);
         } else {
           wakeups.push(event);
         }
         if (i == 0) {
-          cumulator += event;
+          accumulator += event;
         }
       }
       taskData.push(new TaskSummaryData(task.arrival, task.events[task.events.length - 1], sleeps, wakeups, undefined, undefined, undefined, undefined))
@@ -208,13 +208,13 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
     let slots = sched.timeline;
     for (let index = 0; index < sched.plan.tasks.length; index++) {
       const task = sched.plan.tasks[index];
-      //Find the start & end times
+      // Find the start & end times
       let myslots = slots.filter((v, i, a) => v.index == task.index);
       let start = myslots.find((v, i, o) => v.event === "RAN")?.tstart;
       let end = myslots.find((v, i, o) => v.event === "EXITED")?.tend;
-      //Find the waiting time
+      // Find the waiting time
       let waiting = start !== undefined ? start - task.arrival : undefined;
-      //Find the turnaround
+      // Find the turnaround
       let turnaround = end !== undefined ? end - task.arrival : undefined;
       if (options.blank) {
         start = undefined;
@@ -224,16 +224,16 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
       }
       let sleeps: number[] = [];
       let wakeups: number[] = [];
-      let cumulator = 0;
+      let accumulator = 0;
       for (let i = 0; i < task.events.length; i++) {
         const event = task.events[i];
         if (i % 2 == 0) {
-          sleeps.push(event + cumulator);
+          sleeps.push(event + accumulator);
         } else {
           wakeups.push(event);
         }
         if (i == 0) {
-          cumulator += event;
+          accumulator += event;
         }
       }
       taskData.push(new TaskSummaryData(task.arrival, task["computation"], sleeps, wakeups, waiting, end, start, turnaround))

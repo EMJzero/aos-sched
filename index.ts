@@ -109,10 +109,14 @@ let main = () => {
     .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
       datap.then(JSON.parse).then((presched: any) => {
-        //Inject the class into the object
+        // Inject the class into the object
         let class_customizable = presched.class["type"];
         if (class_customizable !== "cfs") {
           presched.class = schedClassFromString(presched.class["type"])
+          // Remove useless attributes (otherwise they would get printed...)
+          if(class_customizable !== "rr") {
+            delete presched.attributes.quantum;
+          }
         }
         return presched as Plan<any, any>;
       }).then((sched: Plan<any, any>) => {
@@ -126,7 +130,7 @@ let main = () => {
       });
     })
     .command("export", "Export simulation data to available formats")
-    .argument("<artifact>", "Artifact name")
+    .argument("<artifact>", "Artifact name (one of: blank, complete, data)")
     .argument("[json]", "JSON file or stdin")
     .action(({ logger, args }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
@@ -135,7 +139,7 @@ let main = () => {
       });
     })
     .command("table", "Export a LaTeX table with the summary of tasks")
-    .argument("<artifact>", "Artfiact name")
+    .argument("<artifact>", "Artfiact name (one of: blank, complete)")
     .argument("[JSON]", "JSON file or stdin")
     .action(({ logger, args }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();

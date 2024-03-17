@@ -516,7 +516,8 @@ let eventLoop = (
 
   return {
     rawSimData: rawSchedule, // <- this is the one being tested by jest
-    simData: serialiseSim(rawSchedule, taskstates), // this is the serialised format
+      // WARNING: changed from taskstates -> origplan, it should be fine, but double check it...
+    simData: serialiseSim(rawSchedule, origplan as CFSStateTaskInfo), // this is the serialised format
   };
 };
 
@@ -528,7 +529,7 @@ let printData = (plan: CFSPlan) => {
         `\\item task ${t.name} (\\lambda = ${t.lambda}) inizia a ${t.arrival}, ` +
           _.join(
             _.map(t.events, (e, i) =>
-              i % 2 === 0 ? `gira per ${e}` : `in attesa per ${e}`
+              i % 2 === 0 ? `runs for ${e}` : `waits for ${e}`
             ),
             ", "
           ),
@@ -666,8 +667,9 @@ let serialiseSim = (
               if (nextState) {
                 // Write at time "time" the text decorating the task 
                 tslot.belowSlot = nextState.vrt + "";
-                tslot.inSlot =
-                  t.event === "RAN" ? `${nextState.sum - t.p}/${r2(t.q)}` : "";
+                tslot.inSlot = t.event === "RAN" ? `\$\\frac{${nextState.sum - t.p}}{${r2(t.q)}}\$` : "";
+              } else { // Last tick for the task, no nextState, it ends!
+                tslot.inSlot = t.event === "RAN" ? `\$\\frac{${t.sum + cfsPlan.timer - t.p}}{${r2(t.q)}}\$` : "";
               }
               return tslot;
             }

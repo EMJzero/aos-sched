@@ -11,7 +11,7 @@ There are two ways a task can end:
 Events alternate, the first is a sleep, then a wakeup, then sleep, ...
 */
 
-let schedule1: GenericSimPlan = {
+let schedule0: GenericSimPlan = {
   timer: 0.5,
   runfor: 8,
   class : {},
@@ -49,7 +49,7 @@ let schedule1: GenericSimPlan = {
   },
 };
 
-let schedule0: GenericSimPlan = {
+let schedule1: GenericSimPlan = {
   timer: 0.5,
   runfor: 8,
   class : {},
