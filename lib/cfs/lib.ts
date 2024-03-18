@@ -516,8 +516,7 @@ let eventLoop = (
 
   return {
     rawSimData: rawSchedule, // <- this is the one being tested by jest
-      // WARNING: changed from taskstates -> origplan, it should be fine, but double check it...
-    simData: serialiseSim(rawSchedule, origplan as CFSStateTaskInfo), // this is the serialised format
+    simData: serialiseSim(rawSchedule, taskstates, origplan), // this is the serialised format
   };
 };
 
@@ -550,7 +549,8 @@ let printData = (plan: CFSPlan) => {
 
 let serialiseSim = (
   cfsStateSnapshots: CFSTaskStateSnapshot[],
-  cfsPlan: CFSStateTaskInfo
+  cfsPlan: CFSStateTaskInfo,
+  origPlan: CFSPlan
 ): Schedule => {
   // assume we always start from 0
 
@@ -680,7 +680,7 @@ let serialiseSim = (
     })
   );
 
-  let scheddata = printData(cfsPlan);
+  let scheddata = printData(origPlan);
   let plan: Plan<ScheduledTask, NoClass> = {
     timer: cfsPlan.timer,
     runfor: cfsPlan.runfor,

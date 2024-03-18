@@ -140,7 +140,7 @@ let main = () => {
       });
     })
     .command("table", "Export a LaTeX table with the summary of tasks")
-    .argument("<artifact>", "Artfiact name (one of: blank, complete)")
+    .argument("<artifact>", "Artifact name (one of: blank, complete)")
     .argument("[JSON]", "JSON file or stdin")
     .action(({ logger, args }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
