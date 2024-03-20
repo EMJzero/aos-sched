@@ -7,6 +7,8 @@ import { Schedule, Plan, GenericPlan, ScheduleProducer } from "./lib/types";
 import { FIFOSchedClass, RRSchedClass, SJFSchedClass, SRTFSchedClass, HRRNSchedClass, schedClassFromString } from "./lib/configurable/lib";
 import { string } from "easy-table";
 
+import _ from "lodash";
+
 type Tests = {
   cfs: Plan<any, any>[];
   configurable: GenericPlan<any>[];
@@ -23,6 +25,7 @@ let tests: Tests = {
 };
 
 let configurableGenerator = require("./lib/configurable/fixtures").configurableGenerator;
+let cfsGenerator = require("./lib/cfs/fixtures").cfsGenerator;
 
 let sims: Simulators = {
   cfs: require("./lib/cfs/lib").produceSchedule as ScheduleProducer,
@@ -85,10 +88,43 @@ let main = () => {
       validator: program.NUMBER,
       default: undefined
     })
+    .option("--lt <latency>", "Meaningful only if <sched> = \"cfs\", latency for CFS (default: 6)", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--mg <mingran>", "Meaningful only if <sched> = \"cfs\", minimum granularity for CFS (default: 0.75)", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--wgup <wakeup_granularity>", "Meaningful only if <sched> = \"cfs\", wakeup granularity for CFS (default: 1)", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--lr <lambda_range>", "Meaningful only if <sched> = \"cfs\", lower and upper bound for lambdas, must be an array of length 2 (default: (0.5, 2.5)). Values will be forced to a decimal of .5 or .0. Note that arrays must be written as \"1, 2\".", {
+      validator: program.ARRAY,
+      default: undefined
+    })
+    .option("--vrtr <initial_vrt_range>", "Meaningful only if <sched> = \"cfs\", lower and upper bound for the initial virtual runtimes, must be an array of length 2 (default: (98, 102)) Note that arrays must be written as \"1, 2\".", {
+      validator: program.ARRAY,
+      default: undefined
+    })
     .action(({ args, options }) => {
       if (args.sched === "cfs") {
-        //console.log(JSON.stringify(tests.cfs[n]));
-        throw Error("Feature not yet supported, sorry >.< !");
+        // Invoke the generator
+        let plan = cfsGenerator(
+          args.tasksCount,
+          options.tm,
+          options.rf,
+          options.lt,
+          options.mg,
+          options.wgup,
+          _.map(options.lr as Array<String>, (s) => Number(s)),
+          _.map(options.vrtr as Array<String>, (s) => Number(s)),
+          options.ms,
+          options.mei,
+          options.mat
+        );
+        console.log(JSON.stringify(plan));
       } else {
         // Invoke the generator
         let plan = configurableGenerator(

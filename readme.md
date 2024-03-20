@@ -55,10 +55,13 @@ The available commands are:
         ...
     ```
 
-2. `gen`: This command is used to randomly generate a new schedule plan. Reasonable default values for the generator are present, but can be chosen via the command's options. As the `dump` command, it returns the JSON representation of the specified schedule.
+2. `gen`: This command is used to randomly generate a new schedule plan. Reasonable default values for the generator are present, but can be chosen via the command's options. As the `dump` command, it returns the JSON representation of the specified schedule. Meaningful options vary accordingly to the chosen scheduler, refer to `gen -h` for details.
 
     ```sh
+    # Example with "rr"
     bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mei 4 --mat 6 --qt 2
+    # Example with "cfs"
+    bunx aos-sched gen cfs 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 --lt 4 --mg 1 --lr "2, 5" --vrtr "6, 9"
     ```
 
 2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes a single argument: the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). The scheduler to be used will be inferred from the data and format of the JSON schedule being passed as input to the command. It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.

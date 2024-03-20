@@ -303,6 +303,8 @@ let cfsGenerator = (
   latency?: number,
   mingran?: number,
   wgup?: number,
+  lambdaRange? : Array<number>,
+  initialVrtRange?: Array<number>,
   maxSleeps?: number,
   maxEventInterval? : number,
   maxArrivalTime? : number,
@@ -314,6 +316,8 @@ let cfsGenerator = (
   latency = (!_.isUndefined(latency) ? max([0.1, latency]) : 6.0) as number;
   mingran = (!_.isUndefined(mingran) ? max([0, mingran]) : 0.75) as number;
   wgup = (!_.isUndefined(wgup) ? max([0.1, wgup]) : 1) as number;
+  lambdaRange = (!_.isUndefined(lambdaRange) && lambdaRange.length == 2 && lambdaRange[0] <= lambdaRange[1] ? [max([0.1, lambdaRange[0]]), max([0.1, lambdaRange[1]])] : [0.5, 2.5]) as Array<number>;
+  initialVrtRange = (!_.isUndefined(initialVrtRange) && initialVrtRange.length == 2 && initialVrtRange[0] <= initialVrtRange[1] ? [max([0.1, initialVrtRange[0]]), max([0.1, initialVrtRange[1]])] : [98, 102]) as Array<number>;
   maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
   maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
   maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
@@ -341,13 +345,11 @@ let cfsGenerator = (
     let task: CFSPlannedTask = {
       index: i,
       name: `$t_${i+1}$`,
-      //TODO: make it customizable
-      lambda: 1,
+      lambda: _.random(lambdaRange[0]*2, lambdaRange[1]*2)/2,
       // The events will determine the length of the task
       arrival: _.random(0, maxArrivalTime),
       events: [],
-      //TODO: make it customizable
-      vrt: 100.0
+      vrt: _.random(initialVrtRange[0]*10, initialVrtRange[1]*10)/10
     };
 
     let eventsCount = _.random(0, maxSleeps)*2 + 1;
