@@ -4,6 +4,7 @@ What we did:
  - fifo
  - ...
 - random schedplan generator
+- new fixtures covering most edge cases, used also for tests
 - fixes per cfs:
  - correct handling of non-zero arrival time
  - added preemption check in case of non-zero arrival time

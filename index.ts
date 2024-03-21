@@ -39,7 +39,7 @@ let main = () => {
   program
     .name("aos-sched")
     .description("Create temporal diagrams of AOS realtime schedulers")
-    .command("dump", "Dump out examples")
+    .command("dump", "Dump out example plans")
     .argument("<sched>", "Scheduler to use", {
       validator: ["cfs", "fifo", "sjf", "srtf", "hrrn", "rr"],
     })

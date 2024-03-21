@@ -6,6 +6,8 @@ import _, {max, min} from "lodash";
 let schedule0: CFSPlan = {
   timer: 0.5,
   runfor: 8,
+  // While moving "latency", "mingran", and "wgup" to attributes is feasible
+  // "class" is maintained like this for legacy reasons.
   class: {
     type: "cfs",
     latency: 6.0,
@@ -296,6 +298,11 @@ let plans: CFSPlan[] = [
   schedule6,
 ];
 
+type GeneratedCFSPlan = CFSPlan & {
+  // Configuration of the generator
+  genConfig : {}
+};
+
 let cfsGenerator = (
   tasksCount: number,
   timer?: number,
@@ -308,7 +315,7 @@ let cfsGenerator = (
   maxSleeps?: number,
   maxEventInterval? : number,
   maxArrivalTime? : number,
-): CFSPlan => {
+): GeneratedCFSPlan => {
   timer = (!_.isUndefined(timer) ? max([0.1, timer]) : 0.5) as number;
   runfor = (!_.isUndefined(runfor) ? max([0.1, runfor]) : 12) as number;
   if ((runfor*10)%(timer*10) !== 0)
@@ -322,7 +329,7 @@ let cfsGenerator = (
   maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
   maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
 
-  let simPlan: CFSPlan = {
+  let simPlan: GeneratedCFSPlan = {
     timer: timer,
     runfor: runfor,
     class : {
@@ -338,6 +345,20 @@ let cfsGenerator = (
       vspace: 1,
       hspace: 1,
       barheight: 0.5,
+    },
+
+    genConfig: {
+      tasksCount: tasksCount,
+      timer: timer,
+      runfor: runfor,
+      latency: latency,
+      mingran: mingran,
+      wgup: wgup,
+      lambdaRange: lambdaRange,
+      initialVrtRange: initialVrtRange,
+      maxSleeps: maxSleeps,
+      maxEventInterval: maxEventInterval,
+      maxArrivalTime: maxArrivalTime
     }
   };
   
