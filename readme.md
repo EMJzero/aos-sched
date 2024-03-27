@@ -76,6 +76,11 @@ The available commands are:
     - `complete`: returns a filled table with the simulation results.
     - `data`: returns a LaTeX itemize with the data required to manually simulate the schedule.
 
+    Options:
+
+    - `--inline` or `-i`, inserts preemption and event strings inline within the plot rather than using a legend.
+    - `--nobelow` or `-n`, removes numbers below the cells, useful when they do not add meaninful insight, such for the RR and FIFO schedulers.
+
     ```sh
     bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
     ```

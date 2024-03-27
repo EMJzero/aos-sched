@@ -169,10 +169,11 @@ let main = () => {
     .argument("<artifact>", "Artifact name (one of: blank, complete, data)")
     .argument("[json]", "JSON file or stdin")
     .option("-i, --inline", "Inserts preemption and event strings inline in the exported LaTeX.")
+    .option("-n, --nobelow", "Removes numbers below the cells, useful when they do not add meaninful insight, such for the RR and FIFO schedulers.")
     .action(({ logger, args, options }) => {
       let datap = args.json ? $fs.readFile(args.json, "utf8") : $gstd();
       datap.then(JSON.parse).then((sim: Schedule) => {
-        console.log(exportLatex(sim, options.inline as Boolean, logger)[args.artifact + ""].code);
+        console.log(exportLatex(sim, options.inline as Boolean, options.nobelow as Boolean, logger)[args.artifact + ""].code);
       });
     })
     .command("table", "Export a LaTeX table with the summary of tasks")

@@ -64,7 +64,7 @@ type ScheduledTask = Task & {
   description: string[]; // actually, only the first two are printed.
 };
 
-type Options = { blank: Boolean, inline: Boolean };
+type Options = { blank: Boolean, inline: Boolean, nobelow: Boolean };
 
 type Schedule = {
   scheddata: {

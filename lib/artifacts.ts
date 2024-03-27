@@ -101,11 +101,11 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
       `\\draw[draw=black] (${r.tstart * hs}, ${r.index * vs}) rectangle ++(${
         (r.tend - r.tstart) * hs
       },${hh}) node[pos=.5] {}; `,
-      printAt(r.tend, r.index - 0.4, r.belowSlot),
+      options.nobelow ? "" : printAt(r.tend, r.index - 0.4, r.belowSlot),
       printAt(r.tend - 0.25, r.index, `${r.inSlot}`),
       pAboveSlot(r),
       pVertMarker(r)
-    ];
+    ].filter((s : String) => s !== "");
   };
   let drawBlocked = (r: TaskSlot) => {
     return [
@@ -116,13 +116,13 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
       },${hh}) node[pos=.5, text=white] {};`,
       pAboveSlot(r),
       pVertMarker(r)
-    ];
+    ].filter((s : String) => s !== "");
   };
   let drawRunnable = (r: TaskSlot) => {
     return [
       pAboveSlot(r),
       pVertMarker(r)
-    ];
+    ].filter((s : String) => s !== "");
   };
   let diag = _.map(sched.timeline, (x) => {
     if (x.tstart < sched.plan.runfor) {
@@ -283,17 +283,17 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   return begin;
 };
 
-let exportLatex = (sim: Schedule, inline: Boolean, logger: Logger) => {
+let exportLatex = (sim: Schedule, inline: Boolean, nobelow: Boolean, logger: Logger) => {
   return {
     complete: latexArtifact(
-      schedToLatex(sim, { blank: false, inline: inline }, logger),
+      schedToLatex(sim, { blank: false, inline: inline, nobelow: nobelow }, logger),
       "rt diagram",
       "standalone",
       "pdflatex",
       "-r varwidth"
     ),
     blank: latexArtifact(
-      schedToLatex(sim, { blank: true, inline: inline }, logger),
+      schedToLatex(sim, { blank: true, inline: inline, nobelow: nobelow }, logger),
       "rt diagram blank",
       "standalone",
       "pdflatex",
@@ -312,14 +312,14 @@ let exportLatex = (sim: Schedule, inline: Boolean, logger: Logger) => {
 let exportLatexSummary = (sim: Schedule, logger: Logger) => {
   return {
     complete: latexArtifact(
-      schedToLatexSummary(sim, { blank: false, inline: false }, logger),
+      schedToLatexSummary(sim, { blank: false, inline: false, nobelow: false }, logger),
       "rt diagram",
       "standalone",
       "pdflatex",
       "-r varwidth"
     ),
     blank: latexArtifact(
-      schedToLatexSummary(sim, { blank: true, inline: false }, logger),
+      schedToLatexSummary(sim, { blank: true, inline: false, nobelow: false }, logger),
       "rt diagram blank",
       "standalone",
       "pdflatex",
