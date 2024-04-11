@@ -525,7 +525,7 @@ let printData = (plan: CFSPlan) => {
   let taskevents = _.join(
     _.map(plan.tasks, (t) => {
       return [
-        `\\item task ${t.name} (\\lambda = ${t.lambda}) inizia a ${t.arrival}, ` +
+        `\\item task ${t.name} (\\lambda = ${t.lambda}) arrives at ${t.arrival}, ` +
           _.join(
             _.map(t.events, (e, i) =>
               i % 2 === 0 ? `runs for ${e}` : `waits for ${e}`
@@ -537,10 +537,10 @@ let printData = (plan: CFSPlan) => {
     "\n"
   );
   let s = `
-  \\begin{itemize}
-  \\item Dati scheduling: $\\bar{\\tau}$= ${plan.class.latency}, $\\mu$=${plan.class.mingran}, $\\omega$=${plan.class.wgup}
-  ${taskevents}
-  \\end{itemize}`;
+Schedule data: $\\bar{\\tau}$= ${plan.class.latency}, $\\mu$=${plan.class.mingran}, $\\omega$=${plan.class.wgup}
+\\begin{itemize}
+${taskevents}
+\\end{itemize}`;
 
   let legendAbove = `Schedule data: $\\bar{\\tau}$= ${plan.class.latency}, $\\mu$=${plan.class.mingran}, $\\omega$=${plan.class.wgup}`;
 
@@ -686,7 +686,7 @@ let serialiseSim = (
     runfor: cfsPlan.runfor,
     graphics: cfsPlan.graphics,
     tasks: [],
-    class: {},
+    class: origPlan.class,
     attributes: {}
   };
 

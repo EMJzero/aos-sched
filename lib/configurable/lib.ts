@@ -498,10 +498,10 @@ let printData = (plan: SimPlan) => {
     "\n"
   );
   let s = `
-  \\begin{itemize}
-  \\item Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}, ${_.map(plan.attributes, (value, key) => `${key} = ${value}`).join(', ')}
-  ${taskevents}
-  \\end{itemize}`;
+Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}, ${_.map(plan.attributes, (value, key) => `${key} = ${value}`).join(', ')}
+\\begin{itemize}
+${taskevents}
+\\end{itemize}`;
 
   let legendAbove = `Schedule data: type = ${plan.class.type}, metric = ${plan.class.metric}, ${_.map(plan.attributes, (value, key) => `${key} = ${value}`).join(', ')}`;
 
@@ -683,7 +683,7 @@ let serialiseSim = (
     runfor: simPlan.runfor,
     graphics: simPlan.graphics,
     tasks: [],
-    class: {},
+    class: origPlan.class,
     attributes: {}
   };
 

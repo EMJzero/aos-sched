@@ -53,7 +53,7 @@ let main = () => {
       } else {
         // Inject the scheduler string, then return the JSON
         let plan = tests.configurable[n];
-        plan.class["type"] = args.sched;
+        plan.class["type"] = args.sched as string;
         console.log(JSON.stringify(plan));
       }
     })

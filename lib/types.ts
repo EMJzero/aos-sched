@@ -22,7 +22,9 @@ type GenericPlan<T> = {
   graphics: any;
   tasks: T[];
   // Contains the class type and specific information
-  class: {},
+  class: {
+    type?: string
+  },
   // A generic dictionary encoding additional scheduling attributes
   attributes: {};
 };

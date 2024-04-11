@@ -6,23 +6,12 @@ import { SimPlan } from "./configurable/lib";
 class TaskSummaryData {
   arrival: number;
   computation: number;
-  wakeups: number[];
-  sleeps: number[];
-  start: number | undefined;
-  completion: number | undefined;
-  waiting: number | undefined;
-  turnaround: number | undefined;
-
-  constructor(arrival: number, computation: number, wakeups: number[], sleeps: number[], waiting: number | undefined, completion: number | undefined, start: number | undefined, turnaround: number | undefined) {
-    this.arrival = arrival;
-    this.computation = computation;
-    this.waiting = waiting;
-    this.completion = completion;
-    this.start = start;
-    this.turnaround = turnaround;
-    this.wakeups = wakeups;
-    this.sleeps = sleeps;
-  }
+  //wakeups: number[];
+  //sleeps: number[];
+  start?: number;
+  completion?: number;
+  waiting?: number;
+  turnaround?: number;
 }
 
 let latexArtifact = (
@@ -212,7 +201,7 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
     let plan = ((sched as unknown) as SimPlan)
     for (let index = 0; index < plan.tasks.length; index++) {
       const task = plan.tasks[index];
-      let sleeps: number[] = [];
+      /*let sleeps: number[] = [];
       let wakeups: number[] = [];
       let accumulator = 0;
       for (let i = 0; i < task.events.length; i++) {
@@ -225,8 +214,17 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
         if (i == 0) {
           accumulator += event;
         }
-      }
-      taskData.push(new TaskSummaryData(task.arrival, task.events[task.events.length - 1], sleeps, wakeups, undefined, undefined, undefined, undefined))
+      }*/
+      taskData.push({
+        arrival: task.arrival,
+        computation: task.events[task.events.length - 1],
+        //sleeps: sleeps,
+        //wakeups: wakeups,
+        waiting: undefined,
+        completion: undefined,
+        start: undefined,
+        turnaround: undefined
+      } as TaskSummaryData)
     }
   } else {
     // We are extracting a table AFTER a simulation has completed, so we can have both a blank and filled-out (as best as the simulation allows) table
@@ -247,7 +245,7 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
         waiting = undefined;
         turnaround = undefined;
       }
-      let sleeps: number[] = [];
+      /*let sleeps: number[] = [];
       let wakeups: number[] = [];
       let accumulator = 0;
       for (let i = 0; i < task.events.length; i++) {
@@ -260,26 +258,35 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
         if (i == 0) {
           accumulator += event;
         }
-      }
-      taskData.push(new TaskSummaryData(task.arrival, task["computation"], sleeps, wakeups, waiting, end, start, turnaround))
+      }*/
+      taskData.push({
+        arrival: task.arrival,
+        computation: task["computation"] ?? task["vrt"],
+        //sleeps: sleeps,
+        //wakeups: wakeups,
+        waiting: waiting,
+        completion: end,
+        start: start,
+        turnaround: turnaround
+      } as TaskSummaryData)
     }
   }
 
   let begin = `\\begin{table}[]
-  \\centering
-  \\caption{Summary of Tasks}
-  \\vspace{10pt}
-  \\begin{tabular}{c|c|c|c|c|c|c|c}
-  Task & Arrival & Computation & Wakeup & Sleep & Start & Finish & Waiting (W) & Turnaround (Z) \\\\
-  \\hline`
-  for (let index = 0; index < taskData.length; index++) {
-    const task = taskData[index];
-    begin += `\n${index} & ${task.arrival} & ${task.computation} & ${task.start ?? ""} & ${task.completion ?? ""} & ${task.waiting ?? ""} & ${task.turnaround ?? ""} \\\\`;
-  }
-  begin += `\n\\end{tabular}
-  \\label{tab:my_label}
-\\end{table}
-\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate each running time at which the associated task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
+\\centering
+\\caption{Summary of Tasks}
+\\vspace{10pt}
+\\begin{tabular}{c|c|c|c|c|c}
+Task & Arrival & ${sched.plan.class.type === "cfs" ? "Final VRT" : "Computation"} & Start & Finish & Waiting (W) & Turnaround (Z) \\\\
+\\hline`
+for (let index = 0; index < taskData.length; index++) {
+  const task = taskData[index];
+  begin += `\n${index+1} & ${task.arrival} & ${task.computation} & ${task.start ?? ""} & ${task.completion ?? ""} & ${task.waiting ?? ""} & ${task.turnaround ?? ""} \\\\`;
+}
+begin += `\n\\end{tabular}
+\\label{tab:my_label}
+\\end{table}`;
+//+ `\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate each running time at which the associated task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
   return begin;
 };
 
