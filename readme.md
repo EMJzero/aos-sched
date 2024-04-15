@@ -116,15 +116,77 @@ The available commands are:
     ```
 
 # Examples
-
+## End-to-End generation using bundled schedules
+### CFS (Completely Fair Scheduler)
+#### Schedule Plot
 ```sh
-bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched export complete
+bunx aos-sched dump cfs 4 | bunx aos-sched simulate | bunx aos-sched export complete
 ```
 
 will produce a latex file that when compiled and exported to png gives:
 
-![](./example.png)
+![](./static/example_cfs.png)
 
+#### Schedule Data
+```sh
+bunx aos-sched dump cfs 4 | bunx aos-sched simulate | bunx aos-sched export data
+```
+will produce a latex file that when compiled gives the following (re-rendered to Markdown):
+
+> Schedule Data: $\bar{\tau}$= 6, $\mu$=4, $\omega$=1
+> - task $t_1$ ($\lambda = 1$) arrives at 0, runs for 1, waits for 5, runs for 8
+> - task $t_2$ ($\lambda = 1$) arrives at 0, runs for 14
+> - task $t_3$ ($\lambda = 1$) arrives at 0, runs for 3, waits for 1, runs for 10
+
+#### Schedule Summary Table
+```sh
+bunx aos-sched dump cfs 4 | bunx aos-sched simulate | bunx aos-sched table complete
+```
+will produce a latex file that when compiled gives the following (re-rendered to Markdown):
+
+
+> | Task | Arrival | Final VRT | Start | Finish | Waiting (W) | Turnaround (Z) |
+> |------|---------|-----------|-------|--------|-------------|----------------|
+> | 1    | 0       | 105       | 0     |        | 0           |                |
+> | 2    | 0       | 104.5     | 1     |        | 1           |                |
+> | 3    | 0       | 104       | 5     |        | 5           |                |
+
+### RR (Round-Robin)
+#### Schedule Plot
+```sh
+bunx aos-sched dump rr 3 | bunx aos-sched simulate | bunx aos-sched export complete
+```
+
+will produce a latex file that when compiled and exported to png gives:
+
+![](./static/example_rr.png)
+
+#### Schedule Data
+```sh
+bunx aos-sched dump rr 3 | bunx aos-sched simulate | bunx aos-sched export data
+```
+will produce a latex file that when compiled gives the following (re-rendered to Markdown):
+
+> Schedule Data: **type** = *rr*, **metric** = *time quantum*, **quantum** = *1.5*
+> - task $t_1$ (*length = 16*) arrives at 0, runs for 1, waits for 2, runs for 3, waits for 4, runs for 8
+> - task $t_2$ (*length = 16*) arrives at 0, runs for 2, waits for 2, runs for 2, waits for 3, runs for 1
+> - task $t_3$ (*length = 16*) arrives at 0, runs for 3, waits for 1, runs for 2, waits for 3, runs for 1
+
+#### Schedule Summary Table
+```sh
+bunx aos-sched dump rr 3 | bunx aos-sched simulate | bunx aos-sched table complete
+```
+will produce a latex file that when compiled gives the following (re-rendered to Markdown):
+
+
+> | Task | Arrival | Computation | Start | Finish | Waiting (W) | Turnaround (Z) |
+> |------|---------|-------------|-------|--------|-------------|----------------|
+> | 1    | 0       | 16          | 0     |        | 0           |                |
+> | 2    | 0       | 16          | 1     | 16     | 1           | 16             |
+> | 3    | 0       | 16          | 2.5   | 18.5   | 2.5         | 18.5           |
+
+
+## Generate a random schedule
 ```sh
 bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 > tmp.json
 bunx aos-sched simulate < tmp.json | bunx aos-sched export complete
