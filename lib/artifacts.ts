@@ -197,29 +197,12 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
   let taskData: TaskSummaryData[] = [];
   if (sched.plan === undefined) {
     // We are extracting a table WITHOUT running a simulation, so we can only have a blank table
-    let slots = sched.timeline;
     let plan = ((sched as unknown) as SimPlan)
     for (let index = 0; index < plan.tasks.length; index++) {
       const task = plan.tasks[index];
-      /*let sleeps: number[] = [];
-      let wakeups: number[] = [];
-      let accumulator = 0;
-      for (let i = 0; i < task.events.length; i++) {
-        const event = task.events[i];
-        if (i % 2 == 0) {
-          sleeps.push(event + accumulator);
-        } else {
-          wakeups.push(event);
-        }
-        if (i == 0) {
-          accumulator += event;
-        }
-      }*/
       taskData.push({
         arrival: task.arrival,
         computation: task.events[task.events.length - 1],
-        //sleeps: sleeps,
-        //wakeups: wakeups,
         waiting: undefined,
         completion: undefined,
         start: undefined,
@@ -230,45 +213,23 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
     // We are extracting a table AFTER a simulation has completed, so we can have both a blank and filled-out (as best as the simulation allows) table
     let slots = sched.timeline;
     for (let index = 0; index < sched.plan.tasks.length; index++) {
+      let data = new TaskSummaryData();
       const task = sched.plan.tasks[index];
-      // Find the start & end times
-      let myslots = slots.filter((v, i, a) => v.index == task.index);
-      let start = myslots.find((v, i, o) => v.event === "RAN")?.tstart;
-      let end = myslots.find((v, i, o) => v.event === "EXITED")?.tend;
-      // Find the waiting time
-      let waiting = start !== undefined ? start - task.arrival : undefined;
-      // Find the turnaround
-      let turnaround = end !== undefined ? end - task.arrival : undefined;
-      if (options.blank) {
-        start = undefined;
-        end = undefined;
-        waiting = undefined;
-        turnaround = undefined;
+      data.arrival = task.arrival;
+      data.computation = task["computation"] ?? task["vrt"];
+      
+      if (!options.blank) {
+        // Find the start & end times
+        let myslots = slots.filter((v, i, a) => v.index == task.index);
+        data.start = myslots.find((v, i, o) => v.event === "RAN")?.tstart;
+        data.completion = task.exited;
+        // Find the waiting time
+        data.waiting = myslots.filter((v, i, o) => v.event === "RUNNABLE").length;
+        // Find the turnaround
+        data.turnaround = data.completion !== undefined ? data.completion - task.arrival : undefined;
       }
-      /*let sleeps: number[] = [];
-      let wakeups: number[] = [];
-      let accumulator = 0;
-      for (let i = 0; i < task.events.length; i++) {
-        const event = task.events[i];
-        if (i % 2 == 0) {
-          sleeps.push(event + accumulator);
-        } else {
-          wakeups.push(event);
-        }
-        if (i == 0) {
-          accumulator += event;
-        }
-      }*/
-      taskData.push({
-        arrival: task.arrival,
-        computation: task["computation"] ?? task["vrt"],
-        //sleeps: sleeps,
-        //wakeups: wakeups,
-        waiting: waiting,
-        completion: end,
-        start: start,
-        turnaround: turnaround
-      } as TaskSummaryData)
+      
+      taskData.push(data);
     }
   }
 
@@ -286,7 +247,6 @@ for (let index = 0; index < taskData.length; index++) {
 begin += `\n\\end{tabular}
 \\label{tab:my_label}
 \\end{table}`;
-//+ `\\textit{{\\tiny Note: the values in the \\textbf{Sleep} column indicate each running time at which the associated task goes to sleep, an event with time $t$ is to be interpreted as happening when the task has actually ran for $t$ units of time. Instead, values in the \\textbf{Wakeup} column indicate the time after which the task wakes up, counting from the moment it goes to sleep: with an event of value $w$, if the task goes to sleep at absolute time $\\tau$, it will wakeup at absolute time $\\tau + w$. Events are all naturally consumed left-to-right.}}`;
   return begin;
 };
 
