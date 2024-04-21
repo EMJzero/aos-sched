@@ -276,7 +276,7 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
 \\centering
 \\caption{Summary of Tasks}
 \\vspace{10pt}
-\\begin{tabular}{c|c|c|c|c|c}
+\\begin{tabular}{c|c|c|c|c|c|c}
 Task & Arrival & ${sched.plan.class.type === "cfs" ? "Final VRT" : "Computation"} & Start & Finish & Waiting (W) & Turnaround (Z) \\\\
 \\hline`
 for (let index = 0; index < taskData.length; index++) {

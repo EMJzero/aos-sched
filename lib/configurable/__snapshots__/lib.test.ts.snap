@@ -1,6 +1,6 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Schedule 0 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 0 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -995,7 +995,7 @@ exports[`Schedule 0 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 1 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 1 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -1990,7 +1990,7 @@ exports[`Schedule 1 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 2 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 2 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -2985,7 +2985,7 @@ exports[`Schedule 2 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 3 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 3 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -3980,7 +3980,7 @@ exports[`Schedule 3 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 4 with scheduler RR works as expected 1`] = `
+exports[`Schedule 4 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -4993,7 +4993,7 @@ exports[`Schedule 4 with scheduler RR works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 5 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 5 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -5988,7 +5988,7 @@ exports[`Schedule 5 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 6 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 6 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -6983,7 +6983,7 @@ exports[`Schedule 6 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 7 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 7 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -7978,7 +7978,7 @@ exports[`Schedule 7 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 8 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 8 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -8973,7 +8973,7 @@ exports[`Schedule 8 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 9 with scheduler RR works as expected 1`] = `
+exports[`Schedule 9 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -9986,7 +9986,7 @@ exports[`Schedule 9 with scheduler RR works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 10 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 10 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -11543,7 +11543,7 @@ exports[`Schedule 10 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 11 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 11 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -13100,7 +13100,7 @@ exports[`Schedule 11 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 12 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 12 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -14633,7 +14633,7 @@ exports[`Schedule 12 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 13 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 13 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -16076,7 +16076,7 @@ exports[`Schedule 13 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 14 with scheduler RR works as expected 1`] = `
+exports[`Schedule 14 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -17627,7 +17627,7 @@ exports[`Schedule 14 with scheduler RR works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 15 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 15 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -20775,7 +20775,7 @@ exports[`Schedule 15 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 16 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 16 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -23923,7 +23923,7 @@ exports[`Schedule 16 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 17 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 17 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -27099,7 +27099,7 @@ exports[`Schedule 17 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 18 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 18 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -30326,7 +30326,7 @@ exports[`Schedule 18 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 19 with scheduler RR works as expected 1`] = `
+exports[`Schedule 19 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -33532,7 +33532,7 @@ exports[`Schedule 19 with scheduler RR works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 20 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 20 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -34628,7 +34628,7 @@ exports[`Schedule 20 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 21 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 21 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -35724,7 +35724,7 @@ exports[`Schedule 21 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 22 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 22 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -36820,7 +36820,7 @@ exports[`Schedule 22 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 23 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 23 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -37814,7 +37814,7 @@ exports[`Schedule 23 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 24 with scheduler RR works as expected 1`] = `
+exports[`Schedule 24 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -38069,24 +38069,6 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
     "rqueue": [
       {
         "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          2,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 1.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
-        "R": "",
         "arrival": 2,
         "computation": 1,
         "enqueue": 2,
@@ -38105,283 +38087,29 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         },
         "wait": 0.5,
       },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 2.5,
+        "events": [
+          2,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
     ],
     "time": 2.5,
   },
   {
     "blocked": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 0,
-        "sum": 1,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 0,
-      },
-    ],
-    "rqueue": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          1.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
-        "R": "",
-        "arrival": 2,
-        "computation": 1,
-        "enqueue": 2,
-        "events": [
-          2,
-          1,
-          1,
-        ],
-        "index": 2,
-        "name": "$t_3$",
-        "prev": 0,
-        "sum": 0,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-    ],
-    "time": 3,
-  },
-  {
-    "blocked": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 0,
-        "sum": 1,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 0,
-      },
-    ],
-    "rqueue": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          1,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
-        "R": "",
-        "arrival": 2,
-        "computation": 1,
-        "enqueue": 2,
-        "events": [
-          2,
-          1,
-          1,
-        ],
-        "index": 2,
-        "name": "$t_3$",
-        "prev": 0,
-        "sum": 0,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1.5,
-      },
-    ],
-    "time": 3.5,
-  },
-  {
-    "blocked": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 0,
-        "sum": 1,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 0,
-      },
-    ],
-    "rqueue": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          0.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 3,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
-        "R": "",
-        "arrival": 2,
-        "computation": 1,
-        "enqueue": 2,
-        "events": [
-          2,
-          1,
-          1,
-        ],
-        "index": 2,
-        "name": "$t_3$",
-        "prev": 0,
-        "sum": 0,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 2,
-      },
-    ],
-    "time": 4,
-  },
-  {
-    "blocked": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          0,
-        ],
-        "exited": 4.5,
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 3.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 0,
-        "sum": 1,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 0,
-      },
-    ],
-    "rqueue": [
-      {
-        "R": "X",
-        "arrival": 2,
-        "computation": 1,
-        "enqueue": 2,
-        "events": [
-          2,
-          1,
-          1,
-        ],
-        "index": 2,
-        "name": "$t_3$",
-        "prev": 0,
-        "sum": 0,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 2.5,
-      },
-    ],
-    "time": 4.5,
-  },
-  {
-    "blocked": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 4,
-        "enqueue": 0,
-        "events": [
-          0,
-        ],
-        "exited": 4.5,
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 3.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
       {
         "R": "X",
         "arrival": 0,
@@ -38420,7 +38148,197 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
           "color": "black",
           "message": "",
         },
-        "wait": 2.5,
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 2.5,
+        "events": [
+          2,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 0,
+        "events": [
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 2.5,
+        "events": [
+          2,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 0,
+        "events": [
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 2.5,
+        "events": [
+          1.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 1.5,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 0,
+        "events": [
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 2.5,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 1.5,
+        "sum": 2.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 0,
+        "events": [
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 4,
+        "enqueue": 5,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 3,
+        "sum": 3,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
       },
     ],
     "time": 5,
@@ -38431,20 +38349,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
       {
         "R": "X",
@@ -38474,20 +38392,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38518,20 +38436,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38562,20 +38480,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38606,20 +38524,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38627,13 +38545,13 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 6,
+        "enqueue": 7.5,
         "events": [
           6.5,
         ],
         "index": 0,
         "name": "$t_1$",
-        "prev": 1,
+        "prev": 2.5,
         "sum": 2.5,
         "text": {
           "color": "black",
@@ -38650,20 +38568,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38671,13 +38589,13 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 6,
+        "enqueue": 7.5,
         "events": [
           6,
         ],
         "index": 0,
         "name": "$t_1$",
-        "prev": 1,
+        "prev": 2.5,
         "sum": 3,
         "text": {
           "color": "black",
@@ -38694,20 +38612,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [
@@ -38715,13 +38633,13 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 6,
+        "enqueue": 7.5,
         "events": [
           5.5,
         ],
         "index": 0,
         "name": "$t_1$",
-        "prev": 1,
+        "prev": 2.5,
         "sum": 3.5,
         "text": {
           "color": "black",
@@ -38738,20 +38656,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38763,20 +38681,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38788,20 +38706,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38813,20 +38731,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38838,20 +38756,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38863,20 +38781,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38888,20 +38806,20 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
         "R": "X",
         "arrival": 0,
         "computation": 4,
-        "enqueue": 0,
+        "enqueue": 5,
         "events": [
           0,
         ],
-        "exited": 4.5,
+        "exited": 5.5,
         "index": 1,
         "name": "$t_2$",
-        "prev": 0,
+        "prev": 3,
         "sum": 3.5,
         "text": {
           "color": "black",
           "message": "",
         },
-        "wait": 1,
+        "wait": 0,
       },
     ],
     "rqueue": [],
@@ -38910,7 +38828,2455 @@ exports[`Schedule 24 with scheduler RR works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 25 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 25 with scheduler fifo works as expected 1`] = `
+[
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0,
+        "wait": 0,
+      },
+    ],
+    "time": 0,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 0.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 1,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 1.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 2,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 2.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "blue",
+          "message": "(wu: 3.5, cur: 2) cont",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          0.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "(wu: 5.5)",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 5.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          1.5,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 6,
+  },
+]
+`;
+
+exports[`Schedule 26 with scheduler fifo works as expected 1`] = `
+[
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0,
+        "wait": 0,
+      },
+    ],
+    "time": 0,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 0.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 1,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 1.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 2,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 2.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "blue",
+          "message": "(wu: 3.5, cur: 2) cont",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          0.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "(wu: 5.5)",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 5.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          1.5,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 6,
+  },
+]
+`;
+
+exports[`Schedule 27 with scheduler sjf works as expected 1`] = `
+[
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0,
+        "wait": 0,
+      },
+    ],
+    "time": 0,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 0.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 1,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 1.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 2,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 2.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "blue",
+          "message": "(wu: 0.5, cur: 3) cont",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          0.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "(wu: 2)",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 5.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 5.5,
+        "events": [
+          1.5,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 6,
+  },
+]
+`;
+
+exports[`Schedule 28 with scheduler srtf works as expected 1`] = `
+[
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0,
+        "wait": 0,
+      },
+    ],
+    "time": 0,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 0.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 1,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 1.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 2,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 2.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "red",
+          "message": "(wu: 0.5, cur: 3) preempt",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 6,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "(wu: 2)",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 6,
+  },
+]
+`;
+
+exports[`Schedule 29 with scheduler rr works as expected 1`] = `
+[
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0,
+        "wait": 0,
+      },
+    ],
+    "time": 0,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 0,
+        "events": [
+          1,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 0.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 1,
+        "events": [
+          0.5,
+          2,
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 1,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 1.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 1,
+        "computation": 1,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 2,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          2,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 2.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 1,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 2,
+        "events": [
+          1.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 0,
+        "sum": 0.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 3,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          1,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "blue",
+          "message": "(wu: 3.5, cur: 3.5) cont",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 3.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 4,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 2,
+        "enqueue": 3.5,
+        "events": [
+          0.5,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1.5,
+        "sum": 1.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+      {
+        "R": "",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 4.5,
+        "events": [
+          0,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 1,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 4.5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 4.5,
+        "events": [
+          0,
+          1,
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "time": 5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 4.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 5.5,
+  },
+  {
+    "blocked": [
+      {
+        "R": "X",
+        "arrival": 2,
+        "computation": 4,
+        "enqueue": 4.5,
+        "events": [
+          2,
+        ],
+        "index": 2,
+        "name": "$t_3$",
+        "prev": 2,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 0.5,
+      },
+    ],
+    "rqueue": [],
+    "time": 6,
+  },
+]
+`;
+
+exports[`Schedule 30 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -40559,7 +42925,7 @@ exports[`Schedule 25 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 26 with scheduler FIFO works as expected 1`] = `
+exports[`Schedule 31 with scheduler fifo works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -42208,7 +44574,7 @@ exports[`Schedule 26 with scheduler FIFO works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 27 with scheduler SJF works as expected 1`] = `
+exports[`Schedule 32 with scheduler sjf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -43857,7 +46223,7 @@ exports[`Schedule 27 with scheduler SJF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 28 with scheduler SRTF works as expected 1`] = `
+exports[`Schedule 33 with scheduler srtf works as expected 1`] = `
 [
   {
     "blocked": [],
@@ -45506,7 +47872,7 @@ exports[`Schedule 28 with scheduler SRTF works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 29 with scheduler RR works as expected 1`] = `
+exports[`Schedule 34 with scheduler rr works as expected 1`] = `
 [
   {
     "blocked": [],

@@ -19,6 +19,8 @@ cd <path-to-repo>
 bun link && bun link aos-sched
 ```
 
+Now you should be able to use `bun test` to run the attached tests.
+
 # Usage
 Only usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
 The available commands are:
