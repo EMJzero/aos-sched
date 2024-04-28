@@ -446,6 +446,8 @@ let eventLoop = (
         */
         schedstate.curr.events[0] = r2(schedstate.curr.events[0] - delta);
 
+        // NOTE: if "computation" were to be added as a task attribute, handle it here!
+
         // If the current time slice has expired, update the rbtree and schedule the next task
         if (
           // WARNING: wouldn't >= 0 be safer ?
@@ -473,29 +475,39 @@ let eventLoop = (
           _setTimeout(_wakeup, blocktime, ts, "_wakeup");
           // Remove the two used events (sleep and wakeup)
           ts.events = _.tail(_.tail(ts.events));
+          // Run the next task
+          resched(`putting task to sleep ${ts.name} @${timer.walltime}`);
         } else {
           // If no subsequent wakeup event is present in the plan, the sleep is treated as an exit,
           // and the current task's "exited" field is written
           // WARNING: schedstate.curr is always defined, the inline-if is useless?
-          let v = _.find(
-            taskstates.tasks,
-            (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
-          );
-          if (v) {
-            v.exited = timer.walltime;
-          }
-
-          let vp = _.find(
-            schedstate.origplan.tasks,
-            (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
-          );
-          if (vp) {
-            vp.exited = timer.walltime;
-          }
+          exitCurrentTask();
+          // Run the next task
+          resched(`exiting task ${ts.name} @${timer.walltime}`);
         }
-        // Run the next task
-        resched(`putting task to sleep ${ts.name} @${timer.walltime}`);
       }
+    }
+  };
+
+  let exitCurrentTask = () => {
+    if (schedstate.curr !== undefined) {
+      let v = _.find(
+        taskstates.tasks,
+        (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
+      );
+      if (v) {
+        v.exited = timer.walltime;
+      }
+
+      let vp = _.find(
+        schedstate.origplan.tasks,
+        (t) => t.index === (schedstate.curr ? schedstate.curr.index : 0)
+      );
+      if (vp) {
+        vp.exited = timer.walltime;
+      }
+
+      removeFromRbt(schedstate.curr);
     }
   };
 

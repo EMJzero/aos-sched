@@ -1,6 +1,19 @@
 
 # Introduction
 
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./static/wordart_orange.png" width=500px>
+      </td>
+      <td align="center">
+        <img src="./static/flow.png" width=250px>
+      </td>
+    </tr>
+  </table>
+</div>
+
 This is a small CLI tool written for the Advanced Operating Systems course to create realtime schedule diagrams from schedule plans. It provides several commands to simulate and print scheduling simulations. At the moment, the following schedulers are implemented:
 
 - CFS (Linux CFS)
@@ -95,26 +108,40 @@ The available commands are:
     ```tex
     \begin{itemize}
       \item Schedule data: type = rr, metric = time quantum, quantum = 1.5
-      \item task $t_1$ (\length = 9) arrives at 0, runs for 1, waits for 5, runs for 8
-      \item task $t_2$ (\length = 20) arrives at 0, runs for 14
-      \item task $t_3$ (\length = 8) arrives at 0, runs for 3, waits for 2, runs for 10
+      \item task $t_1$ (cmp = 9) arrives at 0, runs for 1, waits for 5, runs for 8
+      \item task $t_2$ (cmp = 20) arrives at 0, runs for 14
+      \item task $t_3$ (cmp = 8) arrives at 0, runs for 3, waits for 2, runs for 10
     \end{itemize}
     ```
 
-4. `table`: This command is used to export a LaTeX table summarizing the schedule plan data. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data, or alternatively the raw schedule plan. At the moment there are two artifacts (`blank`, `complete`) that output LaTeX source code, which are observed ONLY if the command is fed with full simulation data (otherwise, `blank` is generated regardless of this option). `blank` creates the table filled with arrival and computation times, while `complete` also adds start, completion, waiting times and turnaround (if the simulation did not run for enough time to let a task exit, it will not have a completion time hence no turnaround can be determined as well, and therefore these fields will remain blank).
+4. `table`: This command is used to export a LaTeX table summarizing the schedule plan data. It takes two arguments: the artifact name and the JSON file or stdin containing the simulation data. At the moment there are two artifacts (`blank`, `complete`) that output LaTeX source code, `blank` creates the table filled with arrival and computation times, while `complete` also adds start, completion, waiting times and turnaround (if the simulation did not run for enough time to let a task exit, the completion time and turnaround for such task will remain unk, therefore resulting in some blank fields).
 
     - `blank`: returns a table with only the initial data of the simulation.
     - `complete`: returns a table containing the solution to the simulation.
 
     ```sh
-    # To extract a full, filled-out table
-    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table complete
+    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table blank
     ```
     ```sh
-    # To extract a blank table
-    bunx aos-sched dump cfs 0 | bunx aos-sched simulate | bunx aos-sched table blank
-    # Or alternatively
-    bunx aos-sched dump cfs 0 | bunx aos-sched table blank
+    bunx aos-sched dump fifo 4 | bunx aos-sched simulate | bunx aos-sched table complete
+    ```
+
+    Example output (`complete`):
+
+    ```tex
+    \begin{table}[]
+    \centering
+    \caption{Summary of Tasks}
+    \vspace{10pt}
+    \begin{tabular}{c|c|c|c|c|c|c}
+    Task & Arrival & Computation & Start & Finish & Waiting (W) & Turnaround (Z) \\
+    \hline
+    1 & 0 & 4 & 0 & 9 & 0 & 9 \\
+    2 & 0 & 4 & 1 & 4.5 & 2 & 4.5 \\
+    3 & 2 & 1 & 4.5 & 5.5 & 5 & 3.5 \\
+    \end{tabular}
+    \label{tab:my_label}
+    \end{table}
     ```
 
 # Examples
@@ -170,9 +197,9 @@ bunx aos-sched dump rr 3 | bunx aos-sched simulate | bunx aos-sched export data
 will produce a latex file that when compiled gives the following (re-rendered to Markdown):
 
 > Schedule Data: **type** = *rr*, **metric** = *time quantum*, **quantum** = *1.5*
-> - task $t_1$ (*length = 16*) arrives at 0, runs for 1, waits for 2, runs for 3, waits for 4, runs for 8
-> - task $t_2$ (*length = 16*) arrives at 0, runs for 2, waits for 2, runs for 2, waits for 3, runs for 1
-> - task $t_3$ (*length = 16*) arrives at 0, runs for 3, waits for 1, runs for 2, waits for 3, runs for 1
+> - task $t_1$ (cmp $= 16$) arrives at 0, runs for 1, waits for 2, runs for 3, waits for 4, runs for 8
+> - task $t_2$ (cmp $= 16$) arrives at 0, runs for 2, waits for 2, runs for 2, waits for 3, runs for 1
+> - task $t_3$ (cmp $= 16$) arrives at 0, runs for 3, waits for 1, runs for 2, waits for 3, runs for 1
 
 #### Schedule Summary Table
 ```sh
@@ -189,11 +216,14 @@ will produce a latex file that when compiled gives the following (re-rendered to
 
 
 ## Generate a random schedule
+
+The following lines will instead yield a randomly generated schedule, its data, and its tables, both empty and complete. Storing the generated schedule to a file is suggested as the generator is **not** deterministic.
+
 ```sh
 bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 > tmp.json
 bunx aos-sched simulate < tmp.json | bunx aos-sched export complete
-bunx aos-sched table blank < tmp.json
+bunx aos-sched simulate < tmp.json | bunx aos-sched export data
+bunx aos-sched simulate < tmp.json | bunx aos-sched table blank
 bunx aos-sched simulate < tmp.json | bunx aos-sched table complete
 ```
 
-will instead yield a randomly generated schedule and its tables, both empty and complete.
