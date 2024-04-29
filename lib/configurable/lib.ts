@@ -122,7 +122,7 @@ const HRRNSchedClass : SchedClass = {
   preempt_wakeup: (t: TaskState, s: State) => false,
   preempt_tick: (t: TaskState, s: State) => false,
   // Computes the response ratio for a task
-  schedmetric: (t?: TaskState) => t ? (t.wait == 0 ? 0 : (t.wait + t.computation) / t.wait) : -1,
+  schedmetric: (t?: TaskState) => t ? (t.wait == 0 ? 0 : (t.wait + t.computation) / t.computation) : -1,
   // Highest first
   order: (t1?: TaskState, t2?: TaskState) => HRRNSchedClass.schedmetric(t1) > HRRNSchedClass.schedmetric(t2)
 };

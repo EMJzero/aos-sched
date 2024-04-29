@@ -176,9 +176,9 @@ will produce a latex file that when compiled gives the following (re-rendered to
 
 > | Task | Arrival | Final VRT | Start | Finish | Waiting (W) | Turnaround (Z) |
 > |------|---------|-----------|-------|--------|-------------|----------------|
-> | 1    | 0       | 105       | 0     |        | 0           |                |
-> | 2    | 0       | 104.5     | 1     |        | 1           |                |
-> | 3    | 0       | 104       | 5     |        | 5           |                |
+> | 1    | 0       | 105       | 0     |        | 2           |                |
+> | 2    | 0       | 104.5     | 1     |        | 8           |                |
+> | 3    | 0       | 104       | 5     |        | 8           |                |
 
 ### RR (Round-Robin)
 #### Schedule Plot

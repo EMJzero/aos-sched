@@ -10633,24 +10633,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          9,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -10671,6 +10653,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
         "wait": 6,
       },
       {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          9,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
+      },
+      {
         "R": "",
         "arrival": 0,
         "computation": 9,
@@ -10684,7 +10684,7 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
         "sum": 1,
         "text": {
           "color": "blue",
-          "message": "(wu($t_1$): 0, cur($t_2$): 21) cont",
+          "message": "(wu($t_1$): 0, cur($t_2$): 1.05) cont",
         },
         "wait": 0,
       },
@@ -10694,24 +10694,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
   {
     "blocked": [],
     "rqueue": [
-      {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          8.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 5.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
       {
         "R": "",
         "arrival": 0,
@@ -10731,6 +10713,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 6.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          8.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 5.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -10757,24 +10757,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          8,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 6,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -10793,6 +10775,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 7,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          8,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 6,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -10819,24 +10819,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          7.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 6.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -10855,6 +10837,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 7.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          7.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 6.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -10881,24 +10881,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          7,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 7,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -10917,6 +10899,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 8,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          7,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 7,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -10943,24 +10943,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          6.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 7.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -10979,6 +10961,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 8.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          6.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 7.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11005,24 +11005,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          6,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 8,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11041,6 +11023,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 9,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          6,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 8,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11067,24 +11067,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          5.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 8.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11103,6 +11085,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 9.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          5.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 8.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11129,24 +11129,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 9,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11165,6 +11147,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 10,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 9,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11191,24 +11191,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          4.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 9.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11227,6 +11209,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 10.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          4.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 9.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11253,24 +11253,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          4,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 10,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11289,6 +11271,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 11,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          4,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 10,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11315,24 +11315,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          3.5,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 10.5,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11351,6 +11333,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 11.5,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          3.5,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 10.5,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -11377,24 +11377,6 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 20,
-        "enqueue": 0,
-        "events": [
-          3,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 11,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 1,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 8,
@@ -11413,6 +11395,24 @@ exports[`Schedule 1 with scheduler "hrrn" 3`] = `
           "message": "",
         },
         "wait": 12,
+      },
+      {
+        "R": "X",
+        "arrival": 0,
+        "computation": 20,
+        "enqueue": 0,
+        "events": [
+          3,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 11,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 1,
       },
       {
         "R": "",
@@ -19581,7 +19581,7 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
         "sum": 1,
         "text": {
           "color": "blue",
-          "message": "(wu($t_1$): 0, cur($t_3$): 6.33) cont",
+          "message": "(wu($t_1$): 0, cur($t_3$): 1.19) cont",
         },
         "wait": 0,
       },
@@ -19799,26 +19799,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "",
-        "arrival": 0,
-        "computation": 16,
-        "enqueue": 3,
-        "events": [
-          3,
-          4,
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 0,
-        "sum": 1,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 2,
-      },
-      {
         "R": "X",
         "arrival": 0,
         "computation": 16,
@@ -19844,32 +19824,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
         "R": "",
         "arrival": 0,
         "computation": 16,
-        "enqueue": 5,
-        "events": [
-          2,
-          3,
-          1,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2,
-        "text": {
-          "color": "blue",
-          "message": "(wu($t_2$): 0, cur($t_3$): 6.33) cont",
-        },
-        "wait": 0,
-      },
-    ],
-    "time": 5,
-  },
-  {
-    "blocked": [],
-    "rqueue": [
-      {
-        "R": "",
-        "arrival": 0,
-        "computation": 16,
         "enqueue": 3,
         "events": [
           3,
@@ -19884,8 +19838,34 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
           "color": "black",
           "message": "",
         },
-        "wait": 2.5,
+        "wait": 2,
       },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 5,
+        "events": [
+          2,
+          3,
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "blue",
+          "message": "(wu($t_2$): 0, cur($t_3$): 1.19) cont",
+        },
+        "wait": 0,
+      },
+    ],
+    "time": 5,
+  },
+  {
+    "blocked": [],
+    "rqueue": [
       {
         "R": "X",
         "arrival": 0,
@@ -19907,6 +19887,26 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
           "message": "",
         },
         "wait": 3,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 3,
+        "events": [
+          3,
+          4,
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 0,
+        "sum": 1,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 2.5,
       },
       {
         "R": "",
@@ -20069,6 +20069,26 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
     "blocked": [],
     "rqueue": [
       {
+        "R": "X",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 3,
+        "events": [
+          2,
+          4,
+          8,
+        ],
+        "index": 0,
+        "name": "$t_1$",
+        "prev": 1,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 3,
+      },
+      {
         "R": "",
         "arrival": 0,
         "computation": 16,
@@ -20089,26 +20109,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
         "wait": 2,
       },
       {
-        "R": "X",
-        "arrival": 0,
-        "computation": 16,
-        "enqueue": 3,
-        "events": [
-          2,
-          4,
-          8,
-        ],
-        "index": 0,
-        "name": "$t_1$",
-        "prev": 1,
-        "sum": 2,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 3,
-      },
-      {
         "R": "",
         "arrival": 0,
         "computation": 16,
@@ -20124,7 +20124,7 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
         "sum": 3,
         "text": {
           "color": "blue",
-          "message": "(wu($t_3$): 0, cur($t_1$): 6.33) cont",
+          "message": "(wu($t_3$): 0, cur($t_1$): 1.19) cont",
         },
         "wait": 0,
       },
@@ -20134,26 +20134,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
   {
     "blocked": [],
     "rqueue": [
-      {
-        "R": "",
-        "arrival": 0,
-        "computation": 16,
-        "enqueue": 5,
-        "events": [
-          2,
-          3,
-          1,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 2.5,
-      },
       {
         "R": "X",
         "arrival": 0,
@@ -20173,6 +20153,26 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
           "message": "",
         },
         "wait": 3,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 5,
+        "events": [
+          2,
+          3,
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 2.5,
       },
       {
         "R": "",
@@ -20201,26 +20201,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "",
-        "arrival": 0,
-        "computation": 16,
-        "enqueue": 5,
-        "events": [
-          2,
-          3,
-          1,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 3,
-      },
-      {
         "R": "X",
         "arrival": 0,
         "computation": 16,
@@ -20234,6 +20214,26 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
         "name": "$t_1$",
         "prev": 1,
         "sum": 3,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 3,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 5,
+        "events": [
+          2,
+          3,
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 2,
         "text": {
           "color": "black",
           "message": "",
@@ -20267,26 +20267,6 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
     "blocked": [],
     "rqueue": [
       {
-        "R": "",
-        "arrival": 0,
-        "computation": 16,
-        "enqueue": 5,
-        "events": [
-          2,
-          3,
-          1,
-        ],
-        "index": 1,
-        "name": "$t_2$",
-        "prev": 0,
-        "sum": 2,
-        "text": {
-          "color": "black",
-          "message": "",
-        },
-        "wait": 3.5,
-      },
-      {
         "R": "X",
         "arrival": 0,
         "computation": 16,
@@ -20305,6 +20285,26 @@ exports[`Schedule 1 with scheduler "hrrn" 4`] = `
           "message": "",
         },
         "wait": 3,
+      },
+      {
+        "R": "",
+        "arrival": 0,
+        "computation": 16,
+        "enqueue": 5,
+        "events": [
+          2,
+          3,
+          1,
+        ],
+        "index": 1,
+        "name": "$t_2$",
+        "prev": 0,
+        "sum": 2,
+        "text": {
+          "color": "black",
+          "message": "",
+        },
+        "wait": 3.5,
       },
       {
         "R": "",
@@ -38229,7 +38229,7 @@ exports[`Schedule 1 with scheduler "hrrn" 6`] = `
         "sum": 1.5,
         "text": {
           "color": "blue",
-          "message": "(wu($t_1$): 0, cur($t_3$): 9) cont",
+          "message": "(wu($t_1$): 0, cur($t_3$): 1.13) cont",
         },
         "wait": 0,
       },
