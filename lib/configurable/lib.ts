@@ -78,7 +78,7 @@ function schedClassFromString(schedclass: string) {
     case "rr":
       return RRSchedClass;
     case "hrrn":
-      return FIFOSchedClass;
+      return HRRNSchedClass;
   }
 }
 
@@ -170,6 +170,18 @@ type EventLoopRes = {
 };
 
 let Table = require("easy-table");
+
+// Number -> String
+let formatNumber = (num: number): string => {
+  if (Number.isInteger(num)) {
+      return num.toString();
+  } else {
+    if (Number.isInteger(num*10))
+      return num.toFixed(1);
+    else
+      return num.toFixed(2);
+  }
+}
 
 // Cut to three decimal digits
 let r2 = (x: number) => Math.round(x * 1000) / 1000;
@@ -280,7 +292,7 @@ let eventLoop = (
     // is running, the next one is scheduled in _task_tick
     if (schedstate.curr !== undefined && taskstates.class.preempt_wakeup(t, schedstate)) {
       t.text = {
-        message: `(arr: ${taskstates.class.schedmetric(t)}, cur: ${taskstates.class.schedmetric(schedstate.curr)}) preempt`,
+        message: `(arr(${t.name}): ${formatNumber(taskstates.class.schedmetric(t))}, cur(${schedstate.curr.name}): ${formatNumber(taskstates.class.schedmetric(schedstate.curr))}) preempt`,
         color: "red"
       };
       resched(`starting task ${t.name} @${timer.walltime}`);
@@ -322,11 +334,11 @@ let eventLoop = (
     addToRunqueue(tw);
 
     tw.text = {
-      message: `(wu: ${taskstates.class.schedmetric(tw)}`,
+      message: `(wu(${tw.name}): ${formatNumber(taskstates.class.schedmetric(tw))}`,
       color: "black"
     };
     if (!_.isUndefined(schedstate.curr)) {
-      tw.text.message += `, cur: ${taskstates.class.schedmetric(schedstate.curr)}`;
+      tw.text.message += `, cur(${schedstate.curr.name}): ${formatNumber(taskstates.class.schedmetric(schedstate.curr))}`;
     }
     tw.text.message += ")";
 
@@ -381,19 +393,25 @@ let eventLoop = (
 
       /*
       IMPORTANT:
-      Currently any event that does NOT occur exactly on a simulation tick
-      is handled AS IF it occurs on the tick immediately after its actual occurrence!
+      Currently any event that does NOT occur exactly on a simulation tick is
+      handled AS IF it occurred on the tick immediately following its actual occurrence!
+
+      Conceptually is as if we handle now the metrics update and events
+      for the past time slot, and prepare for the new one.
+      Ex: at time 13 we update metrics for the interval 12.5-13, and we setup
+      the state for the interval 13-13.5 .
       */
+
+      // Update the task's runtime and the time until its next sleep (event)
+      schedstate.curr.sum = r2(schedstate.curr.sum + delta);
+
+      // See types.ts -> Task -> events for a detailed explanation of this behaviour
+      if (schedstate.curr.events.length != 0)
+        schedstate.curr.events[0] = r2(schedstate.curr.events[0] - delta);
 
       // No events occur on the currently running task
       // CHANGED FROM: >= delta
       if (schedstate.curr.events.length == 0 || schedstate.curr.events[0] > 0) {
-        schedstate.curr.sum = r2(schedstate.curr.sum + delta);
-
-        // See types.ts -> Task -> events for a detailed explanation of this behaviour
-        if (schedstate.curr.events.length != 0)
-          schedstate.curr.events[0] = r2(schedstate.curr.events[0] - delta);
-
         // If the current task's computation time has been satisfied, exit it
         if (schedstate.curr.computation - schedstate.curr.sum <= 0) {
           exitCurrentTask();
@@ -405,10 +423,11 @@ let eventLoop = (
         if (taskstates.class.preempt_tick(schedstate.curr, schedstate)) {
           // The current task goes to sleep
           let ts = schedstate.curr;
-          removeFromRunqueue(schedstate.curr);
-          addToRunqueue(schedstate.curr);
+          removeFromRunqueue(ts);
+          addToRunqueue(ts);
           // Run the next task
-          resched(`task ${schedstate.curr.name} finished quantum @${timer.walltime}`);
+          resched(`task ${ts.name} finished quantum @${timer.walltime}`);
+          return;
         }
       }
       
@@ -664,7 +683,7 @@ let serialiseSim = (
               // Task normally running
               if (nextState) {
                 // Write at time "time" the text decorating the task 
-                tslot.belowSlot = nextState.schedmetric + "";
+                tslot.belowSlot = formatNumber(nextState.schedmetric);
                 tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${nextState.sum - t.p}}{${r2(simPlan.attributes["quantum"])}}\$` : `\$${nextState.sum - t.p}\$`) : "";
               } else { // Last tick for the task, no nextState, it ends!
                 tslot.inSlot = t.event === "RAN" ? (simPlan.class == RRSchedClass ? `\$\\frac{${t.sum + simPlan.timer - t.p}}{${r2(simPlan.attributes["quantum"])}}\$` : `\$${t.sum + simPlan.timer - t.p}\$`) : "";

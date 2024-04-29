@@ -210,9 +210,9 @@ will produce a latex file that when compiled gives the following (re-rendered to
 
 > | Task | Arrival | Computation | Start | Finish | Waiting (W) | Turnaround (Z) |
 > |------|---------|-------------|-------|--------|-------------|----------------|
-> | 1    | 0       | 16          | 0     |        | 0           |                |
-> | 2    | 0       | 16          | 1     | 16     | 1           | 16             |
-> | 3    | 0       | 16          | 2.5   | 18.5   | 2.5         | 18.5           |
+> | 1    | 0       | 16          | 0     | 23     | 5           | 23             |
+> | 2    | 0       | 16          | 1     | 17     | 7           | 17             |
+> | 3    | 0       | 16          | 2.5   | 19.5   | 9.5         | 19.5           |
 
 
 ## Generate a random schedule

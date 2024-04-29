@@ -1,6 +1,6 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Schedule 0 works as expected 1`] = `
+exports[`Schedule 0 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -958,7 +958,7 @@ exports[`Schedule 0 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 1 works as expected 1`] = `
+exports[`Schedule 1 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -2008,7 +2008,7 @@ exports[`Schedule 1 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 2 works as expected 1`] = `
+exports[`Schedule 2 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -3618,7 +3618,7 @@ exports[`Schedule 2 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 3 works as expected 1`] = `
+exports[`Schedule 3 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -6947,7 +6947,7 @@ exports[`Schedule 3 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 4 works as expected 1`] = `
+exports[`Schedule 4 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -8551,7 +8551,7 @@ exports[`Schedule 4 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 5 works as expected 1`] = `
+exports[`Schedule 5 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],
@@ -10746,7 +10746,7 @@ exports[`Schedule 5 works as expected 1`] = `
 ]
 `;
 
-exports[`Schedule 6 works as expected 1`] = `
+exports[`Schedule 6 with scheduler "cfs" 1`] = `
 [
   {
     "blocked": [],

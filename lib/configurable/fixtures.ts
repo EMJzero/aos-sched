@@ -50,8 +50,8 @@ let schedule0: GenericSimPlan = {
 };
 
 let schedule1: GenericSimPlan = {
-  timer: 0.5,
-  runfor: 8,
+  timer: 1,
+  runfor: 16,
   class : {},
   attributes: {
     quantum: 1.5
@@ -61,7 +61,7 @@ let schedule1: GenericSimPlan = {
     {
       index: 0,
       name: "$t_1$",
-      computation: 8,
+      computation: 1,
       arrival: 0,
       events: [8],
     },
@@ -69,15 +69,15 @@ let schedule1: GenericSimPlan = {
       index: 1,
       name: "$t_2$",
       computation: 8,
-      arrival: 0,
-      events: [8],
+      arrival: 2,
+      events: [2, 1, 3],
     },
     {
       index: 2,
       name: "$t_3$",
       computation: 8,
-      arrival: 0,
-      events: [8],
+      arrival: 4,
+      events: [2],
     },
   ],
   graphics: {

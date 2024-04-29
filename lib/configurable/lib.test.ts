@@ -9,17 +9,18 @@ const logger = {
 };
 
 let mappedScheds = _.flatMap(allPlans, (s, i) => {
-    let scheds = ["fifo", "hrrn", "sjf", "srtf", "rr"];
+    const scheds = ["fifo", "hrrn", "sjf", "srtf", "rr"];
     let outscheds: Plan<any, any>[] = []
     _.forEach(scheds, (str, i) => {
-        s["class"] = schedClassFromString(str);
-        outscheds.push(_.cloneDeep(s as Plan<any, any>));
+      s["class"] = schedClassFromString(str);
+      s["idx"] = i;
+      outscheds.push(_.cloneDeep(s as Plan<any, any>));
     })
     return outscheds;
 })
 
 _.map(mappedScheds, (s, i) => {
-  it(`Schedule ${i} with scheduler ${s.class.type} works as expected`, () => {
+  it(`Schedule ${s["idx"]} with scheduler \"${s.class.type}\"`, () => {
     const res = eventLoop({}, s, logger);
     expect(res.rawSimData).toMatchSnapshot();
   });

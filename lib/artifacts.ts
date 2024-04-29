@@ -224,7 +224,7 @@ let schedToLatexSummary = (sched: Schedule, options: Options, logger: Logger) =>
         data.start = myslots.find((v, i, o) => v.event === "RAN")?.tstart;
         data.completion = task.exited;
         // Find the waiting time
-        data.waiting = myslots.filter((v, i, o) => v.event === "RUNNABLE").length;
+        data.waiting = myslots.filter((v, i, o) => v.event === "RUNNABLE").length * sched.plan.timer;
         // Find the turnaround
         data.turnaround = data.completion !== undefined ? data.completion - task.arrival : undefined;
       }

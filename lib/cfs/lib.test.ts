@@ -8,7 +8,7 @@ const logger = {
 };
 
 _.map(plans, (s, i) => {
-  it(`Schedule ${i} works as expected`, () => {
+  it(`Schedule ${i} with scheduler \"cfs\"`, () => {
     const res = eventLoop({}, s, logger);
     expect(res.rawSimData).toMatchSnapshot();
   });
