@@ -76,7 +76,11 @@ let main = () => {
       validator: program.NUMBER,
       default: undefined
     })
-    .option("--mei <max_event_interval>", "Maximum time between a sleep and a wakeup or viceversa (default: 4)", {
+    .option("--mnei <min_event_interval>", "Minimum time between a sleep and a wakeup or viceversa (default: <timer>)", {
+      validator: program.NUMBER,
+      default: undefined
+    })
+    .option("--mxei <max_event_interval>", "Maximum time between a sleep and a wakeup or viceversa (default: 4)", {
       validator: program.NUMBER,
       default: undefined
     })
@@ -121,7 +125,8 @@ let main = () => {
           _.map(options.lr as Array<String>, (s) => Number(s)),
           _.map(options.vrtr as Array<String>, (s) => Number(s)),
           options.ms,
-          options.mei,
+          options.mnei,
+          options.mxei,
           options.mat
         );
         console.log(JSON.stringify(plan));
@@ -133,7 +138,8 @@ let main = () => {
           options.tm,
           options.rf,
           options.ms,
-          options.mei,
+          options.mnei,
+          options.mxei,
           options.mat,
           options.qt
         );

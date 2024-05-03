@@ -313,6 +313,7 @@ let cfsGenerator = (
   lambdaRange? : Array<number>,
   initialVrtRange?: Array<number>,
   maxSleeps?: number,
+  minEventInterval? : number,
   maxEventInterval? : number,
   maxArrivalTime? : number,
 ): GeneratedCFSPlan => {
@@ -326,7 +327,10 @@ let cfsGenerator = (
   lambdaRange = (!_.isUndefined(lambdaRange) && lambdaRange.length == 2 && lambdaRange[0] <= lambdaRange[1] ? [max([0.1, lambdaRange[0]]), max([0.1, lambdaRange[1]])] : [0.5, 2.5]) as Array<number>;
   initialVrtRange = (!_.isUndefined(initialVrtRange) && initialVrtRange.length == 2 && initialVrtRange[0] <= initialVrtRange[1] ? [max([0.1, initialVrtRange[0]]), max([0.1, initialVrtRange[1]])] : [98, 102]) as Array<number>;
   maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
+  minEventInterval = (!_.isUndefined(minEventInterval) ? max([0.5, minEventInterval]) : timer) as number;
   maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
+  if (minEventInterval > maxEventInterval)
+    throw Error("The value of \"min_event_interval\" must be a equal or less than \"max_event_interval\"!");
   maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
 
   let simPlan: GeneratedCFSPlan = {
@@ -362,20 +366,27 @@ let cfsGenerator = (
     }
   };
   
+  let sampleWrapper = (arr: number[]): number => {
+    let res = _.sample(arr);
+    return res != undefined ? res : timer;
+  }
+
   for(let i = 0; i < tasksCount; i++) {
+    let intervals = _.range(timer, maxArrivalTime + timer, timer);
     let task: CFSPlannedTask = {
       index: i,
       name: `$t_${i+1}$`,
       lambda: _.random(lambdaRange[0]*2, lambdaRange[1]*2)/2,
+      arrival: sampleWrapper(intervals),
       // The events will determine the length of the task
-      arrival: _.random(0, maxArrivalTime),
       events: [],
       vrt: _.random(initialVrtRange[0]*10, initialVrtRange[1]*10)/10
     };
 
     let eventsCount = _.random(0, maxSleeps)*2 + 1;
+    intervals = _.range(minEventInterval, maxEventInterval + timer, timer);
     for(let j = 0; j < eventsCount; j++)
-      task.events.push(_.random(1, maxEventInterval));
+      task.events.push(sampleWrapper(intervals));
     
     simPlan.tasks.push(task);
   }

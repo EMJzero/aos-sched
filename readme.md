@@ -220,7 +220,7 @@ will produce a latex file that when compiled gives the following (re-rendered to
 The following lines will instead yield a randomly generated schedule, its data, and its tables, both empty and complete. Storing the generated schedule to a file is suggested as the generator is **not** deterministic.
 
 ```sh
-bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 > tmp.json
+bunx aos-sched gen fifo 4 --tm 0.5 --rf 8 --ms 2 --mxei 2 --mat 4 > tmp.json
 bunx aos-sched simulate < tmp.json | bunx aos-sched export complete
 bunx aos-sched simulate < tmp.json | bunx aos-sched export data
 bunx aos-sched simulate < tmp.json | bunx aos-sched table blank

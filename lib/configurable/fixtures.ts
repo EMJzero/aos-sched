@@ -275,6 +275,7 @@ let configurableGenerator = (
   timer?: number,
   runfor?: number,
   maxSleeps?: number,
+  minEventInterval? : number,
   maxEventInterval? : number,
   maxArrivalTime? : number,
   quantum?: number
@@ -284,7 +285,10 @@ let configurableGenerator = (
   if ((runfor*10)%(timer*10) !== 0)
     throw Error("The value of \"runfor\" must be a multiple of \"timer\", also, limit their precision to one decimal points!");
   maxSleeps = (!_.isUndefined(maxSleeps) ? max([1, maxSleeps]) : 2) as number;
+  minEventInterval = (!_.isUndefined(minEventInterval) ? max([0.5, minEventInterval]) : timer) as number;
   maxEventInterval = (!_.isUndefined(maxEventInterval) ? max([0.5, maxEventInterval]) : 4) as number;
+  if (minEventInterval > maxEventInterval)
+    throw Error("The value of \"min_event_interval\" must be a equal or less than \"max_event_interval\"!");
   maxArrivalTime = (!_.isUndefined(maxArrivalTime) ? max([0.5, maxArrivalTime]) : runfor/2) as number;
   quantum = (!_.isUndefined(quantum) ? quantum : 1.5) as number;
 
@@ -318,19 +322,26 @@ let configurableGenerator = (
   if(type === "rr")
     simPlan.attributes["quantum"] = quantum;
 
+  let sampleWrapper = (arr: number[]): number => {
+    let res = _.sample(arr);
+    return res != undefined ? res : timer;
+  }
+
   for(let i = 0; i < tasksCount; i++) {
+    let intervals = _.range(timer, maxArrivalTime + timer, timer);
     let task: PlannedTask = {
       index: i,
       name: `$t_${i+1}$`,
       // The events will determine the length of the task
       computation: runfor,
-      arrival: _.random(0, maxArrivalTime),
+      arrival: sampleWrapper(intervals),
       events: []
     };
 
     let eventsCount = _.random(0, maxSleeps)*2 + 1;
+    intervals = _.range(minEventInterval, maxEventInterval + timer, timer);
     for(let j = 0; j < eventsCount; j++)
-      task.events.push(_.random(1, maxEventInterval));
+      task.events.push(sampleWrapper(intervals));
     
     simPlan.tasks.push(task);
   }
