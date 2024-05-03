@@ -48,12 +48,14 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
 
   let text: Array<{ text: String, color: String }> = [];
 
+  let x_scale = 0.5 / sched.plan.timer;
+
   let printAt = (time: number, index: number, m: string) => {
     return `\\node at(${hs * time}, ${index * hs + 0.5 * hh}) {\\tiny ${m}};`;
   };
 
   let printAtConf = (time: number, index: number, m: string, conf: string) => {
-    return `\\node [${conf}] at(${hs * time}, ${
+    return `\\node [${conf}] at(${hs * time * x_scale}, ${
       index * hs + 0.5 * hh
     }) {\\tiny ${m}};`;
   };
@@ -73,7 +75,7 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
           color: `${r.aboveSlot.color}`
         });
         return `\\node [shape=circle,draw, inner sep=1pt, ${r.aboveSlot.color}]
-          at(${hs * r.tend - 0.3}, ${(r.index + 0.4) * hs + 0.5 * hh}) {\\tiny ${text.length}};`
+          at(${(hs * r.tend * x_scale - 0.3)}, ${(r.index + 0.4) * hs + 0.5 * hh}) {\\tiny ${text.length}};`
       }
     } else {
       return "";
@@ -82,26 +84,26 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
 
   let pVertMarker = (r: TaskSlot) =>
     !_.isUndefined(r.aboveSlot) && r.aboveSlot.message !== ""
-      ? `\\draw[draw=${r.aboveSlot.color}] [|>-] (${r.tstart * hs}, ${r.index} + 0.55) -- (${r.tstart * hs}, ${r.index});`
+      ? `\\draw[draw=${r.aboveSlot.color}] [|>-] (${r.tstart * hs * x_scale}, ${r.index} + 0.55) -- (${r.tstart * hs * x_scale}, ${r.index});`
       : "";
 
   let drawRan = (r: TaskSlot) => {
     return [
-      `\\draw[draw=black] (${r.tstart * hs}, ${r.index * vs}) rectangle ++(${
-        (r.tend - r.tstart) * hs
+      `\\draw[draw=black] (${r.tstart * hs * x_scale}, ${r.index * vs}) rectangle ++(${
+        (r.tend - r.tstart) * hs * x_scale
       },${hh}) node[pos=.5] {}; `,
-      options.nobelow ? "" : printAt(r.tend, r.index - 0.4, r.belowSlot),
-      printAt(r.tend - 0.25, r.index, `${r.inSlot}`),
+      options.nobelow ? "" : printAt(r.tend * x_scale, r.index - 0.4, r.belowSlot),
+      printAt(r.tend * x_scale - 0.25, r.index, `${r.inSlot}`),
       pAboveSlot(r),
       pVertMarker(r)
     ].filter((s : String) => s !== "");
   };
   let drawBlocked = (r: TaskSlot) => {
     return [
-      `\\draw[draw=black, fill=gray] (${r.tstart * hs}, ${
+      `\\draw[draw=black, fill=gray] (${r.tstart * hs * x_scale}, ${
         r.index * vs
       }) rectangle ++(${
-        (r.tend - r.tstart) * hs
+        (r.tend - r.tstart) * hs * x_scale
       },${hh}) node[pos=.5, text=white] {};`,
       pAboveSlot(r),
       pVertMarker(r)
@@ -133,7 +135,7 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
     ]),
   ]);
   let grid = [
-    `\\draw[xstep=${sched.plan.timer},gray!20,thin,shift={(0,-0.25)}] (0,0) grid (${sched.plan.runfor},${sched.plan.tasks.length});`,
+    `\\draw[xstep=${0.5},gray!20,thin,shift={(0,-0.25)}] (0,0) grid (${sched.plan.runfor * x_scale},${sched.plan.tasks.length});`,
     _.map(_.range(0, sched.plan.runfor / sched.plan.timer + 1), (i) =>
       printAtConf(
         i * sched.plan.timer,
@@ -147,14 +149,14 @@ let schedToLatex = (sched: Schedule, options: Options, logger: Logger) => {
 
   let taskevents = _.map(sched.plan.tasks, (t) => {
     return [
-      `\\draw [->] (${t.arrival}, ${t.index} + 0.75) -- (${t.arrival}, ${t.index});`,
+      `\\draw [->] (${t.arrival * x_scale}, ${t.index} + 0.75) -- (${t.arrival * x_scale}, ${t.index});`,
     ];
   });
 
   let taskexits = _.map(sched.plan.tasks, (t) => {
     return !_.isUndefined(t.exited)
       ? [
-          `\\draw [<-] (${t.exited}, ${t.index} + 0.75) -- (${t.exited}, ${t.index});`,
+          `\\draw [<-] (${t.exited * x_scale}, ${t.index} + 0.75) -- (${t.exited * x_scale}, ${t.index});`,
         ]
       : [];
   });

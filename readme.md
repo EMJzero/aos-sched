@@ -35,7 +35,14 @@ bun link && bun link aos-sched
 Now you should be able to use `bun test` to run the attached tests.
 
 # Usage
-Only usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
+
+First of all, an overview of the interface:
+
+![](./static/commands.png)
+
+
+Note that only some usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
+
 The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
@@ -74,9 +81,9 @@ The available commands are:
 
     ```sh
     # Example with "rr"
-    bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mei 4 --mat 6 --qt 2
+    bunx aos-sched gen rr 3 --tm 1 --rf 12 --ms 2 --mxei 4 --mat 6 --qt 2
     # Example with "cfs"
-    bunx aos-sched gen cfs 4 --tm 0.5 --rf 8 --ms 2 --mei 2 --mat 4 --lt 4 --mg 1 --lr "2, 5" --vrtr "6, 9"
+    bunx aos-sched gen cfs 4 --tm 0.5 --rf 8 --ms 2 --mxei 2 --mat 4 --lt 4 --mg 1 --lr "2, 5" --vrtr "6, 9"
     ```
 
 2. `simulate`: This command is used to produce, by simulation, a realtime schedule from a schedule plan. It takes a single argument: the JSON file or stdin containing the schedule data (for examples of CFS schedules look at its [test files](./lib/cfs/fixtures.ts)). The scheduler to be used will be inferred from the data and format of the JSON schedule being passed as input to the command. It simulates the schedule using the specified scheduler and returns the JSON representation of the simulated schedule.
