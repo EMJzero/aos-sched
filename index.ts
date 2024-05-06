@@ -49,8 +49,12 @@ let main = () => {
     .action(({ args }) => {
       let n: number = parseInt(args.num + "");
       if (args.sched === "cfs") {
+        if (n >= tests.cfs.length)
+          throw Error(`Invalid <sched> index, use a number in the range [0, ${tests.cfs.length - 1}]!`)
         console.log(JSON.stringify(tests.cfs[n]));
       } else {
+        if (n >= tests.configurable.length)
+          throw Error(`Invalid <sched> index, use a number in the range [0, ${tests.configurable.length - 1}]!`)
         // Inject the scheduler string, then return the JSON
         let plan = tests.configurable[n];
         plan.class["type"] = args.sched as string;

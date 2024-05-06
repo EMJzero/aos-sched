@@ -11,7 +11,7 @@ const logger = {
 let mappedScheds = _.flatMap(allPlans, (s, i) => {
     const scheds = ["fifo", "hrrn", "sjf", "srtf", "rr"];
     let outscheds: Plan<any, any>[] = []
-    _.forEach(scheds, (str, i) => {
+    _.forEach(scheds, (str, j) => {
       s["class"] = schedClassFromString(str);
       s["idx"] = i;
       outscheds.push(_.cloneDeep(s as Plan<any, any>));
