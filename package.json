@@ -6,7 +6,17 @@
   "scripts": {
     "test": "jest lib/lib.test.js"
   },
-  "author": "Vittorio Zaccaria",
+  "authors": [
+    {
+      "name": "Vittorio Zaccaria",
+    },
+    {
+      "name": "Marco Ronzani"
+    },
+    {
+      "name": "Alessandro Sassi"
+    }
+  ],
   "license": "MIT",
   "bin": {
     "aos-sched": "./index.ts"
