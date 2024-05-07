@@ -43,6 +43,8 @@ First of all, an overview of the interface:
 
 Note that only some usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
 
+For a full example of the usage in a LaTeX document of the simulator's outputs, refer to [example.tex](./example.tex).
+
 The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
