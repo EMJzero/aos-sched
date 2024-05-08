@@ -43,8 +43,6 @@ First of all, an overview of the interface:
 
 Note that only some usage examples are provided, add the `--help` option to any command for a full list of its arguments and options.
 
-For a full example of the usage in a LaTeX document of the simulator's outputs, refer to [example.tex](./example.tex).
-
 The available commands are:
 
 1. `dump`: This command is used to dump out examples of schedule plans which are wired in the tool (they are the one used for tests). These might have or not parameters specific to the scheduler itself. It takes two arguments: the scheduler to use and the example number. It returns the JSON representation of the specified schedule.
@@ -154,7 +152,7 @@ The available commands are:
     ```
 
 # Examples
-## End-to-End generation using bundled schedules
+## End-to-End Usage with Hardcoded Scheduling Plans
 ### CFS (Completely Fair Scheduler)
 #### Schedule Plot
 ```sh
@@ -224,7 +222,7 @@ will produce a latex file that when compiled gives the following (re-rendered to
 > | 3    | 0       | 16          | 2.5   | 19.5   | 9.5         | 19.5           |
 
 
-## Generate a random schedule
+## Generation and Usage of a Random Scheduling Plan
 
 The following lines will instead yield a randomly generated schedule, its data, and its tables, both empty and complete. Storing the generated schedule to a file is suggested as the generator is **not** deterministic.
 
@@ -236,3 +234,8 @@ bunx aos-sched simulate < tmp.json | bunx aos-sched table blank
 bunx aos-sched simulate < tmp.json | bunx aos-sched table complete
 ```
 
+# Additional Material
+
+A full example of how this tool's output can be incorporated in a LaTeX document is present in [example.tex](./example.tex).
+
+A presentation given on the recent improvements and changes made to this simulator is available as [Ronzani_Sassi_presentation.pdf](./static/Ronzani_Sassi_presentation.pdf)
